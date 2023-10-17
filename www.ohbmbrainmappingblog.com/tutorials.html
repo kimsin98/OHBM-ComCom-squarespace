@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Tutorials - ORGANIZATION FOR HUMAN BRAIN MAPPING</title><meta property="og:site_name" content="ORGANIZATION FOR HUMAN BRAIN MAPPING" />
+<meta property="og:title" content="Tutorials" />
+<meta property="og:description" content="OHBM ON-DEMAND HOW-TO: REPRODUCIBILITY AND GOOD NEUROIMAGING PRACTICES Written by :  Claude Bajada ,  Fakhereh Movahedian Attar ,  Ilona Lipp Expert reviewers :  Adina Wagner ,  Cyril Pernet..." />
+<meta property="og:image" content="https://cdn2.editmysite.com/images/site/footer/og-image-placeholder-blank.png" />
+<meta property="og:url" content="https://www.ohbmbrainmappingblog.com/tutorials.html" />
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0;">
+
+		
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="https://cdn2.editmysite.com/css/sites.css?buildTime=1669754019" />
+<link rel="stylesheet" type="text/css" href="https://cdn2.editmysite.com/css/old/fancybox.css?1669754019" />
+<link rel="stylesheet" type="text/css" href="https://cdn2.editmysite.com/css/social-icons.css?buildtime=1669754019" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css%3F1669824646.css" title="wsite-theme-css" />
+<link href='https://cdn2.editmysite.com/fonts/Source_Sans_Pro/font.css?2' rel='stylesheet' type='text/css' />
+<link href='https://cdn2.editmysite.com/fonts/Raleway/font.css?2' rel='stylesheet' type='text/css' />
+<link href='https://cdn2.editmysite.com/fonts/Roboto_Condensed/font.css?2' rel='stylesheet' type='text/css' />
+
+<style type='text/css'>
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+@media screen and (min-width: 767px) {.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+}</style>
+
+		<script src='files/templateArtifacts.js%3F1669824646'></script>
+<script>
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var ASSETS_BASE = '//cdn2.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+</script>
+<script src='https://cdn2.editmysite.com/js/jquery-1.8.3.min.js'></script>
+
+<script type="text/javascript" src="https://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1669754019&amp;"></script>
+<script src="https://cdn2.editmysite.com/js/site/main.js?buildTime=1669754019"></script><script type="text/javascript">
+		function initCustomerAccountsModels() {
+					(function(){_W.setup_rpc({"url":"\/ajax\/api\/JsonRPC\/CustomerAccounts\/","actions":{"CustomerAccounts":[{"name":"login","len":2,"multiple":false,"standalone":false},{"name":"logout","len":0,"multiple":false,"standalone":false},{"name":"getSessionDetails","len":0,"multiple":false,"standalone":false},{"name":"getAccountDetails","len":0,"multiple":false,"standalone":false},{"name":"getOrders","len":0,"multiple":false,"standalone":false},{"name":"register","len":4,"multiple":false,"standalone":false},{"name":"emailExists","len":1,"multiple":false,"standalone":false},{"name":"passwordReset","len":1,"multiple":false,"standalone":false},{"name":"passwordUpdate","len":3,"multiple":false,"standalone":false},{"name":"validateSession","len":1,"multiple":false,"standalone":false}]},"namespace":"_W.CustomerAccounts.RPC"});
+_W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":"_W.CustomerAccounts.BackboneModelData","collection_namespace":"_W.CustomerAccounts.BackboneCollectionData","bootstrap_namespace":"_W.CustomerAccounts.BackboneBootstrap","models":{"CustomerAccounts":{"_class":"CustomerAccounts.Model.CustomerAccounts","defaults":null,"validation":null,"types":null,"idAttribute":null,"keydefs":null}},"collections":{"CustomerAccounts":{"_class":"CustomerAccounts.Collection.CustomerAccounts"}},"bootstrap":[]});
+})();
+		}
+		if(document.createEvent && document.addEventListener) {
+			var initEvt = document.createEvent('Event');
+			initEvt.initEvent('customerAccountsModelsInitialized', true, false);
+			document.dispatchEvent(initEvt);
+		} else if(document.documentElement.initCustomerAccountsModels === 0){
+			document.documentElement.initCustomerAccountsModels++
+		}
+		</script>
+		<script type="text/javascript"> _W = _W || {}; _W.securePrefix='www.ohbmbrainmappingblog.com'; </script><script>_W = _W || {};
+			_W.customerLocale = "en_US";
+			_W.storeName = null;
+			_W.isCheckoutReskin = false;
+			_W.storeCountry = "US";
+			_W.storeCurrency = "USD";
+			_W.storeEuPrivacyPolicyUrl = "";
+			com_currentSite = "204303227559001667";
+			com_userID = "139872966";</script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="https://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1669754019&amp;"></script><script> _W.themePlugins = {"navpane":{"condense":1024,"forced":1}};</script><script src='https://cdn2.editmysite.com/js/site/theme-plugins.js?buildTime=1669754019'></script><script type="text/javascript"> _W.recaptchaUrl = "https://www.google.com/recaptcha/api.js"; </script><script type="text/javascript"><!--
+	
+	
+	function initFlyouts(){
+		initPublishedFlyoutMenus(
+			[{"id":"124045111785600110","title":"BLOG","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"457330105466321910","title":"Tutorials","url":"tutorials.html","target":"","nav_menu":false,"nonclickable":false},{"id":"286933796587166470","title":"Media","url":"media.html","target":"","nav_menu":false,"nonclickable":false},{"id":"479719222573141757","title":"Contributors","url":"contributors.html","target":"","nav_menu":false,"nonclickable":false},{"id":"566172753373531491","title":"OHBM WEBSITE","url":"http:\/\/www.humanbrainmapping.org","target":"_blank","nav_menu":false,"nonclickable":false}],
+			"457330105466321910",
+			'',
+			'active',
+			false,
+			{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+			{"hasCustomMinicart":true}
+		)
+	}
+//-->
+</script>
+		
+		
+	</head>
+	<body class="header-page  wsite-page-tutorials  wsite-theme-light"><div id="site-wrap">
+
+		<div id="search" class="overlay">
+			<h2>Search the site...</h2>
+		</div>
+
+		<div id="header-wrap">
+			<div class="container">
+				<div class="spacer">
+					<div id="nav-open" class="w-navpane-trigger hamburger" data-target="#nav"><span></span></div>
+				</div>
+				<div class="spacer hidden-sm"></div>
+				<div id="logo"><span class="wsite-logo">
+
+	<a href="index.html">
+	
+	<span id="wsite-title">ORGANIZATION FOR HUMAN BRAIN MAPPING</span>
+	
+	</a>
+
+</span></div>
+				<div class="spacer"><span class="wsite-search">
+	<form id="wsite-header-search-form" action="https://www.ohbmbrainmappingblog.com/apps/search" method="get">
+		<input type="text" name="q" class="wsite-search-input" autocomplete="off" placeholder="Search"/><span class="wsite-search-button"><span class="wsite-search-button-inner"></span></span>
+	</form>
+</span></div>
+				<div class="spacer hidden-sm"></div>
+			</div>
+			<div class="w-navlist nav"><ul class="wsite-menu-default">
+		<li id="pg124045111785600110" class="wsite-menu-item-wrap">
+			<a
+						href="index.html"
+				class="wsite-menu-item"
+				>
+				BLOG
+			</a>
+			
+		</li>
+		<li id="active" class="wsite-menu-item-wrap">
+			<a
+						href="tutorials.html"
+				class="wsite-menu-item"
+				>
+				Tutorials
+			</a>
+			
+		</li>
+		<li id="pg286933796587166470" class="wsite-menu-item-wrap">
+			<a
+						href="media.html"
+				class="wsite-menu-item"
+				>
+				Media
+			</a>
+			
+		</li>
+		<li id="pg479719222573141757" class="wsite-menu-item-wrap">
+			<a
+						href="contributors.html"
+				class="wsite-menu-item"
+				>
+				Contributors
+			</a>
+			
+		</li>
+		<li id="pg566172753373531491" class="wsite-menu-item-wrap">
+			<a
+						href="http://www.humanbrainmapping.org"
+					target="_blank"
+				class="wsite-menu-item"
+				>
+				OHBM WEBSITE
+			</a>
+			
+		</li>
+</ul>
+</div>
+		</div>
+
+		<div id="close-overlay" class="w-navpane-close" data-target="#nav"><span class="container"></span></div>
+
+		<div id="nav" class="overlay w-navpane w-navpane-fullscreen">
+			<div id="navcontainer" class="nav"><ul class="wsite-menu-default">
+		<li id="pg124045111785600110" class="wsite-menu-item-wrap">
+			<a
+						href="index.html"
+				class="wsite-menu-item"
+				>
+				BLOG
+			</a>
+			
+		</li>
+		<li id="active" class="wsite-menu-item-wrap">
+			<a
+						href="tutorials.html"
+				class="wsite-menu-item"
+				>
+				Tutorials
+			</a>
+			
+		</li>
+		<li id="pg286933796587166470" class="wsite-menu-item-wrap">
+			<a
+						href="media.html"
+				class="wsite-menu-item"
+				>
+				Media
+			</a>
+			
+		</li>
+		<li id="pg479719222573141757" class="wsite-menu-item-wrap">
+			<a
+						href="contributors.html"
+				class="wsite-menu-item"
+				>
+				Contributors
+			</a>
+			
+		</li>
+		<li id="pg566172753373531491" class="wsite-menu-item-wrap">
+			<a
+						href="http://www.humanbrainmapping.org"
+					target="_blank"
+				class="wsite-menu-item"
+				>
+				OHBM WEBSITE
+			</a>
+			
+		</li>
+</ul>
+</div>
+			<div><div style="text-align:left;"><div style="height:0px;overflow:hidden"></div>
+<span class="wsite-social wsite-social-default"></span>
+<div style="height:0px;overflow:hidden"></div></div></div>
+		</div>
+
+		<div id="content-wrap">
+			<div id="banner-wrap">
+				<div id="banner" class="container">
+					<div class="wsite-elements wsite-not-footer wsite-header-elements">
+	<div class="wsite-section-wrap">
+	<div  class="wsite-section wsite-header-section wsite-section-bg-image" style="background-image: url(https://www.ohbmbrainmappingblog.com/&quot;/uploads/1/3/9/8/139872966/background-images/461715039.jpg&quot;) ;background-repeat: no-repeat ;background-position: 50% 50% ;background-size: 100% ;background-color: transparent ;background-size: cover;" >
+		<div class="wsite-section-content">
+			
+						<div class="container">
+				<div class="wsite-section-elements">
+					<h2 class="wsite-content-title"><font size="7">OHBM Tutorials</font></h2>
+				</div>
+			</div>
+					
+		</div>
+		<div class=""></div>
+	</div>
+</div>
+
+</div>
+
+				</div>
+			</div>
+
+			<div id="main-wrap">
+				<div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-6"  >
+		<div class="wsite-section-content">
+					<div class="container">
+			<div class="wsite-section-elements">
+				<div class="paragraph" style="text-align:left;"><font size="5"><span style="text-transform: uppercase;"><strong style=""><a href="blog/ohbm-on-demand-how-to-reproducibility-and-good-neuroimaging-practices.html" target="_blank" style="">OHBM ON-DEMAND HOW-TO: REPRODUCIBILITY AND GOOD NEUROIMAGING PRACTICES</a></strong></span></font><strong><font size="5"><br /></font></strong><br /><span style="color:rgb(0, 0, 0); font-weight:700">Written by</span><span style="color:rgb(0, 0, 0)">:&nbsp;<a href="contributors.html" target="_blank">Claude Bajada</a>,&nbsp;<a href="https://www.cbs.mpg.de/person/attar/374227" target="_blank">Fakhereh Movahedian Attar</a>,&nbsp;<a href="contributors.html" target="_blank">Ilona Lipp</a></span><br /><span style="color:rgb(0, 0, 0); font-weight:700">Expert reviewers</span><span style="color:rgb(0, 0, 0)">:&nbsp;<a href="https://www.fz-juelich.de/SharedDocs/Personen/INM/INM-7/EN/Wagner_a.html?nn=654270" target="_blank">Adina Wagner</a>,&nbsp;<a href="https://www.ed.ac.uk/profile/dr-cyril-pernet" target="_blank">Cyril Pernet</a></span><br /><span style="color:rgb(0, 0, 0); font-weight:700">Newbie editors</span><span style="color:rgb(0, 0, 0)">:&nbsp;<a href="https://www.linkedin.com/in/yana-dimech-623347124/?originalSubdomain=mt" target="_blank">Yana Dimech</a>,&nbsp;<a href="https://www.cbs.mpg.de/person/101048/2482" target="_blank">Renzo Torrecuso</a></span><br /><br /><span style="color:rgb(0, 0, 0)"></span><span style="color:rgb(0, 0, 0); font-weight:700">Introduction<br /></span><span style="color:rgb(0, 0, 0)">This post is about good neuroimaging practices. &lsquo;Practices&rsquo; relates to all aspects of conducting research. By &lsquo;good&rsquo;, we mean beneficial to the field and neuroimaging community - but you&rsquo;ll see that most of these practices also benefit the individual researcher. Here, we collected a number of tools, tips and tricks to do neuroimaging in the &lsquo;best&rsquo; way possible. We aim to provide an overview and answer some questions you may have asked yourself about reproducibility and good neuroimaging practices. As usual, we refer to OHBM On-Demand videos from the educational sessions of previous annual meetings.&nbsp;<br /><em>See full content here:&nbsp;</em></span><a href="blog/ohbm-on-demand-how-to-reproducibility-and-good-neuroimaging-practices.html" target="_blank">https://www.ohbmbrainmappingblog.com/blog/ohbm-on-demand-how-to-reproducibility-and-good-neuroimaging-practices</a><span style="color:rgb(0, 0, 0)"><br /><br /></span><strong><font size="5"><a href="blog/on-demand-how-to-measuring-gaba-in-the-brain-with-mr-spectroscopy.html" target="_blank">ON-DEMAND HOW-TO: MEASURING GABA IN THE BRAIN WITH MR SPECTROSCOPY</a></font></strong><br /><span style="color:rgb(0, 0, 0); font-weight:700">Authors</span><span style="color:rgb(0, 0, 0)">:&nbsp;</span><a href="https://www.cbs.mpg.de/person/99802/2482"><span style="color:rgb(17, 85, 204)">Katie Williams</span></a><span style="color:rgb(0, 0, 0)">,&nbsp;</span><a href="contributors.html"><span style="color:rgb(17, 85, 204)">Ilona Lipp</span></a><span style="color:rgb(0, 0, 0)">,&nbsp;</span><a href="http://www.gabamrs.com/mikkelsen"><span style="color:rgb(17, 85, 204)">Mark Mikkelsen</span></a><br /><span style="color:rgb(0, 0, 0); font-weight:700">Infographic</span><span style="color:rgb(0, 0, 0)">:&nbsp;</span><a href="contributors.html"><span style="color:rgb(17, 85, 204)">Roselyne Chauvin</span></a><br /><span style="color:rgb(0, 0, 0); font-weight:700">Expert editors</span><span style="color:rgb(0, 0, 0)">:&nbsp;</span><a href="https://www.cardiff.ac.uk/people/view/1121189-kolasinski-james"><span style="color:rgb(17, 85, 204)">James Kolasinski</span></a><span style="color:rgb(0, 0, 0)">,&nbsp;</span><a href="https://www.bangor.ac.uk/psychology/staff/paul-mullins/en#publications"><span style="color:rgb(17, 85, 204)">Paul Mullins</span></a><br /><span style="color:rgb(0, 0, 0); font-weight:700">Newbie editors:</span><span style="color:rgb(0, 0, 0)">&nbsp;</span><a href="https://www.cbs.mpg.de/person/100583/2482"><span style="color:rgb(17, 85, 204)">Curtiss Chapman</span></a><span style="color:rgb(0, 0, 0)">,&nbsp;</span><a href="https://www.linkedin.com/in/yana-dimech-623347124/?originalSubdomain=mt"><span style="color:rgb(17, 85, 204)">Yana Dimech</span></a><br /><br /><span style="color:rgb(0, 0, 0); font-weight:700">Introduction</span><br /><span style="color:rgb(0, 0, 0)">The noninvasive imaging tools that we Human Brain Mappers apply are most often being used to research brain structure and function. Neurotransmitter systems are something that we are aware of and use to take into account when coming up with hypotheses or interpreting our findings, but rarely make the direct subject of our investigation. Most of us have probably heard of GABA (gamma-aminobutyric acid) as the principal inhibitory neurotransmitter that is used by many interneurons. That we can also measure GABA in vivo with MR spectroscopy (MRS) is maybe less widely known. While this biomedical imaging tool opens many doors for neuroscience, measurement of GABA using MRS is not broadly used yet, possibly because special sequences and analysis methods are needed. At the OHBM Annual Meeting in 2019, for the first time, an educational session on GABA MRS was held. This post summarizes what was taught about the most important things you need to know if you&rsquo;re considering GABA MRS for your research.<br /><em>See full content here:</em><a href="blog/on-demand-how-to-measuring-gaba-in-the-brain-with-mr-spectroscopy.html" target="_blank">&nbsp;</a></span><a href="blog/on-demand-how-to-measuring-gaba-in-the-brain-with-mr-spectroscopy.html" target="_blank">https://www.ohbmbrainmappingblog.com/blog/on-demand-how-to-measuring-gaba-in-the-brain-with-mr-spectroscopy</a><br /><br /><strong><font size="5"><a href="blog/on-demand-how-to-anatomy-in-neuroimaging.html" target="_blank">OHBM ONDEMAND HOW-TO: ANATOMY IN NEUROIMAGING</a></font></strong><br /><span style="color:rgb(0, 0, 0)"><strong>Authors:</strong>&nbsp;<a href="contributors.html" target="_blank">Claude Bajada, Nils Muhlert, Ilona Lipp</a><br /><strong>Infographic:</strong>&nbsp;<a href="contributors.html" target="_blank">Roselyne Chauvin</a></span><br /><span style="color:rgb(0, 0, 0)"><strong>Expert editors:</strong>&nbsp;<a href="https://www.cbs.mpg.de/employees/anwander" target="_blank">Alfred Anwander</a><a href="https://www.um.edu.mt/profile/jurgengatt" target="_blank">, Jurgen Gatt</a><br /><strong>Newbie editor:</strong>&nbsp;<a href="mailto:cjantzen@cbs.mpg.de">Caroline Jantzen</a></span><br /><br /><span><span style="color:rgb(0, 0, 0); font-weight:700"><font size="4">Introduction</font></span></span><br /><span style="color:rgb(0, 0, 0)">Neuroanatomy is one of the most exciting topics in neuroscience! Some readers may disagree, but for now, humor us and read along. With the help of this On-Demand post, we will convince you not only that anatomy is a useful endeavour but that it is one where much beauty is found.&nbsp;Our journey starts with the fundamental notion that the structure and the function of objects are tightly coupled; sometimes in ways that are not obvious. Understanding the complexity of the brain&rsquo;s structure, hopefully, allows researchers to build more accurate models of brain function.<br /><em>See full content here:&nbsp;</em></span><a href="blog/on-demand-how-to-anatomy-in-neuroimaging.html" target="_blank">https://www.ohbmbrainmappingblog.com/blog/on-demand-how-to-anatomy-in-neuroimaging</a><br /><br /><font size="5"><a href="blog/ohbm-ondemand-how-to-diffusion-mri.html" target="_blank"><strong>OHBM ONDEMAND HOW-TO: DIFFUSION MRI</strong></a></font><br /><font size="2">By&nbsp;<a href="contributors.html">Claude Bajada &amp; Ilona Lipp</a></font><br /><span><span style="color:rgb(0, 0, 0); font-weight:700"><font size="4">Introduction</font></span></span><br /><span><span style="color:rgb(0, 0, 0)">For the budding cerebronaut, the term diffusion MRI evokes images of fancy red, green or blue fibre coursing across the brain; pretty enough to find their way onto a&nbsp;</span><a href="https://en.wikipedia.org/wiki/The_2nd_Law#/media/File:Muse_2nd_law.jpg"><span style="color:rgb(17, 85, 204)">musical album cover</span></a><span style="color:rgb(0, 0, 0)">&nbsp;or to be the standard stock image for anyone giving a public communication lecture about the brain. While the pictures are appealing, the terminology associated with diffusion MRI is often confusing and hard to disentangle. Any PhD student about to embark on a diffusion MRI project has had to grapple with a sea of acronyms such as DTI, HARDI, FA, RD, ADC, CHARMED and many more! If you have ever got frustrated by these terms and how they relate, this &ldquo;how-to&rdquo; post is for you.</span></span><br /><em style="color:rgb(0, 0, 0)">See full content here:&nbsp;</em><em><a href="blog/ohbm-ondemand-how-to-diffusion-mri.html">https://www.ohbmbrainmappingblog.com/blog/ohbm-ondemand-how-to-diffusion-mri</a></em><br /><br /><a href="blog/ohbm-ondemand-how-to-resting-state-fmri-analysis.html"><strong><font size="5">OHBM ONDEMAND HOW-TO: RESTING STATE FMRI ANALYSIS</font></strong></a><br /><span style="color:rgb(0, 0, 0)">By&nbsp;</span><a href="https://www.research.manchester.ac.uk/portal/danka.jandric.html"><span style="color:rgb(17, 85, 204)">Danka Jandric</span></a><span style="color:rgb(0, 0, 0)">,&nbsp;</span><a href="http://mumford.fmripower.org/"><span style="color:rgb(17, 85, 204)">Jeanette Mumford&nbsp;</span></a><span style="color:rgb(0, 0, 0)">&amp;&nbsp;</span><span style="color:rgb(17, 85, 204)"><a href="http://psych.cf.ac.uk/contactsandpeople/pgs/archive/lipp.php">Ilona Lipp</a></span><br /><br /><span style="color:rgb(0, 0, 0); font-weight:700">Introduction</span><br /><span style="color:rgb(0, 0, 0)">Planning a resting state study and analysing resting state data can feel overwhelming. There seems to be an endless number of options regarding all stages of the experiment. Decisions need to be made about how to acquire data in an optimal way, what preprocessing and noise correction pipelines to employ and how to extract the most meaningful metrics. Many strategies have been published and are available in software packages. However, there seems to be little consensus about what works best and even more importantly, about how to judge whether something &ldquo;works&rdquo; or not. The choice of method often depends on the specifics of the data and addressed research question, but can equally often seem arbitrary. To help guide you through this jungle of rs-fMRI, we walk you through all stages of a resting state experiment. We do this by addressing questions that researchers are likely to have&hellip; or should have! While we do not provide definite answers to these questions, we try to point out the most important considerations, outline some of the available methods, and offer some valuable video resources from recent OHBM education courses, to help you make informed decisions.&nbsp;<br /><em>See full content here:&nbsp;</em></span><em><a href="blog/ohbm-ondemand-how-to-resting-state-fmri-analysis.html">https://www.ohbmbrainmappingblog.com/blog/ohbm-ondemand-how-to-resting-state-fmri-analysis</a></em><br /><br /><strong><font size="5">&#8203;</font></strong><br /><a href="blog/ohbm-ondemand-how-to-machine-learning-in-neuroimaging.html"><strong><font size="5">OHBM ONDEMAND HOW-TO: MACHINE LEARNING IN NEUROIMAGING</font></strong></a><br /><span style="color:rgb(0, 0, 0)">By&nbsp;</span><a href="contributors.html"><span style="color:rgb(17, 85, 204)">Claude Bajada</span></a><span style="color:rgb(0, 0, 0)">,&nbsp;</span><a href="https://www.cbs.mpg.de/person/simonhofmann/371395"><span style="color:rgb(17, 85, 204)">Simon M. Hofmann</span></a><span style="color:rgb(0, 0, 0)">&nbsp;and&nbsp;</span><a href="contributors.html"><span style="color:rgb(17, 85, 204)">Ilona Lipp</span></a><br /><span style="color:rgb(0, 0, 0)">Edited by:&nbsp;</span><a href="https://sites.google.com/site/yeoyeo02/home"><span style="color:rgb(17, 85, 204)">Thomas Yeo</span></a><span style="color:rgb(0, 0, 0)">&nbsp;and&nbsp;</span><a href="https://connects.catalyst.harvard.edu/Profiles/display/Person/65562"><span style="color:rgb(17, 85, 204)">Lisa Nickerson</span></a><br /><br /><span style="color:rgb(0, 0, 0); font-weight:700">Introduction</span><br /><span style="color:rgb(0, 0, 0)">Machine learning, deep learning and artificial intelligence are terms that currently appear everywhere; in the media, in job adverts&hellip; and at neuroimaging conferences. Machine learning is often portrayed as a mystical black box that will either solve all our problems in the future or replace us in our jobs. In this blog post, we discuss what the term machine learning actually means, what methods it encompasses, and how these methods can be applied to brain imaging analysis. Doing this, we refer to the OHBM OnDemand material, which contains some great videos explaining machine learning methodology and we provide examples for how it has been used in a variety of applications. If you are curious about machine learning tools, but are not really sure whether you want to jump on the bandwagon, then we hope that this post is right for you and will help you get started.<br /><em>See full content here:&nbsp;</em></span><em><a href="blog/ohbm-ondemand-how-to-machine-learning-in-neuroimaging.html">https://www.ohbmbrainmappingblog.com/blog/ohbm-ondemand-how-to-machine-learning-in-neuroimaging</a></em></div>
+			</div>
+		</div>
+				</div>
+
+	</div>
+</div>
+
+</div>
+
+			</div>
+		</div>
+
+		<div id="footer-wrap"><div class='wsite-elements wsite-footer'>
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -20px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:79.1%; padding:0 20px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:left;"><font size="4">stay connected with ohbm!</font></h2>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:20.9%; padding:0 20px;">
+					
+						
+
+<div style="text-align:center;"><div style="height:20px;overflow:hidden"></div>
+<span class="wsite-social wsite-social-default"><a class='first-child wsite-social-item wsite-social-facebook' href='https://www.facebook.com/Organization-for-Human-Brain-Mapping-373611079434746/?fref=nf' target='_blank' alt='Facebook' aria-label='Facebook'><span class='wsite-social-item-inner'></span></a><a class='wsite-social-item wsite-social-twitter' href='https://twitter.com/OHBM_SciNews' target='_blank' alt='Twitter' aria-label='Twitter'><span class='wsite-social-item-inner'></span></a><a class='last-child wsite-social-item wsite-social-linkedin' href='https://www.linkedin.com/company/organization-for-human-brain-mapping' target='_blank' alt='Linkedin' aria-label='Linkedin'><span class='wsite-social-item-inner'></span></a></span>
+<div style="height:0px;overflow:hidden"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:33.71103822001%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:left;"><font size="3"><span><a href="http://www.humanbrainmapping.org/i4a/pages/index.cfm?pageid=3282">become a member</a></span></font></h2>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:37.840880509071%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:left;"><font size="3">Telephone</font></h2>
+
+<div class="paragraph" style="text-align:left;">952-646-2029</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:28.44808127092%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:left;"><a href="mailto:info@humanbrainmapping.org"><strong><font size="3">Email ohbm</font></strong></a><br /></h2>
+
+<div class="paragraph" style="text-align:left;"><a href="mailto:hello@ohbm-com.com"><strong><font size="4">EMAIL BLOG TEAM</font></strong></a></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<div class="paragraph" style="text-align:left;"><em><font color="#a1a1a1" size="2">Header image created by&nbsp;<span>Thiebaut de Schotten &amp; Batrancourt&nbsp;&nbsp;</span></font><br /><span><font color="#a1a1a1"><font size="2">www.brainconnectivitybehaviour.eu</font></font></span></em><br /><br /></div></div></div>
+
+	</div>
+
+	<!-- JavaScript -->
+	<script type="text/javascript" src="files/theme/plugins.js%3F1637098368"></script>
+	<script type="text/javascript" src="files/theme/mobile.js%3F1637098368"></script>
+	<script type="text/javascript" src="files/theme/custom.js%3F1637098368"></script>
+    <div id="customer-accounts-app"></div>
+    <script src="https://cdn2.editmysite.com/js/site/main-customer-accounts-site.js?buildTime=1669754019"></script>
+
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78661612-1', 'auto');
+  ga('send', 'pageview');
+
+</script><script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-7870337-1']);
+	_gaq.push(['_setDomainName', 'none']);
+	_gaq.push(['_setAllowLinker', true]);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		// NOTE: keep the [1] if you replace this code. Otherwise cookie banner scripts won't be first on the page
+		var s = document.getElementsByTagName('script')[1]; s.parentNode.insertBefore(ga, s);
+	})();
+
+	_W.Analytics = _W.Analytics || {'trackers': {}};
+	_W.Analytics.trackers.wGA = '_gaq';
+</script>
+
+<script type="text/javascript" async=1>
+	// NOTE: keep the getElementsByTagName(o)**[1]** if you replace this code. Otherwise cookie banner scripts won't be first on the page
+	;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+			p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+			};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[1];n.async=1;
+			n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,'script','//cdn2.editmysite.com/js/wsnbn/snowday262.js','snowday'));
+
+	var r = [99, 104, 101, 99, 107, 111, 117, 116, 46, 40, 119, 101, 101, 98, 108, 121, 124, 101, 100, 105, 116, 109, 121, 115, 105, 116, 101, 41, 46, 99, 111, 109];
+	var snPlObR = function(arr) {
+		var s = '';
+		for (var i = 0 ; i < arr.length ; i++){
+			s = s + String.fromCharCode(arr[i]);
+		}
+		return s;
+	};
+	var s = snPlObR(r);
+
+	var regEx = new RegExp(s);
+
+	_W.Analytics = _W.Analytics || {'trackers': {}};
+	_W.Analytics.trackers.wSP = 'snowday';
+	_W.Analytics.user_id = '139872966';
+	_W.Analytics.site_id = '204303227559001667';
+
+	var drSegmentsTag = document.getElementById('drSegments');
+	if (drSegmentsTag) {
+		_W.Analytics.spContexts = _W.Analytics.spContexts || [];
+
+		var segmentData = JSON.parse(drSegmentsTag.innerText);
+		segmentData.forEach(function(test) {
+			_W.Analytics.spContexts.push({
+				schema: "iglu:com.weebly/context_ab_segment/jsonschema/1-0-0",
+				data: {
+					test_id: test.name,
+					segment: test.variant,
+				}
+			});
+		});
+	}
+
+
+	(function(app_id, ec_hostname, discover_root_domain) {
+		var track = window[_W.Analytics.trackers.wSP];
+		if (!track) return;
+		track('newTracker', app_id, ec_hostname, {
+			appId: app_id,
+			post: true,
+			platform: 'web',
+			discoverRootDomain: discover_root_domain,
+			cookieName: '_snow_',
+			contexts: {
+				webPage: true,
+				performanceTiming: true,
+				gaCookies: true
+			},
+			crossDomainLinker: function (linkElement) {
+				return regEx.test(linkElement.href);
+			},
+			respectDoNotTrack: true
+		});
+		track('trackPageView', _W.Analytics.user_id+':'+_W.Analytics.site_id, _W.Analytics.spContexts);
+		track('crossDomainLinker', function (linkElement) {
+			return regEx.test(linkElement.href);
+		});
+	})(
+		'_wn',
+		'ec.editmysite.com',
+		true
+	);
+</script>
+
+
+
+
+
+<script>
+	(function(jQuery) {
+		try {
+			if (jQuery) {
+				jQuery('div.blog-social div.fb-like').attr('class', 'blog-social-item blog-fb-like');
+				var $commentFrame = jQuery('#commentArea iframe');
+				if ($commentFrame.length > 0) {
+					var frameHeight = jQuery($commentFrame[0].contentWindow.document).height() + 50;
+					$commentFrame.css('min-height', frameHeight + 'px');
+				}
+				if (jQuery('.product-button').length > 0){
+					jQuery(document).ready(function(){
+						jQuery('.product-button').parent().each(function(index, product){
+							if(jQuery(product).attr('target') == 'paypal'){
+								if (!jQuery(product).find('> [name="bn"]').length){
+									jQuery('<input>').attr({
+										type: 'hidden',
+										name: 'bn',
+										value: 'DragAndDropBuil_SP_EC'
+									}).appendTo(product);
+								}
+							}
+						});
+					});
+				}
+			}
+			else {
+				// Prototype
+				$$('div.blog-social div.fb-like').each(function(div) {
+					div.className = 'blog-social-item blog-fb-like';
+				});
+				$$('#commentArea iframe').each(function(iframe) {
+					iframe.style.minHeight = '410px';
+				});
+			}
+		}
+		catch(ex) {}
+	})(window._W && _W.jQuery);
+</script>
+
+<script>
+	window._W.isEUUser = false;
+	window._W.showCookieToAll = "";
+</script>
+
+
+	</body>
+</html>

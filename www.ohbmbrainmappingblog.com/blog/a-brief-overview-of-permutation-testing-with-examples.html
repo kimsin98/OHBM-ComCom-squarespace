@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+	<head>
+		<title>A BRIEF OVERVIEW OF PERMUTATION TESTING WITH EXAMPLES - ORGANIZATION FOR HUMAN BRAIN MAPPING</title><meta property="og:site_name" content="ORGANIZATION FOR HUMAN BRAIN MAPPING" />
+<meta property="og:title" content="A BRIEF OVERVIEW OF PERMUTATION TESTING WITH EXAMPLES" />
+<meta property="og:description" content="By Tian Ge , BT Thomas Yeo , Anderson M Winkler" />
+<meta property="og:image" content="http://www.ohbmbrainmappingblog.com/uploads/1/3/9/8/139872966/blog-photo-01-70_orig.png" />
+<meta property="og:image" content="http://www.ohbmbrainmappingblog.com/uploads/1/3/9/8/139872966/blog-photo-01-71_orig.png" />
+<meta property="og:url" content="http://www.ohbmbrainmappingblog.com/1/post/2018/03/a-brief-overview-of-permutation-testing-with-examples.html" />
+<meta http-equiv='cache-control' content='no-cache' />
+
+
+<meta name="keywords" content="brain mapping, neuroscience, neuro imaging, MRI, fMRI, neurodata, EEG, MEG, OHBM" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0;">
+
+		
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="https://cdn2.editmysite.com/css/sites.css?buildTime=1673495532" />
+<link rel="stylesheet" type="text/css" href="https://cdn2.editmysite.com/css/old/fancybox.css?1669754019" />
+<link rel="stylesheet" type="text/css" href="https://cdn2.editmysite.com/css/social-icons.css?buildtime=1669754019" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="../files/main_style.css%3F1669824646.css" title="wsite-theme-css" />
+<link href='https://cdn2.editmysite.com/fonts/Source_Sans_Pro/font.css?2' rel='stylesheet' type='text/css' />
+<link href='https://cdn2.editmysite.com/fonts/Raleway/font.css?2' rel='stylesheet' type='text/css' />
+<link href='https://cdn2.editmysite.com/fonts/Roboto_Condensed/font.css?2' rel='stylesheet' type='text/css' />
+
+<style type='text/css'>
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+@media screen and (min-width: 767px) {.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+}</style>
+
+		<script src='../files/templateArtifacts.js%3F1669824646'></script>
+<script>
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var ASSETS_BASE = '//cdn2.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+</script>
+<script src='https://cdn2.editmysite.com/js/jquery-1.8.3.min.js'></script>
+
+<script type="text/javascript" src="https://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1669754019&amp;"></script>
+<script src="https://cdn2.editmysite.com/js/site/main.js?buildTime=1673495532"></script><script type="text/javascript">
+		function initCustomerAccountsModels() {
+					(function(){_W.setup_rpc({"url":"\/ajax\/api\/JsonRPC\/CustomerAccounts\/","actions":{"CustomerAccounts":[{"name":"login","len":2,"multiple":false,"standalone":false},{"name":"logout","len":0,"multiple":false,"standalone":false},{"name":"getSessionDetails","len":0,"multiple":false,"standalone":false},{"name":"getAccountDetails","len":0,"multiple":false,"standalone":false},{"name":"getOrders","len":0,"multiple":false,"standalone":false},{"name":"register","len":4,"multiple":false,"standalone":false},{"name":"emailExists","len":1,"multiple":false,"standalone":false},{"name":"passwordReset","len":1,"multiple":false,"standalone":false},{"name":"passwordUpdate","len":3,"multiple":false,"standalone":false},{"name":"validateSession","len":1,"multiple":false,"standalone":false}]},"namespace":"_W.CustomerAccounts.RPC"});
+_W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":"_W.CustomerAccounts.BackboneModelData","collection_namespace":"_W.CustomerAccounts.BackboneCollectionData","bootstrap_namespace":"_W.CustomerAccounts.BackboneBootstrap","models":{"CustomerAccounts":{"_class":"CustomerAccounts.Model.CustomerAccounts","defaults":null,"validation":null,"types":null,"idAttribute":null,"keydefs":null}},"collections":{"CustomerAccounts":{"_class":"CustomerAccounts.Collection.CustomerAccounts"}},"bootstrap":[]});
+})();
+		}
+		if(document.createEvent && document.addEventListener) {
+			var initEvt = document.createEvent('Event');
+			initEvt.initEvent('customerAccountsModelsInitialized', true, false);
+			document.dispatchEvent(initEvt);
+		} else if(document.documentElement.initCustomerAccountsModels === 0){
+			document.documentElement.initCustomerAccountsModels++
+		}
+		</script>
+		<script type="text/javascript"> _W = _W || {}; _W.securePrefix='www.ohbmbrainmappingblog.com'; </script><script>_W = _W || {};
+			_W.customerLocale = "en_GB";
+			_W.storeName = null;
+			_W.isCheckoutReskin = false;
+			_W.storeCountry = "US";
+			_W.storeCurrency = "USD";
+			_W.storeEuPrivacyPolicyUrl = "";
+			com_currentSite = "204303227559001667";
+			com_userID = "139872966";</script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="https://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1673495532&amp;"></script><script> _W.themePlugins = {"navpane":{"condense":1024,"forced":1}};</script><script src='https://cdn2.editmysite.com/js/site/theme-plugins.js?buildTime=1673495532'></script><script type="text/javascript"> _W.recaptchaUrl = "https://www.google.com/recaptcha/api.js"; </script><script type="text/javascript"><!--
+	
+	
+	function initFlyouts(){
+		initPublishedFlyoutMenus(
+			[{"id":"124045111785600110","title":"BLOG","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"457330105466321910","title":"Tutorials","url":"tutorials.html","target":"","nav_menu":false,"nonclickable":false},{"id":"286933796587166470","title":"Media","url":"media.html","target":"","nav_menu":false,"nonclickable":false},{"id":"479719222573141757","title":"Contributors","url":"contributors.html","target":"","nav_menu":false,"nonclickable":false},{"id":"566172753373531491","title":"OHBM WEBSITE","url":"http:\/\/www.humanbrainmapping.org","target":"_blank","nav_menu":false,"nonclickable":false}],
+			"124045111785600110",
+			'',
+			'active',
+			false,
+			{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+			{"hasCustomMinicart":true}
+		)
+	}
+//-->
+</script>
+		
+		
+	</head>
+	<body class="header-page  wsite-page-index wsite-blog-post  wsite-theme-light"><div id="site-wrap">
+
+		<div id="search" class="overlay">
+			<h2>Search the site...</h2>
+		</div>
+
+		<div id="header-wrap">
+			<div class="container">
+				<div class="spacer">
+					<div id="nav-open" class="w-navpane-trigger hamburger" data-target="#nav"><span></span></div>
+				</div>
+				<div class="spacer hidden-sm"></div>
+				<div id="logo"><span class="wsite-logo">
+
+	<a href="../index.html">
+	
+	<span id="wsite-title">ORGANIZATION FOR HUMAN BRAIN MAPPING</span>
+	
+	</a>
+
+</span></div>
+				<div class="spacer"><span class="wsite-search">
+	<form id="wsite-header-search-form" action="https://www.ohbmbrainmappingblog.com/apps/search" method="get">
+		<input type="text" name="q" class="wsite-search-input" autocomplete="off" placeholder="Search"/><span class="wsite-search-button"><span class="wsite-search-button-inner"></span></span>
+	</form>
+</span></div>
+				<div class="spacer hidden-sm"></div>
+			</div>
+			<div class="w-navlist nav"><ul class="wsite-menu-default">
+		<li id="active" class="wsite-menu-item-wrap">
+			<a
+						href="../index.html"
+				class="wsite-menu-item"
+				>
+				BLOG
+			</a>
+			
+		</li>
+		<li id="pg457330105466321910" class="wsite-menu-item-wrap">
+			<a
+						href="../tutorials.html"
+				class="wsite-menu-item"
+				>
+				Tutorials
+			</a>
+			
+		</li>
+		<li id="pg286933796587166470" class="wsite-menu-item-wrap">
+			<a
+						href="../media.html"
+				class="wsite-menu-item"
+				>
+				Media
+			</a>
+			
+		</li>
+		<li id="pg479719222573141757" class="wsite-menu-item-wrap">
+			<a
+						href="../contributors.html"
+				class="wsite-menu-item"
+				>
+				Contributors
+			</a>
+			
+		</li>
+		<li id="pg566172753373531491" class="wsite-menu-item-wrap">
+			<a
+						href="http://www.humanbrainmapping.org"
+					target="_blank"
+				class="wsite-menu-item"
+				>
+				OHBM WEBSITE
+			</a>
+			
+		</li>
+</ul>
+</div>
+		</div>
+
+		<div id="close-overlay" class="w-navpane-close" data-target="#nav"><span class="container"></span></div>
+
+		<div id="nav" class="overlay w-navpane w-navpane-fullscreen">
+			<div id="navcontainer" class="nav"><ul class="wsite-menu-default">
+		<li id="active" class="wsite-menu-item-wrap">
+			<a
+						href="../index.html"
+				class="wsite-menu-item"
+				>
+				BLOG
+			</a>
+			
+		</li>
+		<li id="pg457330105466321910" class="wsite-menu-item-wrap">
+			<a
+						href="../tutorials.html"
+				class="wsite-menu-item"
+				>
+				Tutorials
+			</a>
+			
+		</li>
+		<li id="pg286933796587166470" class="wsite-menu-item-wrap">
+			<a
+						href="../media.html"
+				class="wsite-menu-item"
+				>
+				Media
+			</a>
+			
+		</li>
+		<li id="pg479719222573141757" class="wsite-menu-item-wrap">
+			<a
+						href="../contributors.html"
+				class="wsite-menu-item"
+				>
+				Contributors
+			</a>
+			
+		</li>
+		<li id="pg566172753373531491" class="wsite-menu-item-wrap">
+			<a
+						href="http://www.humanbrainmapping.org"
+					target="_blank"
+				class="wsite-menu-item"
+				>
+				OHBM WEBSITE
+			</a>
+			
+		</li>
+</ul>
+</div>
+			<div><div style="text-align:left;"><div style="height:0px;overflow:hidden"></div>
+<span class="wsite-social wsite-social-default"></span>
+<div style="height:0px;overflow:hidden"></div></div></div>
+		</div>
+
+		<div id="content-wrap">
+			<div id="banner-wrap">
+				<div id="banner" class="container">
+					<div class="wsite-elements wsite-not-footer wsite-header-elements">
+	<div class="wsite-section-wrap">
+	<div  class="wsite-section wsite-header-section wsite-section-bg-image" style="height: 250px;vertical-align: middle;background-image: url(https://www.ohbmbrainmappingblog.com/blog/&quot;/uploads/1/3/9/8/139872966/background-images/461715039.jpg&quot;) ;background-repeat: no-repeat ;background-position: 50% 50% ;background-size: 100% ;background-color: transparent ;background-size: cover;" >
+		<div class="wsite-section-content">
+			
+						<div class="container">
+				<div class="wsite-section-elements">
+					<h2 class="wsite-content-title"><font color="#f8f1f1" size="7">&nbsp;B&#8203;RAIN MAPPING</font></h2>
+
+<div class="paragraph"></div>
+				</div>
+			</div>
+					
+		</div>
+		<div class=""></div>
+	</div>
+</div>
+
+</div>
+
+				</div>
+			</div>
+
+			<div id="main-wrap">
+				<div class="wsite-section-content">
+					<div class="container"><div class="wsite-elements wsite-not-footer">
+	<table 
+	id="blogTable" 
+		class="wsite-not-footer" 
+	style="border: 0; width: 100%; table-layout: fixed" 
+>
+	<tr>
+	    <td valign="top">
+	        	<div id="124045111785600110-blog" class="blog-body" style="float: left;"> 
+		<div id="wsite-content">	<div id="blog-post-910028945224501202" class="blog-post">
+	
+	
+		<div class="blog-header">
+			<h2 class="blog-title">
+					<a class="blog-title-link blog-link" href="a-brief-overview-of-permutation-testing-with-examples.html">A BRIEF OVERVIEW OF PERMUTATION TESTING WITH EXAMPLES</a>
+
+			</h2>
+			<p class="blog-date">
+					<span class="date-text">
+		3/19/2018
+	</span>
+
+			</p>
+			<p class="blog-comments">
+					<a href="a-brief-overview-of-permutation-testing-with-examples.html#comments" class="blog-link">
+		4 Comments
+	</a>
+
+			</p>
+		</div>
+	
+		<div class="blog-separator">&nbsp;</div>
+	
+		<div class="blog-content">
+				<div class="paragraph"><span style="color:#000000; font-weight:400">By </span><a href="https://scholar.harvard.edu/tge"><span style="color:#1155cc; font-weight:400">Tian Ge</span></a><span style="color:#000000; font-weight:400">, </span><a href="https://yeolab.weebly.com/"><span style="color:#1155cc; font-weight:400">BT Thomas Yeo</span></a><span style="color:#000000; font-weight:400">, </span><a href="https://brainder.org/"><span style="color:#1155cc; font-weight:400">Anderson M Winkler</span></a><br /><span></span><br /></div>  <div class="paragraph"><span style="color:#000000; font-weight:400">Permutation methods are a class of statistical tests that, under minimal assumptions, can provide exact control of false positives (i.e., type I error). The central assumption is simply that of </span><span style="color:#000000; font-weight:400">exchangeability</span><span style="color:#000000; font-weight:400">, that is, swapping data points keeps the data just as likely as the original. With the increasing availability of inexpensive large-scale computational resources and openly shared, large datasets, permutation methods are becoming popular in neuroimaging due to their flexibility and ease of concern about yielding nominal error rates than parametric tests, which rely on assumptions and/or approximations that may be difficult to meet in real data. This becomes even more important in the presence of multiple testing, in that assumptions may not be satisfied for each and every test, and the correlation across tests may be difficult to account for. However, even exchangeability can be violated in the presence of dependence among observations, and it may not always be clear what to permute. The aim of this blog post is to emphasize the relevance of linking the null hypothesis and the dependence structure within the data to what should be shuffled in a permutation test. We provide a few practical examples, and offer some glimpses of the theory along the way.</span><br /><br /><br /><span style="color:#000000; font-weight:700">Example 1: Permutation mechanics</span><br /><br /><span style="color:#000000; font-weight:400">Let&rsquo;s begin by reviewing the </span><a href="https://doi.org/10.1002/hbm.1058"><span style="color:#1155cc; font-weight:400">mechanics of a permutation test</span></a><span style="color:#000000; font-weight:400">. Consider a comparison between two groups, for example whether hippocampal volume is different between subjects with Alzheimer&rsquo;s disease (AD) and demographically matched cognitively normal controls (that is, a group with similar age, sex, education level, etc). If we assume that in both groups the hippocampal volumes are independent samples from a Gaussian distribution, a classical parametric two-sample t-test can be used to test for a difference between means of the two groups. However, this distributional assumption may not be true, and departures from this assumption can potentially lead to incorrect conclusions. In these circumstances, permutation tests perform better than parametric tests by providing a valid statistical test with much weaker assumptions. Specifically, under the </span><span style="color:#000000; font-weight:400">null hypothesis</span><span style="color:#000000; font-weight:400"> that the hippocampal volume has no actual difference between AD cases and controls, the group membership (or the label of case and control) becomes arbitrary, that is, any subject from one group might as well have been from the other.</span><br /></div>  <div>  <!--BLOG_SUMMARY_END--></div>  <div class="paragraph"><span style="color:rgb(0, 0, 0)">While it may seem implausible that this would be the case for patients and controls, in fact this is what we are testing: all else being equal (that is, exchangeable), and any difference found must relate to the means, which is what we are interested in. In fact, a classical parametric two-sample test (with equal variance) makes not just the same assumption, but also further assumes that patients and controls come from the same Gaussian distribution. Permutation tests do not require Gaussianity; it suffices that the data are merely exchangeable. Exchangeability further relaxes another important assumption of parametric tests:&nbsp;</span><span style="color:rgb(0, 0, 0)">independence</span><span style="color:rgb(0, 0, 0)">. Data that are not independent may still be exchangeable, either globally or under certain restrictions, as presented in more detail in Example 3 below.</span><br /><br /><span style="color:rgb(0, 0, 0)">With exchangeability, we compute the t&nbsp;</span><span style="color:rgb(0, 0, 0)">statistic</span><span style="color:rgb(0, 0, 0)">&nbsp;under each permutation, and produce the&nbsp;</span><span style="color:rgb(0, 0, 0)">permutation distribution</span><span style="color:rgb(0, 0, 0)">&nbsp;of the statistic under the null. The permutation distribution is the empirical cumulative distribution function (cdf) obtained from the data themselves, as opposed to from some idealized distribution, as is the case with parametric tests. The observed test statistic can be considered a random sample from the permutation distribution because it is equally likely to have arisen from any case-control re-labeling given the null hypothesis.</span><br /><br /><span style="color:rgb(0, 0, 0)">The&nbsp;</span><span style="color:rgb(0, 0, 0)">p-value</span><span style="color:rgb(0, 0, 0)">&nbsp;is the probability of finding a test statistic for the group comparison at least as high as the one observed, provided that there is no actual difference (i.e., null hypothesis is true). So, the p-value can be calculated by randomly permuting the group labels many times, each time recalculating the test statistic; at the end of the process, we check how often a larger statistic was observed than the original (before any shuffling had been applied), and divide that by the number of permutations performed. Figure 1 shows an example in which there are three subjects in each group; before any permutation is done, the test statistic is t = +0.7361. After exhaustively computing all 20 possible permutations, we see that 4 of these (including the non-permuted) are higher than or equal to +0.7361. Thus, the p-value is 4/20 = 0.20. If we had decided beforehand that our&nbsp;</span><span style="color:rgb(0, 0, 0)">significance level</span><span style="color:rgb(0, 0, 0)">&nbsp;would be 0.05, we would say that the result of this test is not significant, that is, there is no significant difference in hippocampal volume between AD patients and controls.</span><br /></div>  <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center"> <a> <img src="../uploads/1/3/9/8/139872966/blog-photo-01-70_orig.png" alt="Picture" style="width:430;max-width:100%" /> </a> <div style="display:block;font-size:90%">Figure 1: Consider the hippocampal volume measured in 6 subjects, three with Alzheimer’s disease, and three cognitively normal controls. The values measured are shown in the boxes (ranging between 3498 and 3588), controls in blue, AD patients in green. The test statistic for a difference Controls > AD is t = +0.7361. If there is no actual difference between the two groups, then the group assignment can be randomly permuted. For each such permutation, a new test statistic is calculated. In this example, four t statistics (shown in red) computed after random permutations of the group assignments, out of the 20 performed, were equal to or larger than the observed, non-permuted statistic. The p-value is therefore 4/20 = 0.20.</div> </div></div>  <div class="paragraph"><span style="color:#000000; font-weight:700">Example 2: Permutation with the presence of nuisance</span><br /><br /><span style="color:#000000; font-weight:400">Suppose in Example 1 that there were other variables that could potentially explain some of the variability seen in hippocampal volume. Some of these variables could even be associated with diagnosis itself. For example, it may be the case that, in this particular study, AD patients were older than cognitively normal controls. To account for these </span><span style="color:#000000; font-weight:400">nuisance variables</span><span style="color:#000000; font-weight:400">, we can formulate the problem as a multiple regression, in which hippocampal volume is the dependent variable, whereas the case-control status, along with other potential nuisance variables, are the independent variables. We would then test whether the regression coefficient corresponding to the case-control label is significantly different than zero. Now it is less clear what should be permuted. If we permute just the group labels, what to do with the other variables in the model? It turns out that various approaches have been considered in the literature.</span><br /><br /><a href="https://doi.org/10.1016/j.neuroimage.2014.01.060"><span style="color:#1155cc; font-weight:400">Systematic evaluations</span></a><span style="color:#000000; font-weight:400"> show that, among a host of permutation and regression strategies, the method attributed to </span><a href="http://dx.doi.org/10.1080/07350015.1983.10509354"><span style="color:#1155cc; font-weight:400">Freedman and Lane</span></a><span style="color:#000000; font-weight:400"> provides accurate false positive control in the presence of nuisance variables and is robust to extreme outliers in the data. In the Freedman-Lane method, we regress out all nuisance variables from the hippocampal volume measurements to obtain the residuals of this nuisance-only model, and use the permuted residuals as the new dependent variable in the multiple regression, from which we construct the permutation distribution for the test statistic (i.e., the regression coefficient of interest). Intuitively, once the nuisance has been regressed out, what remains should be indistinguishable between AD patients and controls if the null hypothesis is true, and thus, can be permuted.</span><br /><br /><span style="color:#000000; font-weight:400">We note that whichever regression and permutation strategy is adopted, it is crucial that what is permuted is what would render the subjects different were the alternative hypothesis true. It is not relevant to permute aspects of the dataset that would not be affected should the null hypothesis be false, that is, should an effect actually exists. This is important because, when an experiment becomes complex (e.g., with multiple factors, levels, nuisance variables, and/or multiple response variables), it can be easy to permute aspects of the data that are not informative with respect to the null hypothesis. One should not lose sight of what is being tested, and permute the data accordingly.</span><span style="color:#000000; font-weight:700"><br /><br /><br />Example 3: Permutation with the presence of dependence in observations</span><span style="color:#000000; font-weight:400"><br /><br />Data are </span><a href="https://doi.org/10.1016/j.neuroimage.2015.05.092"><span style="color:#1155cc; font-weight:400">not always freely exchangeable</span></a><span style="color:#000000; font-weight:400">. It may be the case, for example, that there are repeated measurements from the same subjects among the observations. Or maybe some or all subjects are twins, siblings, or otherwise relatives. Cases such as these restrict the possibilities for permutations, but even so, permutation tests continue to be possible. They proceed in a similar manner as in the examples above, but care needs to be taken when selecting the permutations that are allowed. Exchangeability as defined above &mdash; that is, permuting the data keeps them just as likely as originally observed &mdash; must be preserved. More technically, it means that the </span><span style="color:#000000; font-weight:400">joint distribution</span><span style="color:#000000; font-weight:400"> of all the data points must remain unchanged under the null. For example, in a twin study, one could permute the subjects within twin pairs, and pairs of twins could be permuted as a whole, but one sibling should never be mixed with the sibling from a different family; see an example in Figure 2. These restrictions, unfortunately, tend to reduce power compared to the analyses in which all subjects are independent and freely exchangeable. However, all other benefits of permutation tests are kept.</span><br /><br /></div>  <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center"> <a> <img src="../uploads/1/3/9/8/139872966/blog-photo-01-71_orig.png" alt="Picture" style="width:auto;max-width:100%" /> </a> <div style="display:block;font-size:90%">Figure 2: Observations that are not independent restrict the possible rearrangements of the data. In this figure, each white circle represent an observation (e.g., a measurement from a subject), the blue (+) or red (−) dots indicate whether the branches that originate at that dot are or are not exchangeable, respectively, and therefore indicate observations that can be permuted with each other. On the left, 10 unrelated subjects who are freely exchangeable. On the right, 18 subjects, some of which were recruited along with their siblings (FS), and/or with their monozygotic (MZ) or dizygotic (DZ) twin. Siblings must be kept together in every rearrangement of the data, which needs be performed in blocks; subjects within a sibship can be permuted; some families may have both twins and non-twins, which requires nested blocks. (Figure licensed under CC-BY 4.0.  https://creativecommons.org/licenses/by/4.0/)</div> </div></div>  <div class="paragraph"><br /><span style="color:#000000; font-weight:400">Consider a longitudinal extension of the AD patients vs. controls example, in which two measurements are obtained from each subject, one before and another after an intervention is applied. As per above, the measurements must stay together within subject. However, depending on what is being tested, we may permute the data only within-subject, or only the subjects as a whole while keeping the order of intra-subject measurements unaltered, or do both things simultaneously. Within-subject effects (that is, the effect of treatment) would require that permutations happen within-subject, whereas between-subject effects would require permutations of the subjects as a whole. Interactions in a mixed design (within and between-subject effects) could benefit from both types of permutation. Crucially, what needs to be permuted is what would be equal should the null hypothesis hold, and that would differ should the alternative hypothesis be actually true.</span><br /><br /><br /><span style="color:#000000; font-weight:700">Example 4: Comparison between models</span><br /><br /><span style="color:#000000; font-weight:400">Now suppose that, in our AD example, in addition to hippocampal volume, we have also measured the amygdala volume for each subject, and are interested in investigating whether hippocampal volume is a better biomarker of AD than amygdala volume (for example, in terms of standardized mean difference between cases and controls as measured by the Cohen&rsquo;s d statistic). It is tempting to permute the case-control label, but this strategy turns out to be wrong as it completely breaks the associations between the hippocampal/amygdala volume and disease status, which should be retained under the null hypothesis. In fact, in this example, it is unclear what to permute. As a second example, if we want to test whether the mean of hippocampal volume in AD cases is significantly different from a fixed value (e.g., the typical size of hippocampus in normal aging subjects), it can be seen that there is nothing to permute. In these circumstances where a permutation test is difficult to apply, we need to resort to other methods such as </span><a href="https://www.crcpress.com/An-Introduction-to-the-Bootstrap/Efron-Tibshirani/p/book/9780412042317"><span style="color:#1155cc; font-weight:400">the bootstrap</span></a><span style="color:#000000; font-weight:400"> for statistical inference. </span><br /><br /><br /><span style="color:#000000; font-weight:400">The bootstrap is an established data-based simulation method, which is often used to assign measures of accuracy, such as standard error, bias, and confidence intervals, to a statistical estimate. It essentially uses the observed data to define an empirical distribution that estimates the unknown underlying data-generation mechanism, and then generates </span><span style="color:#000000; font-weight:400">bootstrap samples</span><span style="color:#000000; font-weight:400"> and </span><span style="color:#000000; font-weight:400">bootstrap replications</span><span style="color:#000000; font-weight:400"> of the statistic of interest using the empirical distribution, from which measures of accuracy can be calculated. </span><br /><br /><span style="color:#000000; font-weight:400">Bootstrap can be applied to virtually any statistic and a wide variety of situations. For example, by sampling cases and controls with replacement independently, we can calculate the standard error or construct confidence intervals for the Cohen&rsquo;s d statistic for hippocampal and amygdala volume, respectively, as well as for the difference of the two Cohen&rsquo;s d. Given the strong connection between confidence intervals and hypothesis testing, a p-value can also be produced indicating whether the difference in Cohen&rsquo;s d is significantly different from zero. In fact, bootstrap can be applied to hypothesis testing, including the questions described in Examples 1-3. However, unlike the permutation p-value, which is exact, the bootstrap significance is only approximate and thus less accurate.</span><br /><br /><span style="color:#000000; font-weight:400">Therefore, permutation is a natural and favorable choice when the null/alternative hypothesis is well defined and what to permute is clear. Bootstrap is useful when the primary goal is to quantify the accuracy of an estimate or when a permutation test is not available in a hypothesis test (e.g., nothing to permute). That said, we also caution that bootstrap relies on an accurate empirical estimation of the true underlying probability distribution. Thus the sampling procedure requires careful consideration in order to respect the data generation mechanism in the presence of complex data structures. For example, block bootstrap is often used to replicate correlations within the data, while variants of the wild bootstrap are used to capture heteroscedasticity in the sample.</span><br /><br /><span style="color:#000000; font-weight:700">Summary</span><ul><li style="color:#000000"><span style="color:#000000; font-weight:400">Permutation requires weak distributional assumptions that justify the exchangeability</span></li><li style="color:#000000"><span style="color:#000000; font-weight:400">Permute what is exchangeable, and that would differ under the alternative hypothesis, while retaining other dependence structure in the data as much as possible</span></li><li style="color:#000000"><span style="color:#000000; font-weight:400">Consult statisticians when unsure about the permutation procedure</span><span style="color:#000000; font-weight:400"></span></li></ul><br /><strong>Practical advice:</strong>&nbsp;It's easy to get started with permutation methods in brain imaging. Most software packages have some sort of permutation test implemented. AFNI's&nbsp;<a href="https://afni.nimh.nih.gov/pub/dist/doc/program_help/3dttest++.html" target="_blank">3dttest++</a>&nbsp;now uses permutation by default for cluster inference with the -ClustSim option;&nbsp;BrainVoyager has a&nbsp;<a href="http://www.brainvoyager.com/bvresources/RainersBVBlog/files/a8a22212f9f1f01e4da11fef4ba91da8-34.html" target="_blank">randomisation plugin</a>&nbsp;(permutation tests are sometimes called randomisation tests);&nbsp;Freesurfer can do permutation with&nbsp;<a href="https://surfer.nmr.mgh.harvard.edu/fswiki/mri_glmfit" target="_blank">mri_glmfit-sim</a>; FSL has its&nbsp;<a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/Randomise" target="_blank">randomise</a>&nbsp;tool; and SPM has the&nbsp;<a href="http://www.nisox.org/Software/SnPM" target="_blank">SnPM toolbox</a>. Finally,&nbsp;<a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/PALM" target="_blank">PALM</a>&nbsp;is a standalone tool for permutation that works with different types of input data and has various advanced features.<br /><span style="color:#000000; font-weight:400"></span><br /></div>
+
+		</div>
+	
+	
+			<div class="blog-social  ">
+		<div class="blog-social-item blog-fb-like"><fb:like href="https://www.ohbmbrainmappingblog.com/1/post/2018/03/a-brief-overview-of-permutation-testing-with-examples.html" width="90" layout="button_count" action="like" show_faces="false" share="false"></fb:like></div><div class="blog-social-item"><a class="twitter-share-button" href="http://twitter.com/share?url=https://www.ohbmbrainmappingblog.com/1/post/2018/03/a-brief-overview-of-permutation-testing-with-examples.html" data-text="A BRIEF OVERVIEW OF PERMUTATION TESTING WITH EXAMPLES - ORGANIZATION FOR HUMAN BRAIN MAPPING" data-count="horizontal"></a></div>
+		<div style="clear:both"></div>
+	</div>
+
+	
+		<div class="blog-comments-bottom">
+				<a href="a-brief-overview-of-permutation-testing-with-examples.html#comments" class="blog-link">
+		4 Comments
+	</a>
+
+		</div>
+	
+		<div class="blog-post-separator"></div>
+	</div>
+
+
+    <a name="comments" id="comments"></a>
+<div id="commentArea">
+	<div class="blog-comment-area">
+		
+
+		<div id="518739963219934095">
+			<div class="blogCommentWrap even blogCommentLevel0
+				
+				">
+				<div class="blogCommentHeading">
+					<div class="blogCommentHeadingInner">
+						<div class="blogCommentAuthor">
+							<span class="name">Johan Carlin</span>
+						</div>
+						<div class="blogCommentDate">3/20/2018 09:34:44 am</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="blogCommentText">
+					<p>
+							Great post.<br/>
+<br/>
+"if we want to test whether the mean of hippocampal volume in AD cases is significantly different from a fixed value (e.g., the typical size of hippocampus in normal aging subjects), it can be seen that there is nothing to permute"<br/>
+<br/>
+Wouldn't a sign-flip permutation test be possible in this scenario? Ie subtract the control value from each statistic, permute the sign of the resulting differences, and estimate a null distribution of standardised effects. See e.g. Nichols & Holmes, 2001, HBM. There is an additional assumption about the symmetry of the null distribution, but that doesn't seem problematic for the example.
+					</p>
+				</div>
+				<div class="blogCommentOptions">
+							 
+									<span
+									 href="#"
+									 class="blog-button reply-comment"
+									 onclick="blogCommentDisplayForm('//www.weebly.com/editor/apps/showCommentForm-v2.php?user_id=139872966&amp;blog_id=699015543220266125&amp;post_id=910028945224501202&amp;comment_id=518739963219934095&amp;parent=http://www.ohbmbrainmappingblog.com/blog/a-brief-overview-of-permutation-testing-with-examples&amp;is_mobile=&amp;parent_id=518739963219934095&amp;r=3&is_light=1', 'blogCommentReplyWrapper_518739963219934095', '518739963219934095'); return false;"
+									 title="Reply to this comment"
+									 >
+										<span>Reply</span>
+									</span>
+					<div class="clear"></div>
+						<div id="blogCommentReplyWrapper_518739963219934095" class="blogCommentReplyWrapper blogCommentSubreplyWrapper " style="display: none;">
+							<div class="iframeWrapper">
+								<div class="iframeContainer"></div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div id="958666175667949441">
+			<div class="blogCommentWrap odd blogCommentLevel1
+				
+				">
+				<div class="blogCommentHeading">
+					<div class="blogCommentHeadingInner">
+						<div class="blogCommentAuthor">
+							<a class="name" rel="nofollow noopener noreferrer" href="http://brainder.org">Anderson Winkler</a>
+							<a href="http://brainder.org" class="link" rel="nofollow noopener noreferrer">link</a>
+						</div>
+						<div class="blogCommentDate">3/22/2018 05:02:35 am</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="blogCommentText">
+					<p>
+							Hi Johan,<br/>
+Exactly, sign-flipping is an option in this case. And it is a form of bootstrap.<br/>
+All the best,<br/>
+Anderson
+					</p>
+				</div>
+				<div class="blogCommentOptions">
+							 
+									<span
+									 href="#"
+									 class="blog-button reply-comment"
+									 onclick="blogCommentDisplayForm('//www.weebly.com/editor/apps/showCommentForm-v2.php?user_id=139872966&amp;blog_id=699015543220266125&amp;post_id=910028945224501202&amp;comment_id=958666175667949441&amp;parent=http://www.ohbmbrainmappingblog.com/blog/a-brief-overview-of-permutation-testing-with-examples&amp;is_mobile=&amp;parent_id=958666175667949441&amp;r=3&is_light=1', 'blogCommentReplyWrapper_958666175667949441', '958666175667949441'); return false;"
+									 title="Reply to this comment"
+									 >
+										<span>Reply</span>
+									</span>
+					<div class="clear"></div>
+						<div id="blogCommentReplyWrapper_958666175667949441" class="blogCommentReplyWrapper blogCommentSubreplyWrapper " style="display: none;">
+							<div class="iframeWrapper">
+								<div class="iframeContainer"></div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div id="375542033889488968">
+			<div class="blogCommentWrap even blogCommentLevel2
+				
+				">
+				<div class="blogCommentHeading">
+					<div class="blogCommentHeadingInner">
+						<div class="blogCommentAuthor">
+							<a class="name" rel="nofollow noopener noreferrer" href="https://github.com/vittorio-giatti">Vittorio Giatti</a>
+							<a href="https://github.com/vittorio-giatti" class="link" rel="nofollow noopener noreferrer">link</a>
+						</div>
+						<div class="blogCommentDate">11/15/2019 12:31:09 pm</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="blogCommentText">
+					<p>
+							sign-flipping on what? it can be done with permutations or as bootstrap. But it is NOT a form of boostrap in general.
+					</p>
+				</div>
+				<div class="blogCommentOptions">
+												<div class="clear"></div>
+						<div id="" class="blogCommentReplyWrapper blogCommentSubreplyWrapper " style="display: none;">
+							<div class="iframeWrapper">
+								<div class="iframeContainer"></div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div id="209402919546574316">
+			<div class="blogCommentWrap odd blogCommentLevel0
+				
+				">
+				<div class="blogCommentHeading">
+					<div class="blogCommentHeadingInner">
+						<div class="blogCommentAuthor">
+							<a class="name" rel="nofollow noopener noreferrer" href="http://N/A">Max</a>
+							<a href="http://N/A" class="link" rel="nofollow noopener noreferrer">link</a>
+						</div>
+						<div class="blogCommentDate">7/20/2019 11:02:39 pm</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="blogCommentText">
+					<p>
+							Yo you missed Perm #13, the real p-value should be 5/20 = .25. Also, multiple statements indicate:<br/>
+<br/>
+"whether hippocampal volume is different between subjects with Alzheimer&rsquo;s disease (AD) and demographically matched cognitively normal controls"<br/>
+<br/>
+"a classical parametric two-sample t-test can be used to test for a difference between means of the two groups"<br/>
+<br/>
+"null hypothesis that the hippocampal volume has no actual difference between AD cases and controls"<br/>
+<br/>
+that you're actually intending to test for a difference between AD and controls (two-tailed test), rather than testing for one group having a higher mean than the other (one-tailed test). Here, you (almost) perform a one-tailed test, but a two-tailed test would be more appropriate, such that the actual p-value based on permutation is .5.
+					</p>
+				</div>
+				<div class="blogCommentOptions">
+							 
+									<span
+									 href="#"
+									 class="blog-button reply-comment"
+									 onclick="blogCommentDisplayForm('//www.weebly.com/editor/apps/showCommentForm-v2.php?user_id=139872966&amp;blog_id=699015543220266125&amp;post_id=910028945224501202&amp;comment_id=209402919546574316&amp;parent=http://www.ohbmbrainmappingblog.com/blog/a-brief-overview-of-permutation-testing-with-examples&amp;is_mobile=&amp;parent_id=209402919546574316&amp;r=3&is_light=1', 'blogCommentReplyWrapper_209402919546574316', '209402919546574316'); return false;"
+									 title="Reply to this comment"
+									 >
+										<span>Reply</span>
+									</span>
+					<div class="clear"></div>
+						<div id="blogCommentReplyWrapper_209402919546574316" class="blogCommentReplyWrapper blogCommentSubreplyWrapper " style="display: none;">
+							<div class="iframeWrapper">
+								<div class="iframeContainer"></div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div id="commentText">
+			<!-- lastComment -->
+		<div id="lastComment"> </div>
+		</div>
+		<br />
+		
+			<div class="blog-notice-comments-pending">Your comment will be posted after it is approved.</div>
+		
+			<br/><br/>
+			<h2 id="commentReplyTitle">Leave a Reply.</h2>
+			<div class="blogCommentReplyWrapper ">
+				<div class="iframeWrapper">
+					<div class="iframeContainer">
+						<iframe src="https://www.weebly.com/editor/apps/showCommentForm-v2.php?user_id=139872966&amp;blog_id=699015543220266125&amp;post_id=910028945224501202&amp;parent=http://www.ohbmbrainmappingblog.com/blog/a-brief-overview-of-permutation-testing-with-examples&amp;is_mobile=&amp;r=3&amp;is_light=1" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+					</div>
+				</div>
+			</div>
+
+	</div>
+	<!-- bid-1: , path:  -->
+</div>
+ 
+<!-- bid: $blog_id --></div>
+	</div>
+
+	    </td>
+	        <td class="blog-sidebar" valign="top">
+	            <div id="124045111785600110-sidebar" class="column-blog">
+	<div class="blog-sidebar-separator">
+		<ul id="124045111785600110-sidebar-list" class="columnlist-blog" style="margin:0; padding: 0;">
+			<h2 class="blog-author-title" style="text-align:left;"><a href="../index.html">BLOG HOME</a><br /><br /><a href="../tutorials.html">&#8203;TUTORIALS</a><br /><br /><a href="http://www.humanbrainmapping.org" target="_blank">&#8203;</a><a href="../media.html" target="_blank">MEDIA</a><br /><br /><a href="../contributors.html">&#8203;contributors</a><br /><br /><a href="../media.html" target="_blank">&#8203;</a><a href="http://www.humanbrainmapping.org/" target="_blank">OHBM WEBSITE</a></h2>
+<p style="text-align:left;">&#8203;</p>
+
+<div class="paragraph"><strong><a href="https://www.pathlms.com/ohbm" target="_blank"><font size="4">OHBM OnDemand&nbsp;<br />&#8203;Education Platform</font></a><br /></strong><br /></div>
+
+<div style="text-align:left;"><div style="height:10px;overflow:hidden"></div>
+<span class="wsite-social wsite-social-default"><a class='first-child wsite-social-item wsite-social-facebook' href='https://www.facebook.com/Organization-for-Human-Brain-Mapping-373611079434746/' target='_blank' alt='Facebook' aria-label='Facebook'><span class='wsite-social-item-inner'></span></a><a class='wsite-social-item wsite-social-twitter' href='https://twitter.com/OHBM' target='_blank' alt='Twitter' aria-label='Twitter'><span class='wsite-social-item-inner'></span></a><a class='wsite-social-item wsite-social-linkedin' href='https://www.linkedin.com/in/organization-for-human-brain-mapping-00962979' target='_blank' alt='Linkedin' aria-label='Linkedin'><span class='wsite-social-item-inner'></span></a><a class='last-child wsite-social-item wsite-social-mail' href='mailto:ohbm.blogteam@gmail.com' target='_blank' alt='Mail' aria-label='Mail'><span class='wsite-social-item-inner'></span></a></span>
+<div style="height:10px;overflow:hidden"></div></div>
+
+<p class="blog-feed-link">
+	<link href="a-brief-overview-of-permutation-testing-with-examples.html"  rel="alternate" type="application/rss+xml" title="RSS" />
+	<a href="../1/feed">
+		<img src="https://cdn2.editmysite.com/images/old/bg_feed.gif" />
+		RSS Feed
+	</a>
+</p>
+
+<div class="wsite-search-element-outer"><div class="wsite-search-element-align-left" style="padding: 10px 0 10px 0">
+  <form class="wsite-search-element-form" action="https://www.ohbmbrainmappingblog.com/apps/search" method="get">
+    <div class="wsite-search-element">
+      <input class="wsite-input wsite-search-element-input" type="text" name="q" placeholder="Search" autocomplete="off" aria-label="Search" />
+      <span class="wsite-search-element-submit" title="Search"></span>
+    </div>
+  </form>
+</div></div>
+
+<div class="wsite-spacer" style="height:29px;"></div>
+
+<h2 class="blog-archives-title" style="text-align:left;">Archives</h2>
+<p class="blog-archive-list">
+		<a href="archives/10-2022.html" class="blog-link">October 2022</a>
+		<br />
+		<a href="archives/09-2022.html" class="blog-link">September 2022</a>
+		<br />
+		<a href="archives/08-2022.html" class="blog-link">August 2022</a>
+		<br />
+		<a href="archives/07-2022.html" class="blog-link">July 2022</a>
+		<br />
+		<a href="archives/06-2022.html" class="blog-link">June 2022</a>
+		<br />
+		<a href="archives/05-2022.html" class="blog-link">May 2022</a>
+		<br />
+		<a href="archives/04-2022.html" class="blog-link">April 2022</a>
+		<br />
+		<a href="archives/03-2022.html" class="blog-link">March 2022</a>
+		<br />
+		<a href="archives/01-2022.html" class="blog-link">January 2022</a>
+		<br />
+		<a href="archives/12-2021.html" class="blog-link">December 2021</a>
+		<br />
+		<a href="archives/11-2021.html" class="blog-link">November 2021</a>
+		<br />
+		<a href="archives/10-2021.html" class="blog-link">October 2021</a>
+		<br />
+		<a href="archives/09-2021.html" class="blog-link">September 2021</a>
+		<br />
+		<a href="archives/08-2021.html" class="blog-link">August 2021</a>
+		<br />
+		<a href="archives/07-2021.html" class="blog-link">July 2021</a>
+		<br />
+		<a href="archives/06-2021.html" class="blog-link">June 2021</a>
+		<br />
+		<a href="archives/05-2021.html" class="blog-link">May 2021</a>
+		<br />
+		<a href="archives/04-2021.html" class="blog-link">April 2021</a>
+		<br />
+		<a href="archives/03-2021.html" class="blog-link">March 2021</a>
+		<br />
+		<a href="archives/02-2021.html" class="blog-link">February 2021</a>
+		<br />
+		<a href="archives/01-2021.html" class="blog-link">January 2021</a>
+		<br />
+		<a href="archives/12-2020.html" class="blog-link">December 2020</a>
+		<br />
+		<a href="archives/11-2020.html" class="blog-link">November 2020</a>
+		<br />
+		<a href="archives/10-2020.html" class="blog-link">October 2020</a>
+		<br />
+		<a href="archives/09-2020.html" class="blog-link">September 2020</a>
+		<br />
+		<a href="archives/06-2020.html" class="blog-link">June 2020</a>
+		<br />
+		<a href="archives/05-2020.html" class="blog-link">May 2020</a>
+		<br />
+		<a href="archives/04-2020.html" class="blog-link">April 2020</a>
+		<br />
+		<a href="archives/03-2020.html" class="blog-link">March 2020</a>
+		<br />
+		<a href="archives/02-2020.html" class="blog-link">February 2020</a>
+		<br />
+		<a href="archives/01-2020.html" class="blog-link">January 2020</a>
+		<br />
+		<a href="archives/12-2019.html" class="blog-link">December 2019</a>
+		<br />
+		<a href="archives/11-2019.html" class="blog-link">November 2019</a>
+		<br />
+		<a href="archives/10-2019.html" class="blog-link">October 2019</a>
+		<br />
+		<a href="archives/09-2019.html" class="blog-link">September 2019</a>
+		<br />
+		<a href="archives/08-2019.html" class="blog-link">August 2019</a>
+		<br />
+		<a href="archives/07-2019.html" class="blog-link">July 2019</a>
+		<br />
+		<a href="archives/06-2019.html" class="blog-link">June 2019</a>
+		<br />
+		<a href="archives/05-2019.html" class="blog-link">May 2019</a>
+		<br />
+		<a href="archives/04-2019.html" class="blog-link">April 2019</a>
+		<br />
+		<a href="archives/03-2019.html" class="blog-link">March 2019</a>
+		<br />
+		<a href="archives/02-2019.html" class="blog-link">February 2019</a>
+		<br />
+		<a href="archives/01-2019.html" class="blog-link">January 2019</a>
+		<br />
+		<a href="archives/12-2018.html" class="blog-link">December 2018</a>
+		<br />
+		<a href="archives/11-2018.html" class="blog-link">November 2018</a>
+		<br />
+		<a href="archives/10-2018.html" class="blog-link">October 2018</a>
+		<br />
+		<a href="archives/08-2018.html" class="blog-link">August 2018</a>
+		<br />
+		<a href="archives/07-2018.html" class="blog-link">July 2018</a>
+		<br />
+		<a href="archives/06-2018.html" class="blog-link">June 2018</a>
+		<br />
+		<a href="archives/05-2018.html" class="blog-link">May 2018</a>
+		<br />
+		<a href="archives/04-2018.html" class="blog-link">April 2018</a>
+		<br />
+		<a href="archives/03-2018.html" class="blog-link">March 2018</a>
+		<br />
+		<a href="archives/02-2018.html" class="blog-link">February 2018</a>
+		<br />
+		<a href="archives/01-2018.html" class="blog-link">January 2018</a>
+		<br />
+		<a href="archives/12-2017.html" class="blog-link">December 2017</a>
+		<br />
+		<a href="archives/11-2017.html" class="blog-link">November 2017</a>
+		<br />
+		<a href="archives/10-2017.html" class="blog-link">October 2017</a>
+		<br />
+		<a href="archives/09-2017.html" class="blog-link">September 2017</a>
+		<br />
+		<a href="archives/08-2017.html" class="blog-link">August 2017</a>
+		<br />
+		<a href="archives/07-2017.html" class="blog-link">July 2017</a>
+		<br />
+		<a href="archives/06-2017.html" class="blog-link">June 2017</a>
+		<br />
+		<a href="archives/05-2017.html" class="blog-link">May 2017</a>
+		<br />
+		<a href="archives/04-2017.html" class="blog-link">April 2017</a>
+		<br />
+		<a href="archives/03-2017.html" class="blog-link">March 2017</a>
+		<br />
+		<a href="archives/02-2017.html" class="blog-link">February 2017</a>
+		<br />
+		<a href="archives/01-2017.html" class="blog-link">January 2017</a>
+		<br />
+		<a href="archives/12-2016.html" class="blog-link">December 2016</a>
+		<br />
+		<a href="archives/11-2016.html" class="blog-link">November 2016</a>
+		<br />
+		<a href="archives/10-2016.html" class="blog-link">October 2016</a>
+		<br />
+		<a href="archives/09-2016.html" class="blog-link">September 2016</a>
+		<br />
+		<a href="archives/08-2016.html" class="blog-link">August 2016</a>
+		<br />
+		<a href="archives/07-2016.html" class="blog-link">July 2016</a>
+		<br />
+		<a href="archives/06-2016.html" class="blog-link">June 2016</a>
+		<br />
+		<a href="archives/05-2016.html" class="blog-link">May 2016</a>
+		<br />
+		<a href="archives/04-2016.html" class="blog-link">April 2016</a>
+		<br />
+</p>
+		</ul>
+	</div>
+</div>
+
+	        </td>
+	</tr>
+</table>
+
+</div>
+</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="footer-wrap"><div class='wsite-elements wsite-footer'>
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -20px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:79.1%; padding:0 20px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:left;"><font size="4">stay connected with ohbm!</font></h2>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:20.9%; padding:0 20px;">
+					
+						
+
+<div style="text-align:center;"><div style="height:20px;overflow:hidden"></div>
+<span class="wsite-social wsite-social-default"><a class='first-child wsite-social-item wsite-social-facebook' href='https://www.facebook.com/Organization-for-Human-Brain-Mapping-373611079434746/?fref=nf' target='_blank' alt='Facebook' aria-label='Facebook'><span class='wsite-social-item-inner'></span></a><a class='wsite-social-item wsite-social-twitter' href='https://twitter.com/OHBM_SciNews' target='_blank' alt='Twitter' aria-label='Twitter'><span class='wsite-social-item-inner'></span></a><a class='last-child wsite-social-item wsite-social-linkedin' href='https://www.linkedin.com/company/organization-for-human-brain-mapping' target='_blank' alt='Linkedin' aria-label='Linkedin'><span class='wsite-social-item-inner'></span></a></span>
+<div style="height:0px;overflow:hidden"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:33.71103822001%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:left;"><font size="3"><span><a href="http://www.humanbrainmapping.org/i4a/pages/index.cfm?pageid=3282">become a member</a></span></font></h2>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:37.840880509071%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:left;"><font size="3">Telephone</font></h2>
+
+<div class="paragraph" style="text-align:left;">952-646-2029</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:28.44808127092%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:left;"><a href="mailto:info@humanbrainmapping.org"><strong><font size="3">Email ohbm</font></strong></a><br /></h2>
+
+<div class="paragraph" style="text-align:left;"><a href="mailto:hello@ohbm-com.com"><strong><font size="4">EMAIL BLOG TEAM</font></strong></a></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<div class="paragraph" style="text-align:left;"><em><font color="#a1a1a1" size="2">Header image created by&nbsp;<span>Thiebaut de Schotten &amp; Batrancourt&nbsp;&nbsp;</span></font><br /><span><font color="#a1a1a1"><font size="2">www.brainconnectivitybehaviour.eu</font></font></span></em><br /><br /></div></div></div>
+
+	</div>
+
+	<!-- JavaScript -->
+	<script type="text/javascript" src="../files/theme/plugins.js"></script>
+	<script type="text/javascript" src="../files/theme/mobile.js"></script>
+	<script type="text/javascript" src="../files/theme/custom.js"></script>
+    <div id="customer-accounts-app"></div>
+    <script src="https://cdn2.editmysite.com/js/site/main-customer-accounts-site.js?buildTime=1673495532"></script>
+
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78661612-1', 'auto');
+  ga('send', 'pageview');
+
+</script><script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-7870337-1']);
+	_gaq.push(['_setDomainName', 'none']);
+	_gaq.push(['_setAllowLinker', true]);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		// NOTE: keep the [1] if you replace this code. Otherwise cookie banner scripts won't be first on the page
+		var s = document.getElementsByTagName('script')[1]; s.parentNode.insertBefore(ga, s);
+	})();
+
+	_W.Analytics = _W.Analytics || {'trackers': {}};
+	_W.Analytics.trackers.wGA = '_gaq';
+</script>
+
+<script type="text/javascript" async=1>
+	// NOTE: keep the getElementsByTagName(o)**[1]** if you replace this code. Otherwise cookie banner scripts won't be first on the page
+	;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+			p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+			};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[1];n.async=1;
+			n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,'script','//cdn2.editmysite.com/js/wsnbn/snowday262.js','snowday'));
+
+	var r = [99, 104, 101, 99, 107, 111, 117, 116, 46, 40, 119, 101, 101, 98, 108, 121, 124, 101, 100, 105, 116, 109, 121, 115, 105, 116, 101, 41, 46, 99, 111, 109];
+	var snPlObR = function(arr) {
+		var s = '';
+		for (var i = 0 ; i < arr.length ; i++){
+			s = s + String.fromCharCode(arr[i]);
+		}
+		return s;
+	};
+	var s = snPlObR(r);
+
+	var regEx = new RegExp(s);
+
+	_W.Analytics = _W.Analytics || {'trackers': {}};
+	_W.Analytics.trackers.wSP = 'snowday';
+	_W.Analytics.user_id = '139872966';
+	_W.Analytics.site_id = '204303227559001667';
+
+	var drSegmentsTag = document.getElementById('drSegments');
+	if (drSegmentsTag) {
+		_W.Analytics.spContexts = _W.Analytics.spContexts || [];
+
+		var segmentData = JSON.parse(drSegmentsTag.innerText);
+		segmentData.forEach(function(test) {
+			_W.Analytics.spContexts.push({
+				schema: "iglu:com.weebly/context_ab_segment/jsonschema/1-0-0",
+				data: {
+					test_id: test.name,
+					segment: test.variant,
+				}
+			});
+		});
+	}
+
+
+	(function(app_id, ec_hostname, discover_root_domain) {
+		var track = window[_W.Analytics.trackers.wSP];
+		if (!track) return;
+		track('newTracker', app_id, ec_hostname, {
+			appId: app_id,
+			post: true,
+			platform: 'web',
+			discoverRootDomain: discover_root_domain,
+			cookieName: '_snow_',
+			contexts: {
+				webPage: true,
+				performanceTiming: true,
+				gaCookies: true
+			},
+			crossDomainLinker: function (linkElement) {
+				return regEx.test(linkElement.href);
+			},
+			respectDoNotTrack: true
+		});
+		track('trackPageView', _W.Analytics.user_id+':'+_W.Analytics.site_id, _W.Analytics.spContexts);
+		track('crossDomainLinker', function (linkElement) {
+			return regEx.test(linkElement.href);
+		});
+	})(
+		'_wn',
+		'ec.editmysite.com',
+		true
+	);
+</script>
+
+
+
+
+
+<script>
+	(function(jQuery) {
+		try {
+			if (jQuery) {
+				jQuery('div.blog-social div.fb-like').attr('class', 'blog-social-item blog-fb-like');
+				var $commentFrame = jQuery('#commentArea iframe');
+				if ($commentFrame.length > 0) {
+					var frameHeight = jQuery($commentFrame[0].contentWindow.document).height() + 50;
+					$commentFrame.css('min-height', frameHeight + 'px');
+				}
+				if (jQuery('.product-button').length > 0){
+					jQuery(document).ready(function(){
+						jQuery('.product-button').parent().each(function(index, product){
+							if(jQuery(product).attr('target') == 'paypal'){
+								if (!jQuery(product).find('> [name="bn"]').length){
+									jQuery('<input>').attr({
+										type: 'hidden',
+										name: 'bn',
+										value: 'DragAndDropBuil_SP_EC'
+									}).appendTo(product);
+								}
+							}
+						});
+					});
+				}
+			}
+			else {
+				// Prototype
+				$$('div.blog-social div.fb-like').each(function(div) {
+					div.className = 'blog-social-item blog-fb-like';
+				});
+				$$('#commentArea iframe').each(function(iframe) {
+					iframe.style.minHeight = '410px';
+				});
+			}
+		}
+		catch(ex) {}
+	})(window._W && _W.jQuery);
+</script>
+
+<script>
+	window._W.isEUUser = false;
+	window._W.showCookieToAll = "";
+</script>
+
+<div id="fb-root"></div>
+<script>
+	window.fbAsyncInit = function() {
+		FB.init({
+			appId : '190291501407',
+			xfbml : true,
+			version : 'v2.6'
+		});
+
+        // Set Facebook comment plugin's colorscheme based off of theme
+		var comments = document.getElementsByClassName('facebook-comment-widget'),
+			scheme = document.body.className.match('wsite-theme-light');
+
+		for (var i = 0; i < comments.length; i++) {
+			comments[i].setAttribute('colorscheme', scheme ? 'light' : 'dark');
+		}
+
+		var fbCommentCounts;
+
+		FB.Event.subscribe('xfbml.render', function(){
+			fbCommentCounts = jQuery('.fb_comments_count');
+			for (var i = 0; i < fbCommentCounts.length; i++) {
+				var commentText = (jQuery(fbCommentCounts[i]).text() == '1' ? "Comment" : "Comments");
+				jQuery(fbCommentCounts[i]).parent().siblings('.fb_comment_count_label').text(commentText);
+			}
+		});
+
+		var comment_callback = function(res) {
+			FB.XFBML.parse(); // Refresh comment counters on page
+		}
+
+		FB.Event.subscribe('comment.create', comment_callback);
+		FB.Event.subscribe('comment.remove', comment_callback);
+
+	};
+
+	(function(d, s, id){
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/"+_W.facebookLocale+"/sdk.js";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+</script>
+<script type='text/javascript'>
+	(function() {
+		function j(src, id) {
+			var s = document.createElement('script');
+			s.type = 'text/javascript';
+			s.async = true;
+			s.src = src;
+			if(id) {s.id=id};
+			document.getElementsByTagName('head')[0].appendChild(s);
+		}
+		j('//platform.twi'+'tter.com/widgets.js');
+	})()
+</script>
+	</body>
+</html>

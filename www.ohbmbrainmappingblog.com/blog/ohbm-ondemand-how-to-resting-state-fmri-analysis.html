@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+	<head>
+		<title>OHBM OnDemand How-to: Resting State fMRI Analysis - ORGANIZATION FOR HUMAN BRAIN MAPPING</title><meta property="og:site_name" content="ORGANIZATION FOR HUMAN BRAIN MAPPING" />
+<meta property="og:title" content="OHBM OnDemand How-to: Resting State fMRI Analysis" />
+<meta property="og:description" content="By Danka Jandric , Jeanette Mumford &amp; Ilona Lipp Introduction Planning a resting state study and analysing resting state data can feel overwhelming. There seems to be an endless number of options..." />
+<meta property="og:image" content="http://www.ohbmbrainmappingblog.com/uploads/1/3/9/8/139872966/blog-photo-36-0_orig.png" />
+<meta property="og:image" content="http://www.ohbmbrainmappingblog.com/uploads/1/3/9/8/139872966/blog-photo-36-1_orig.png" />
+<meta property="og:image" content="http://www.ohbmbrainmappingblog.com/uploads/1/3/9/8/139872966/blog-photo-36-2_orig.png" />
+<meta property="og:image" content="http://www.ohbmbrainmappingblog.com/uploads/1/3/9/8/139872966/blog-photo-36-3_orig.png" />
+<meta property="og:image" content="http://www.ohbmbrainmappingblog.com/uploads/1/3/9/8/139872966/blog-photo-36-4_orig.png" />
+<meta property="og:image" content="http://www.ohbmbrainmappingblog.com/uploads/1/3/9/8/139872966/blog-photo-36-5_orig.png" />
+<meta property="og:url" content="http://www.ohbmbrainmappingblog.com/1/post/2018/08/ohbm-ondemand-how-to-resting-state-fmri-analysis.html" />
+<meta http-equiv='cache-control' content='no-cache' />
+
+
+<meta name="keywords" content="brain mapping, neuroscience, neuro imaging, MRI, fMRI, neurodata, EEG, MEG, OHBM" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0;">
+
+		
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="https://cdn2.editmysite.com/css/sites.css?buildTime=1673495532" />
+<link rel="stylesheet" type="text/css" href="https://cdn2.editmysite.com/css/old/fancybox.css?1669754019" />
+<link rel="stylesheet" type="text/css" href="https://cdn2.editmysite.com/css/social-icons.css?buildtime=1669754019" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="../files/main_style.css%3F1669824646.css" title="wsite-theme-css" />
+<link href='https://cdn2.editmysite.com/fonts/Source_Sans_Pro/font.css?2' rel='stylesheet' type='text/css' />
+<link href='https://cdn2.editmysite.com/fonts/Raleway/font.css?2' rel='stylesheet' type='text/css' />
+<link href='https://cdn2.editmysite.com/fonts/Roboto_Condensed/font.css?2' rel='stylesheet' type='text/css' />
+
+<style type='text/css'>
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+@media screen and (min-width: 767px) {.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+}</style>
+
+		<script src='../files/templateArtifacts.js%3F1669824646'></script>
+<script>
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var ASSETS_BASE = '//cdn2.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+</script>
+<script src='https://cdn2.editmysite.com/js/jquery-1.8.3.min.js'></script>
+
+<script type="text/javascript" src="https://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1669754019&amp;"></script>
+<script src="https://cdn2.editmysite.com/js/site/main.js?buildTime=1673495532"></script><script type="text/javascript">
+		function initCustomerAccountsModels() {
+					(function(){_W.setup_rpc({"url":"\/ajax\/api\/JsonRPC\/CustomerAccounts\/","actions":{"CustomerAccounts":[{"name":"login","len":2,"multiple":false,"standalone":false},{"name":"logout","len":0,"multiple":false,"standalone":false},{"name":"getSessionDetails","len":0,"multiple":false,"standalone":false},{"name":"getAccountDetails","len":0,"multiple":false,"standalone":false},{"name":"getOrders","len":0,"multiple":false,"standalone":false},{"name":"register","len":4,"multiple":false,"standalone":false},{"name":"emailExists","len":1,"multiple":false,"standalone":false},{"name":"passwordReset","len":1,"multiple":false,"standalone":false},{"name":"passwordUpdate","len":3,"multiple":false,"standalone":false},{"name":"validateSession","len":1,"multiple":false,"standalone":false}]},"namespace":"_W.CustomerAccounts.RPC"});
+_W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":"_W.CustomerAccounts.BackboneModelData","collection_namespace":"_W.CustomerAccounts.BackboneCollectionData","bootstrap_namespace":"_W.CustomerAccounts.BackboneBootstrap","models":{"CustomerAccounts":{"_class":"CustomerAccounts.Model.CustomerAccounts","defaults":null,"validation":null,"types":null,"idAttribute":null,"keydefs":null}},"collections":{"CustomerAccounts":{"_class":"CustomerAccounts.Collection.CustomerAccounts"}},"bootstrap":[]});
+})();
+		}
+		if(document.createEvent && document.addEventListener) {
+			var initEvt = document.createEvent('Event');
+			initEvt.initEvent('customerAccountsModelsInitialized', true, false);
+			document.dispatchEvent(initEvt);
+		} else if(document.documentElement.initCustomerAccountsModels === 0){
+			document.documentElement.initCustomerAccountsModels++
+		}
+		</script>
+		<script type="text/javascript"> _W = _W || {}; _W.securePrefix='www.ohbmbrainmappingblog.com'; </script><script>_W = _W || {};
+			_W.customerLocale = "it_IT";
+			_W.storeName = null;
+			_W.isCheckoutReskin = false;
+			_W.storeCountry = "US";
+			_W.storeCurrency = "USD";
+			_W.storeEuPrivacyPolicyUrl = "";
+			com_currentSite = "204303227559001667";
+			com_userID = "139872966";</script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="https://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1673495532&amp;"></script><script> _W.themePlugins = {"navpane":{"condense":1024,"forced":1}};</script><script src='https://cdn2.editmysite.com/js/site/theme-plugins.js?buildTime=1673495532'></script><script type="text/javascript"> _W.recaptchaUrl = "https://www.google.com/recaptcha/api.js"; </script><script type="text/javascript"><!--
+	
+	
+	function initFlyouts(){
+		initPublishedFlyoutMenus(
+			[{"id":"124045111785600110","title":"BLOG","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"457330105466321910","title":"Tutorials","url":"tutorials.html","target":"","nav_menu":false,"nonclickable":false},{"id":"286933796587166470","title":"Media","url":"media.html","target":"","nav_menu":false,"nonclickable":false},{"id":"479719222573141757","title":"Contributors","url":"contributors.html","target":"","nav_menu":false,"nonclickable":false},{"id":"566172753373531491","title":"OHBM WEBSITE","url":"http:\/\/www.humanbrainmapping.org","target":"_blank","nav_menu":false,"nonclickable":false}],
+			"124045111785600110",
+			'',
+			'active',
+			false,
+			{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+			{"hasCustomMinicart":true}
+		)
+	}
+//-->
+</script>
+		
+		
+	</head>
+	<body class="header-page  wsite-page-index wsite-blog-post  wsite-theme-light"><div id="site-wrap">
+
+		<div id="search" class="overlay">
+			<h2>Search the site...</h2>
+		</div>
+
+		<div id="header-wrap">
+			<div class="container">
+				<div class="spacer">
+					<div id="nav-open" class="w-navpane-trigger hamburger" data-target="#nav"><span></span></div>
+				</div>
+				<div class="spacer hidden-sm"></div>
+				<div id="logo"><span class="wsite-logo">
+
+	<a href="../index.html">
+	
+	<span id="wsite-title">ORGANIZATION FOR HUMAN BRAIN MAPPING</span>
+	
+	</a>
+
+</span></div>
+				<div class="spacer"><span class="wsite-search">
+	<form id="wsite-header-search-form" action="https://www.ohbmbrainmappingblog.com/apps/search" method="get">
+		<input type="text" name="q" class="wsite-search-input" autocomplete="off" placeholder="Search"/><span class="wsite-search-button"><span class="wsite-search-button-inner"></span></span>
+	</form>
+</span></div>
+				<div class="spacer hidden-sm"></div>
+			</div>
+			<div class="w-navlist nav"><ul class="wsite-menu-default">
+		<li id="active" class="wsite-menu-item-wrap">
+			<a
+						href="../index.html"
+				class="wsite-menu-item"
+				>
+				BLOG
+			</a>
+			
+		</li>
+		<li id="pg457330105466321910" class="wsite-menu-item-wrap">
+			<a
+						href="../tutorials.html"
+				class="wsite-menu-item"
+				>
+				Tutorials
+			</a>
+			
+		</li>
+		<li id="pg286933796587166470" class="wsite-menu-item-wrap">
+			<a
+						href="../media.html"
+				class="wsite-menu-item"
+				>
+				Media
+			</a>
+			
+		</li>
+		<li id="pg479719222573141757" class="wsite-menu-item-wrap">
+			<a
+						href="../contributors.html"
+				class="wsite-menu-item"
+				>
+				Contributors
+			</a>
+			
+		</li>
+		<li id="pg566172753373531491" class="wsite-menu-item-wrap">
+			<a
+						href="http://www.humanbrainmapping.org"
+					target="_blank"
+				class="wsite-menu-item"
+				>
+				OHBM WEBSITE
+			</a>
+			
+		</li>
+</ul>
+</div>
+		</div>
+
+		<div id="close-overlay" class="w-navpane-close" data-target="#nav"><span class="container"></span></div>
+
+		<div id="nav" class="overlay w-navpane w-navpane-fullscreen">
+			<div id="navcontainer" class="nav"><ul class="wsite-menu-default">
+		<li id="active" class="wsite-menu-item-wrap">
+			<a
+						href="../index.html"
+				class="wsite-menu-item"
+				>
+				BLOG
+			</a>
+			
+		</li>
+		<li id="pg457330105466321910" class="wsite-menu-item-wrap">
+			<a
+						href="../tutorials.html"
+				class="wsite-menu-item"
+				>
+				Tutorials
+			</a>
+			
+		</li>
+		<li id="pg286933796587166470" class="wsite-menu-item-wrap">
+			<a
+						href="../media.html"
+				class="wsite-menu-item"
+				>
+				Media
+			</a>
+			
+		</li>
+		<li id="pg479719222573141757" class="wsite-menu-item-wrap">
+			<a
+						href="../contributors.html"
+				class="wsite-menu-item"
+				>
+				Contributors
+			</a>
+			
+		</li>
+		<li id="pg566172753373531491" class="wsite-menu-item-wrap">
+			<a
+						href="http://www.humanbrainmapping.org"
+					target="_blank"
+				class="wsite-menu-item"
+				>
+				OHBM WEBSITE
+			</a>
+			
+		</li>
+</ul>
+</div>
+			<div><div style="text-align:left;"><div style="height:0px;overflow:hidden"></div>
+<span class="wsite-social wsite-social-default"></span>
+<div style="height:0px;overflow:hidden"></div></div></div>
+		</div>
+
+		<div id="content-wrap">
+			<div id="banner-wrap">
+				<div id="banner" class="container">
+					<div class="wsite-elements wsite-not-footer wsite-header-elements">
+	<div class="wsite-section-wrap">
+	<div  class="wsite-section wsite-header-section wsite-section-bg-image" style="height: 250px;vertical-align: middle;background-image: url(https://www.ohbmbrainmappingblog.com/blog/&quot;/uploads/1/3/9/8/139872966/background-images/461715039.jpg&quot;) ;background-repeat: no-repeat ;background-position: 50% 50% ;background-size: 100% ;background-color: transparent ;background-size: cover;" >
+		<div class="wsite-section-content">
+			
+						<div class="container">
+				<div class="wsite-section-elements">
+					<h2 class="wsite-content-title"><font color="#f8f1f1" size="7">&nbsp;B&#8203;RAIN MAPPING</font></h2>
+
+<div class="paragraph"></div>
+				</div>
+			</div>
+					
+		</div>
+		<div class=""></div>
+	</div>
+</div>
+
+</div>
+
+				</div>
+			</div>
+
+			<div id="main-wrap">
+				<div class="wsite-section-content">
+					<div class="container"><div class="wsite-elements wsite-not-footer">
+	<table 
+	id="blogTable" 
+		class="wsite-not-footer" 
+	style="border: 0; width: 100%; table-layout: fixed" 
+>
+	<tr>
+	    <td valign="top">
+	        	<div id="124045111785600110-blog" class="blog-body" style="float: left;"> 
+		<div id="wsite-content">	<div id="blog-post-203656114553596775" class="blog-post">
+	
+	
+		<div class="blog-header">
+			<h2 class="blog-title">
+					<a class="blog-title-link blog-link" href="ohbm-ondemand-how-to-resting-state-fmri-analysis.html">OHBM OnDemand How-to: Resting State fMRI Analysis</a>
+
+			</h2>
+			<p class="blog-date">
+					<span class="date-text">
+		8/6/2018
+	</span>
+
+			</p>
+			<p class="blog-comments">
+					<a href="ohbm-ondemand-how-to-resting-state-fmri-analysis.html#comments" class="blog-link">
+		0 Comments
+	</a>
+
+			</p>
+		</div>
+	
+		<div class="blog-separator">&nbsp;</div>
+	
+		<div class="blog-content">
+				<div class="paragraph" style="text-align:left;"><span><span style="color:rgb(0, 0, 0)">By </span><a href="https://www.research.manchester.ac.uk/portal/danka.jandric.html"><span style="color:rgb(17, 85, 204)">Danka Jandric</span></a><span style="color:rgb(0, 0, 0)">, </span><a href="http://mumford.fmripower.org/"><span style="color:rgb(17, 85, 204)">Jeanette Mumford </span></a><span style="color:rgb(0, 0, 0)">&amp; </span><a href="http://psych.cf.ac.uk/contactsandpeople/pgs/archive/lipp.php"><span style="color:rgb(17, 85, 204)">Ilona Lipp</span></a></span><br /><br /><span><span style="color:rgb(0, 0, 0); font-weight:700">Introduction</span></span><br /><span><span style="color:rgb(0, 0, 0)">Planning a resting state study and analysing resting state data can feel overwhelming. There seems to be an endless number of options regarding all stages of the experiment. Decisions need to be made about how to acquire data in an optimal way, what preprocessing and noise correction pipelines to employ and how to extract the most meaningful metrics. Many strategies have been published and are available in software packages. However, there seems to be little consensus about what works best and even more importantly, about how to judge whether something &ldquo;works&rdquo; or not. The choice of method often depends on the specifics of the data and addressed research question, but can equally often seem arbitrary. To help guide you through this jungle of rs-fMRI, we walk you through all stages of a resting state experiment. We do this by addressing questions that researchers are likely to have&hellip; or should have! While we do not provide definite answers to these questions, we try to point out the most important considerations, outline some of the available methods, and offer some valuable video resources from recent OHBM education courses, to help you make informed decisions.</span></span><br /></div>  <div>  <!--BLOG_SUMMARY_END--></div>  <div class="paragraph"><span><span style="color:rgb(0, 0, 0); font-weight:700">What do I need to consider when planning my experiment?</span></span><br /><span><span style="color:rgb(0, 0, 0)">Running a rs-fMRI experiment seems easy enough. Technically, all you need is to put your participant in the scanner, tell them to rest and run a standard BOLD sequence. However, it may be worth thinking about your analysis strategy beforehand, so that once you start analysing your data you do not suddenly wish you had&hellip;</span></span><ul><li style="color:rgb(0, 0, 0)">&hellip; acquired physiological recordings. Noise correction is an important step in resting state fMRI analysis. As you will see later, having physiological recordings available can help explain and get rid of unwanted variance in your data.</li><li style="color:rgb(0, 0, 0)">&hellip; acquired multiple echoes. Acquiring data with multiple echo times can also help with separating signal and noise sources of the resting state time series. We will discuss later how to use these additional data.</li><li style="color:rgb(0, 0, 0)">&hellip; not put the sequence at the very end of the scanning session, when your participants were already a bit restless and could not keep still. As you will see later, head motion can have strong effects on resting state fMRI data and it can be hard to deal with this.</li><li style="color:rgb(0, 0, 0)">&hellip; thought about what instructions to give your participants. What participants do or think about during &lsquo;rest&rsquo; can affect the resting state networks, as for example demonstrated in&nbsp;<a href="https://www.ncbi.nlm.nih.gov/pubmed/21616982"><span style="color:rgb(17, 85, 204)">this study by Shirer and colleagues</span></a>. Also, you might want to tell your participants to keep their eyes open, otherwise you can expect&nbsp;<a href="https://www.sciencedirect.com/science/article/pii/S0896627314002505"><span style="color:rgb(17, 85, 204)">some of them to fall asleep</span></a>, which could have an&nbsp;<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4003890/"><span style="color:rgb(17, 85, 204)">impact on the resting state networks and their reliability</span></a>. In order to be able to at least assess whether the behaviour of your participants during the &lsquo;rest&rsquo; period could account for some of your group-level effects, you could consider&nbsp;<a href="http://www.pnas.org/content/113/34/9653.short"><span style="color:rgb(17, 85, 204)">using eye-tracking</span></a>&nbsp;or&nbsp;<a href="https://www.sciencedirect.com/science/article/pii/S0361923009003657?via%3Dihub"><span style="color:rgb(17, 85, 204)">administering a resting state questionnaire</span></a>.</li><li style="color:rgb(0, 0, 0)">&hellip; acquired more volumes. More data points is always better, however, in MRI studies long acquisitions can be unfeasible. Birn and colleagues show that the&nbsp;<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4104183/"><span style="color:rgb(17, 85, 204)">retest reliability of connectivity metrics increases with scan length</span></a>.</li><li style="color:rgb(0, 0, 0)">&hellip; added a short breath-hold at the end of your resting state. Why? Check out Molly Bright&rsquo;s introduction into&nbsp;<a href="https://www.pathlms.com/ohbm/courses/5158/sections/7788/video_presentations/75975"><span style="color:rgb(17, 85, 204)">the nuisance regression approach to clean up noise</span></a>, which we will discuss later.</li></ul><br /><span><span style="color:rgb(0, 0, 0); font-weight:700">How do I know my data quality is good?</span></span><br /><span><span style="color:rgb(0, 0, 0)">One of the most common questions asked when evaluating data is how to tell if the data are &ldquo;good&rdquo; or not. &nbsp;The answer to this question, regardless of the data, is to actually look at your data. Although this task is somewhat easy with behavioral data, when faced with hundreds of thousands of time series for a single subject, it is less clear how we can do this. &nbsp;Luckily Jonathan Power has not only developed tools we can use with our own data but also takes us through data inspection in his educational talk from 2017, &ldquo;</span><a href="https://www.pathlms.com/ohbm/courses/5158/sections/7788/video_presentations/75974"><span style="color:rgb(17, 85, 204)">How to assess fMRI noise and data quality</span></a><span style="color:rgb(0, 0, 0)">&rdquo;.&nbsp;&nbsp;<br /></span></span></div>  <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center"> <a href='https://www.pathlms.com/ohbm/courses/5158/sections/7788/video_presentations/75974' target='_blank'> <img src="../uploads/1/3/9/8/139872966/blog-photo-36-0_orig.png" alt="Picture" style="width:auto;max-width:100%" /> </a> <div style="display:block;font-size:90%">Jonathan Green discussing fMRI data quality</div> </div></div>  <div class="paragraph" style="text-align:left;"><br /><span><span style="color:rgb(0, 0, 0); font-weight:700">How do I improve my data quality?</span></span><br /><span><span style="color:rgb(0, 0, 0)">fMRI data are noisy and this is not going to change any time soon, so we have to deal with it somehow. Acceptance and hoping for the best is a strategy, but could lead to problems further on in your analysis. If there is a lot of noise compared to the signal of interest, then individual subject&rsquo;s resting state networks will not look clean, and the power in detecting group-level effects may be low, so you might not find anything interesting in your group-level analysis. However, as importantly, if there are systematic differences in noise sources between the cohorts you are studying, then seemingly interesting effects can be simply a result of group differences in noise, such as head motion. Having ignored the noise problem, you might end up spending days writing a paper with a game-changing title, being hit by reality when the annoying reviewer then asks you to quantify group differences in your noise. Better to be aware of and account for noise to start with, right? But this is easier said than done&hellip;&nbsp;<br /><br /><strong>What causes noise in rs-fMRI data?&nbsp;<br />&#8203;</strong></span></span><span><span style="color:rgb(0, 0, 0)">Resting state analysis generally deals with correlations in time courses between voxels. If a noise source affects several voxels in similar ways, this can lead to temporal correlations which are independent of neural co-fluctuations. For this reason, the aim of noise correction is to get rid of as much variance in the BOLD signal as possible that is related to noise. To figure out what the best possible noise correction strategy may be, we first have to be aware of what the sources of noise in BOLD time series are. </span></span><br /><br /><span><span style="color:rgb(0, 0, 0)">In his video, Cesar Caballero Gaudes gives a comprehensive </span><a href="https://www.pathlms.com/ohbm/courses/5158/sections/7788/video_presentations/75972"><span style="color:rgb(17, 85, 204)">overview of the most common sources of noise</span></a><span style="color:rgb(0, 0, 0)">, such as head motion (from minute 05:11), respiratory and cardiac variation (from minute 05:53), and hardware (from minute 11:11), and their effects on the data. Cesar also gives an overview of some of the denoising strategies that are available to tackle different types of noise.</span></span><br />&#8203;</div>  <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center"> <a href='https://www.pathlms.com/ohbm/courses/5158/sections/7788/video_presentations/75972' target='_blank'> <img src="../uploads/1/3/9/8/139872966/blog-photo-36-1_orig.png" alt="Picture" style="width:auto;max-width:100%" /> </a> <div style="display:block;font-size:90%">Cesar Caballero Gaudes on noise correction in fMRI</div> </div></div>  <div class="paragraph" style="text-align:left;"><br /><strong><span><span style="color:rgb(0, 0, 0)">How can I correct for noise when I have information about the noise sources? The nuisance regression approach:</span></span></strong><br /><span><span style="color:rgb(0, 0, 0)">One denoising approach is to record information about some of the potential noise sources during the scan, such as physiological recordings or head motion parameters. These can then be used to figure out to what extent our BOLD time series can be explained by the noise sources, by including nuisance regressors in a general linear model. Generally, we probably all agree that the more high-quality information we have on what happened during our scan, the better. One may also think that the more nuisance regressors we employ to regress out from our BOLD time series, the better our clean-up&hellip; but is that so? In her video, Molly Bright gives us deeper insight into </span><a href="https://www.pathlms.com/ohbm/courses/5158/sections/7788/video_presentations/75975"><span style="color:rgb(17, 85, 204)">the nuisance regression approach to clean up noise</span></a><span style="color:rgb(0, 0, 0)">. </span></span><br /><br /><span><span style="color:rgb(0, 0, 0)">In some smart simulation analyses (from minute 12:30), Molly shows that simply adding as many nuisance regressors as possible may not be the best strategy, as we may accidentally remove a lot of signal. Also, we need to be careful about time-lagging our regressors in order to account for the delay between a physiological change and the BOLD response. Molly explains why trying to identify that delay using the rs-fMRI data can be tricky, and why adding a breath-hold at the end of your acquisition may be a good idea (from minute 20:16). &nbsp;</span></span><br /><br /><span><span style="color:rgb(0, 0, 0)">Molly also demonstrates that very commonly applied preprocessing steps, such as bandpass filtering, can have effects on our data that we might not have predicted (from minute 16:30). While introducing a few strategies to make the nuisance regression approach for noise corrections more valid &ndash; such as prewhitening (from minute 12:00) - she stresses the fact that there is not one optimal strategy and that it is very difficult to tell whether noise removal &ldquo;has worked&rdquo;. The take-home message here is probably that as a field, we need to work towards a better understanding of the BOLD profiles of different noise sources. Additionally, integrated strategies are needed to deal with the complicated interplay between different noise sources, such as between </span><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2833099/"><span style="color:rgb(17, 85, 204)">head motion and physiological noise</span></a><span style="color:rgb(0, 0, 0)">. </span></span><br /><br /><strong><span><span style="color:rgb(0, 0, 0)">How can I correct for noise when I do not have information about the noise sources? The ICA approach:</span></span></strong><br /><span><span style="color:rgb(0, 0, 0)">While the success of nuisance regression depends on having good quality nuisance regressors in the first place, data-driven approaches are available that can be applied to any dataset, the most common strategy being independent component analysis (ICA). ICA for noise removal is based on the separation of the BOLD time courses into spatial components, and classifying each component into signal vs. noise. This is typically done on a subject-by-subject basis. The time courses of the noise components can then be regressed out or accounted for during further analyses. </span></span><br /><br /><span><span style="color:rgb(0, 0, 0)">Ludovica Griffanti gives a </span><a href="https://www.pathlms.com/ohbm/courses/5158/sections/7788/video_presentations/75976"><span style="color:rgb(17, 85, 204)">comprehensive introduction to ICA for noise removal </span></a><span style="color:rgb(0, 0, 0)">and highlights the difficulty that often lies in the signal vs noise classification that is performed by &ldquo;experts&rdquo;. Whilst semi-automated and automated approaches are under development in order to make this classification more objective, Ludovica makes the strong point that ultimately these algorithms or at least their validation are based on &ldquo;gold-standard&rdquo; manually labelled data. While there is no clear consensus yet on what signal and noise components look like, Ludovica provides us with some guidance and rules that can help with classification and are a first step towards this consensus.<br /></span></span></div>  <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center"> <a href='https://www.pathlms.com/ohbm/courses/5158/sections/7788/video_presentations/75976' target='_blank'> <img src="../uploads/1/3/9/8/139872966/blog-photo-36-2_orig.png" alt="Picture" style="width:auto;max-width:100%" /> </a> <div style="display:block;font-size:90%">Ludovica Griffanti discussing the use of ICA with rs-fMRI</div> </div></div>  <div class="paragraph" style="text-align:left;"><br /><strong><span><span style="color:rgb(0, 0, 0)">How can multi echo data help with noise correction?</span></span></strong><br /><span><span style="color:rgb(0, 0, 0)">The vast majority of BOLD data has been acquired with a single echo time, optimised to the average T2 across grey matter. However, if you have not started your experiment, you might want to acquire data with several echo times. Prantik Kundu explains why: </span><a href="https://www.pathlms.com/ohbm/courses/5158/sections/7788/video_presentations/75977"><span style="color:rgb(17, 85, 204)">BOLD and non-BOLD related signal have different sensitivity to echo time</span></a><span style="color:rgb(0, 0, 0)">, so having information about the actual decay can help distinguish signal of interest from noise (from minute 05:10). </span></span><br /><br /><span><span style="color:rgb(0, 0, 0)">Prantik provides a few beautiful examples on how multi-echo fMRI data can be combined with ICA-based approaches for noise clean-up, calculating parameters that objectively inform about how similar the components&rsquo; behaviour is to BOLD vs non-BOLD related signal (from 11:43). In the grand scheme of things, the multiple echo times used are still quite short, so acquiring this extra information would not necessarily increase your total acquisition time. On a side note, even data from one additional short echo time can provide information about some noise sources, as described in a study by </span><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3518782/"><span style="color:rgb(17, 85, 204)">Bright and Murphy (2013)</span></a><span style="color:rgb(0, 0, 0)">. Be aware that certain noise sources, such as slow physiological changes yield &lsquo;BOLD-like&rsquo; noise </span><a href="https://www.sciencedirect.com/science/article/pii/S0730725X11000968"><span style="color:rgb(17, 85, 204)">(which we can treat as noise or as signal of interest, depending on our perspective)</span></a><span style="color:rgb(0, 0, 0)">, as they interact with the cerebrovascular system. Multi-echo data does not help with correcting for this type of noise.</span></span><br /><br /><strong><span><span style="color:rgb(0, 0, 0)">Why go through all that pain? Can I not just do a simple global signal regression for noise correction?</span></span></strong><br /><span><span style="color:rgb(0, 0, 0)">A cheap and easy (and still very widely used) way for performing &lsquo;noise correction&rsquo; is global signal regression. Here, the average signal across the whole brain (or all gray matter voxels or all cortical voxels) is calculated and regressed out from each voxel time series, with the underlying assumption that the global signal mostly reflects combined noise from various sources. The advantage of this approach is </span><a href="https://www.sciencedirect.com/science/article/pii/S1053811917302288"><span style="color:rgb(17, 85, 204)">that it is able to remove artifacts that are hard to get rid of with other noise correction methods</span></a><span style="color:rgb(0, 0, 0)">. However, global signal regression is highly controversial in the field, with the main points of criticism being that the global signal has neuronal contributions and that global signal regression shifts the correlation coefficients and induces negative functional connectivity. In her video, Molly Bright briefly touches on this (from minute 24:43), and refers to a recent </span><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5489207/"><span style="color:rgb(17, 85, 204)">'consensus paper'</span></a><span style="color:rgb(0, 0, 0)">. An alternative to regressing out the global signal are using the signal from white matter or CSF, as briefly described in </span><a href="https://www.pathlms.com/ohbm/courses/5158/sections/7788/video_presentations/75972"><span style="color:rgb(17, 85, 204)">Cesar&rsquo;s video</span></a><span style="color:rgb(0, 0, 0)"> (from minute 20:00). If you are interested also see his </span><a href="https://www.sciencedirect.com/science/article/pii/S1053811916307418"><span style="color:rgb(17, 85, 204)">recent paper</span></a><span style="color:rgb(0, 0, 0)">.</span></span><br /><br /><span><span style="color:rgb(0, 0, 0); font-weight:700">How should rs-fMRI data be preprocessed?</span></span><br /><span><span style="color:rgb(0, 0, 0)">Resting state fMRI data can largely be preprocessed in the same way as data from a task-based fMRI acquisition (for a refresher on steps we recommend the slides from the </span><a href="https://www.pathlms.com/ohbm/courses/2658/sections/4569"><span style="color:rgb(17, 85, 204)">educational course from OHBM 2016</span></a><span style="color:rgb(0, 0, 0)">). </span><a href="https://www.pathlms.com/ohbm/courses/5158/sections/7788/video_presentations/75975"><span style="color:rgb(17, 85, 204)">As Molly pointed out</span></a><span style="color:rgb(0, 0, 0)">, some of the &ldquo;standard&rdquo; preprocessing steps, such as bandpass filtering, can have unexpected effects on rs-fMRI data. As rs-fMRI data does not have strong task-driven signal changes, it is generally more susceptible to noise and probably to anything we do to the data, so be wary of that.</span></span><br /><br /><span><span style="color:rgb(0, 0, 0)">As described above, there are strategies for tackling noise, such as physiological artifacts, in the preprocessing pipeline. Some good pointers, including </span><a href="https://www.pathlms.com/ohbm/courses/5158/sections/7788/video_presentations/75972"><span style="color:rgb(17, 85, 204)">Cesar Caballero Gaudes&rsquo;s video on denoising</span></a><span style="color:rgb(0, 0, 0)">, have been outlined in the previous section. In addition, in 2016 Rasmus Birn, an expert on the influence of physiological noise on the BOLD signal, gave a thorough overview of </span><a href="https://www.pathlms.com/ohbm/courses/2658/sections/4569/slide_presentations/33757"><span style="color:rgb(17, 85, 204)">physiological noise and approaches to remove it.</span></a><span style="color:rgb(0, 0, 0)"> </span></span><br /><br /></div>  <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center"> <a href='https://www.pathlms.com/ohbm/courses/5158/sections/7788/video_presentations/75975' target='_blank'> <img src="../uploads/1/3/9/8/139872966/blog-photo-36-3_orig.png" alt="Picture" style="width:auto;max-width:100%" /> </a> <div style="display:block;font-size:90%">Molly Bright discussing the preprocessing of rs-fMRI data</div> </div></div>  <div class="paragraph" style="text-align:left;"><br /><span><span style="color:rgb(0, 0, 0); font-weight:700">How can I analyse the data to find meaningful resting state networks?</span></span><br /><span><span style="color:rgb(0, 0, 0)">Once your data is preprocessed, denoised and you are confident that it is in good shape, you will want to get on with the exciting part &ndash; identifying resting state networks. When done properly, resting state data can show us large-scale networks in the &lsquo;brain at rest.&rsquo; What defines them are the correlated temporal patterns across spatially independent regions. Each network has a distinct time course from other resting state networks, but one which is consistent across its regions.</span></span><br /><br /><span><span style="color:rgb(0, 0, 0)">The aim of rs-fMRI analyses approaches is to use the time courses of brain regions to decompose the brain into resting state networks. Several techniques exist, with the two most common being seed-based correlation analysis (SCA) and independent component analysis (ICA). </span></span><br /><br /><span><span style="color:rgb(0, 0, 0)">In his video, </span><a href="https://www.pathlms.com/ohbm/courses/1492/sections/1827/video_presentations/17154"><span style="color:rgb(17, 85, 204)">Carl Hacker gives a nice overview of both SCA and ICA</span></a><span style="color:rgb(0, 0, 0)">. He introduces the two methods (from minute 1:12) and identifies the main differences between the approaches (from minute 4:15). Carl also discusses how to identify RSNs from seed-based mapping (from minute 6:25), and how the brain can be parcellated using ICA (from minute 13:35). While SCA uses the time series of an </span><span style="color:rgb(0, 0, 0)">a priori </span><span style="color:rgb(0, 0, 0)">selected seed region in order to identify whole brain functional connectivity maps of that region, ICA decomposes data from the whole brain into the time courses and spatial maps of the resting state signals, called independent components (ICs). SCA is a useful method to answer questions about the functional connectivity of one specific region. However, the drawback is that it only informs about connectivity of this region. On the other hand, the numerous ICs that you get from ICA are defined as a collection of regions which have maximal spatial independence but co-varying time courses, thus showing networks across the whole brain that have synchronous BOLD fluctuations when the brain is not performing a task.</span></span><br /><br /><span><span style="color:rgb(0, 0, 0)">In healthy subjects, SCA and ICA have been shown to produce moderately corresponding functional connectivity information, and the choice between them is likely to be guided by the specific research question. Note that the focus of Carl&rsquo;s video is parcellation of the brain. However, many concepts and principles also apply to other types of analyses. Read more about these two methods in </span><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2854531/"><span style="color:rgb(17, 85, 204)">Cole et al. (2010</span></a><span style="color:rgb(0, 0, 0)">) and </span><a href="https://www.ncbi.nlm.nih.gov/pubmed/24238796"><span style="color:rgb(17, 85, 204)">Smith et al. (2013</span></a><span style="color:rgb(0, 0, 0)">).</span></span><br /><br /><span><span style="color:rgb(0, 0, 0); font-weight:700">How do I interpret ICA components?</span></span><br /><span><span style="color:rgb(0, 0, 0)">If you have run ICAs on your resting state data, your next task will be to interpret the output. The output consists of a number of spatial maps showing regions with spatial independence but co-varying time courses, called independent components (ICs). How many ICs you get depends on the parameters you set when you run the ICA, but it is typically a few dozen.</span></span><br /><br /><span><span style="color:rgb(0, 0, 0)">The first step when interpreting the ICs is to determine whether they are signal or noise. Because ICA is data-driven, it does not &lsquo;filter out&rsquo; noise, but it can separate neural signal from non-neural signal, i.e. noise, so it is important to classify the components correctly as either signal or noise.</span></span><br /><br /><strong><span><span style="color:rgb(0, 0, 0)">So how do I distinguish between signal and noise in extracted ICs?</span></span></strong><br /><span><span style="color:rgb(0, 0, 0)">In her video, </span><a href="https://www.pathlms.com/ohbm/courses/5158/sections/7788/video_presentations/75976"><span style="color:rgb(17, 85, 204)">Ludovica Griffanti discusses how RSNs and noise can be distinguished</span></a><span style="color:rgb(0, 0, 0)">. She provides an overview of component classification approaches, including manual and automatic classification approaches (from minute 2:58). Importantly, Ludovica describes the characteristics of signal and noise components and gives examples of both (from minute 5:20). Ludovica&rsquo;s key message is that the aim of classification is to retain as much signal as possible, so if you are unsure if a component is signal or noise, keep it in as signal. She also makes the point (from minute 19:00) that a number of factors relating to participants, MR acquisition and preprocessing affect IC characteristics and discusses these briefly. The classification approach discussed in Ludovica&rsquo;s video is very similar when classifying ICA outputs from single-subject data and group level ICA, but there are differences. For an outline of these and for a more thorough discussion of manual classification of ICA components, please see </span><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5489418/"><span style="color:rgb(17, 85, 204)">Griffanti et al. (2017)</span></a><span style="color:rgb(0, 0, 0)">.</span></span><br /><br /><strong><span><span style="color:rgb(0, 0, 0)">How do I identify RSNs from ICs classified as signal?</span></span></strong><br /><span><span style="color:rgb(0, 0, 0)">There are a few approaches to determining what networks signal components correspond to. Some ICA toolboxes will have spatial templates that can be compared to the ICs. But perhaps the most common approach is manual labelling based on known anatomy. The spatial patterns and time courses of many common resting state networks (RSNs) have been described. (e.g. for labelling RSNs from group-level data see </span><a href="https://www.ncbi.nlm.nih.gov/pubmed/16087444"><span style="color:rgb(17, 85, 204)">Beckman et al. (2005</span></a><span style="color:rgb(0, 0, 0)">) and </span><a href="https://www.ncbi.nlm.nih.gov/pubmed/16260155"><span style="color:rgb(17, 85, 204)">De Luca et al. (2006)</span></a><span style="color:rgb(0, 0, 0)">).</span></span><br /><br /><span><span style="color:rgb(0, 0, 0)">A further option for IC classification is the use of automated RSN classification techniques. In his video, </span><a href="https://www.pathlms.com/ohbm/courses/5158/sections/7787/video_presentations/75970"><span style="color:rgb(17, 85, 204)">Abraham Snyder gives an overview of how machine learning can be used to classify RSNs based on pattern recognition</span></a><span style="color:rgb(0, 0, 0)"> (minutes 28:50-33:00).<br />&#8203;</span></span></div>  <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center"> <a href='https://www.pathlms.com/ohbm/courses/5158/sections/7787/video_presentations/75970' target='_blank'> <img src="../uploads/1/3/9/8/139872966/blog-photo-36-4_orig.png" alt="Picture" style="width:auto;max-width:100%" /> </a> <div style="display:block;font-size:90%">Abraham Snyder discusses using machine learning methods to classify resting state networks</div> </div></div>  <div class="paragraph" style="text-align:left;"><br /><strong><span><span style="color:rgb(0, 0, 0)">What is this thing called dual regression?</span></span></strong><br /><span><span style="color:rgb(0, 0, 0)">ICA is typically done with group data and produces spatial maps that reflect the group average functional connectivity. However, the individual variability of IC topography is often useful, for example to make comparisons between groups of individuals. A process called back-reconstruction is therefore used to obtain the individuals&rsquo; time courses for the ICs obtained from the group-level ICA, which are then correlated with each voxel to obtain subject-specific spatial maps. Dual regression is one available back-reconstruction method. In his video, </span><a href="https://www.pathlms.com/ohbm/courses/1492/sections/1827/video_presentations/17154"><span style="color:rgb(17, 85, 204)">Carl Hecker gives a brief overview of how it works </span></a><span style="color:rgb(0, 0, 0)">(from minute 19:38).</span></span><br /><span><span style="color:rgb(0, 0, 0)">If you are interested, </span><a href="https://www.ncbi.nlm.nih.gov/pubmed/21162045"><span style="color:rgb(17, 85, 204)">Erhardt et al. (2011</span></a><span style="color:rgb(0, 0, 0)">), describe the principles of several back-reconstruction methods, including dual regression.</span></span><br /><br /><span><span style="color:rgb(0, 0, 0); font-weight:700">What metrics can I extract from the rs-fMRI analyses?</span></span><br /><em><span><span style="color:rgb(0, 0, 0)">Local activity metrics:</span></span></em><br /><span><span style="color:rgb(0, 0, 0)">Even before running a network analysis on the rsfMRI data, such as SCA or ICA (see above), two useful metrics can be derived from the data, ALFF and ReHo.</span></span><br /><br /><span><span style="color:rgb(0, 0, 0)">Amplitude of Low Frequency Fluctuations (ALFF) measures the magnitude of low frequency oscillations (0.01-0.1 Hz) in the BOLD signal in neural regions. The fractional ALFF, a complementary metric, is a measure of the contribution that a specific low frequency oscillation makes to the whole frequency range recorded. Both metrics give a measure of the amplitudes of brain activity in specific regions. However, the interpretation of these measures is difficult. Fractional ALFF has been shown to be dependent on the vascularisation of the brain, similar to the resting-state fluctuation amplitude (RSFA), which is a very similar measure to the ALFF, and available from any rs-fMRI scan, but has often been interpreted differently. Physiological mechanisms, including vascular effects, in rs-fMRI are still not fully understood and the exact interpretation of measures linked to cerebrovascular characteristics is therefore more difficult.</span></span><br /><br /><span><span style="color:rgb(0, 0, 0)">The other common rs-fMRI metric is that of regional homogeneity, or ReHo. ReHo is a voxel-based measure of regional brain activity, based on the similarity of the time-series of a given voxel and its nearest neighbours. It quantifies the homogeneity of adjacent regions, to provide information about the coherence of neural activity of a specific spatial region.</span></span><br /><br /><span><span style="color:rgb(0, 0, 0)">Thus, both ALFF and ReHo give information about regional neural activity and have been shown to have high values in, for example, the default mode network regions during rest, indicating that they can point to the regions that play central roles in resting state networks. Because they provide information about regional neural activity at rest, both ALFF and ReHo can be used to determine an ROI for SCA.</span></span><br /><br /><em><span><span style="color:rgb(0, 0, 0)">Functional network metrics:</span></span></em><br /><span><span style="color:rgb(0, 0, 0)">However, ALFF and ReHo are metrics of local neural activity, and are thus limited in their ability to provide information about large resting state networks. Network analyses therefore tend to focus on functional connectivity measures.</span></span><br /><br /><span><span style="color:rgb(0, 0, 0)">SCA and ICA, discussed above, both offer measures of functional connectivity within the brain. Both calculate the correlation of time series between voxels in the brain to produce spatial maps of Z-scores for each voxel. These scores reflect how well the time series of each voxel is correlated with the time series of other voxels and are a measure of functional connectivity. In SCA, the Z-scores reflect the correlation of each voxel with the average time course of the seed voxel, while in ICA the Z-scores reflect the correlation of each voxel with the average time series of the respective IC. Dual regression can be run with both SCA and ICA to enable the investigation of individual and group level differences of functional connectivity.</span></span><br /><br /><span><span style="color:rgb(0, 0, 0)">A good overview of the metrics described above is provided in </span><a href="https://www.ncbi.nlm.nih.gov/pubmed/29348136"><span style="color:rgb(17, 85, 204)">Lv et al. (2018</span></a><span style="color:rgb(0, 0, 0)">).</span></span><br /><br /><span><span style="color:rgb(0, 0, 0)">A more recent metric derived from rs-fMRI data is that of functional homotopy. Functional homotopy shows the synchrony of spontaneous neural activity between geometrically corresponding, i.e. homotopic, regions in the two hemispheres. It provides a measure of connectivity between corresponding interhemispheric regions, and can be used to determine regional versus hemispheric information processing. </span></span><br /><br /><span><a href="https://www.pathlms.com/ohbm/courses/3233/sections/4563/slide_presentations/33663"><span style="color:rgb(17, 85, 204)">Chao-Gan Yan asks whether these different measures of resting state functional connectivity show unique variance</span></a><span style="color:rgb(0, 0, 0)">, and discusses the concordance among some of these metrics and also global connectivity (a graph theory measure, please see the next section), by drawing on work from his research group.</span></span><br /><br /><span><span style="color:rgb(0, 0, 0)">It is important to remember that most measures of resting state functional connectivity are based on correlational analyses and thus do not tell us anything about how regions of the brain influence the activity of other regions. It is possible to model the relationships between observed patterns of functional connectivity to be able to draw inferences about such neural influences, in an approach called effective connectivity, which is determined with Dynamic Causal Modelling. In his video, </span><a href="https://www.pathlms.com/ohbm/courses/3232/sections/4526/video_presentations/33861"><span style="color:rgb(17, 85, 204)">Karl Friston describes how we can use effective connectivity to infer causality from observed connectivity </span></a><span style="color:rgb(0, 0, 0)">(minutes 0:57 to 23:07).</span></span><br /><br /></div>  <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center"> <a href='https://www.pathlms.com/ohbm/courses/3232/sections/4526/video_presentations/33861' target='_blank'> <img src="../uploads/1/3/9/8/139872966/blog-photo-36-5_orig.png" alt="Picture" style="width:auto;max-width:100%" /> </a> <div style="display:block;font-size:90%">Karl Friston discussing the theory behind dynamic causal modelling</div> </div></div>  <div class="paragraph" style="text-align:left;"><br /><span><span style="color:rgb(0, 0, 0); font-weight:700">How can graph theory be applied to resting state data?</span></span><br /><span><span style="color:rgb(0, 0, 0)">More advanced metrics can be derived from rs-fMRI data using graph theoretical analysis approaches. Graph theory is a mathematical method for mapping all the brain&rsquo;s connections by depicting them as a graph consisting of nodes and edges. When graph theory is applied to rs-fMRI data, the nodes are often large-scale brain regions, and the edges represent the functional connectivity between them. The great advantage of graph theory over other measures of functional connectivity is that it offers a way to quantify the properties of large, complex networks.</span></span><br /><br /><span><a href="https://www.pathlms.com/ohbm/courses/5158/sections/7789/video_presentations/75978"><span style="color:rgb(17, 85, 204)">Alex Fornito gives an excellent introduction to graph theory </span></a><span style="color:rgb(0, 0, 0)">in his video. He discusses the rationale for using graph theory (minutes 0:55 to 3:39), before going on to give a history of graph theory (minutes 3:39 - 11:54). Then, Alex describes how network models can be created and shown as graphs (minutes 11:54 to 16:53), with a focus on defining nodes and edges. He describes how edges can be defined using fMRI data, including the potential problem of relying on the time series correlations that underpin functional connectivity (minutes 19:16 - 24:43). Finally, the construction of the graph is described (minutes 24:43 - 28:55).</span></span><br /><br /><span><span style="color:rgb(0, 0, 0)">Alex Fornito discusses several approaches to defining the nodes of a network. One of these is parcellation of the brain. The brain can be </span><a href="https://www.pathlms.com/ohbm/courses/1492/sections/1827/video_presentations/17154"><span style="color:rgb(17, 85, 204)">parcellated from rs-fMRI data through either SCA or ICA, as described by Carl Hacker</span></a><span style="color:rgb(0, 0, 0)">. </span></span><br /><br /><span><span style="color:rgb(51, 51, 51)">Once a functional connectivity matrix has been created, either from brain parcellation or the components obtained from ICA, there are two options for deriving metrics. The first is to simply compare the functional connectivity matrices between two or more groups of participants. This approach can provide useful information about how the variable of interest, such as a disease, affects the connectivity between or within resting state networks, and has been used to characterise functional connectivity in diseases such as </span><a href="https://www.ncbi.nlm.nih.gov/pubmed/24306091"><span style="color:rgb(51, 51, 51)">schizophrenia</span></a><span style="color:rgb(51, 51, 51)"> and </span><a href="https://www.ncbi.nlm.nih.gov/pubmed/23774715"><span style="color:rgb(51, 51, 51)">autism</span></a><span style="color:rgb(51, 51, 51)">. The other option is to create a graph from the functional connectivity matrix and study it with graph theory.</span></span><br /><br /><span><span style="color:rgb(51, 51, 51)">However, because functional connectivity matrices show correlations between the time series of defined brain regions, either approach </span><span style="color:rgb(0, 0, 0)">is potentially susceptible to spurious or weak connections, for instance due to noise. One way to address this is to apply a threshold that removes the connections that fall below that threshold. </span><a href="https://www.pathlms.com/ohbm/courses/5158/sections/7789/video_presentations/75979"><span style="color:rgb(17, 85, 204)">Andrew Zalesky gives an introduction to network thresholding </span></a><span style="color:rgb(0, 0, 0)">and an overview of how it is performed between 0:00 and 16:40 minutes of his video. He also provides an overview of the type of measures that can be extracted from brain graphs, with a focus on comparisons of edge strength (minutes 16:40 to 19:36).</span></span><br /><br /><span><span style="color:rgb(0, 0, 0)">Some regions of the brain are more strongly connected with others, and tend to be considered network hubs. Metrics related to network hubs are among the most commonly used in graph theoretical analysis. </span><a href="https://www.pathlms.com/ohbm/courses/5158/sections/7789/video_presentations/75982"><span style="color:rgb(17, 85, 204)">Martijn van den Heuvel discusses network hubs and the metrics associated with them</span></a><span style="color:rgb(0, 0, 0)"> (from about 1:30 minutes). </span></span><br /><br /><span><span style="color:rgb(0, 0, 0)">An extensive list of graph theory metrics and what they tell us about neural networks can be found in </span><a href="https://www.ncbi.nlm.nih.gov/pubmed/19819337"><span style="color:rgb(17, 85, 204)">Rubinov and Sporns (2010</span></a><span style="color:rgb(0, 0, 0)">).</span></span><br /><br /><span><span style="color:rgb(0, 0, 0)">For those interested, there is a small collection of videos on graph theory from </span><a href="https://www.pathlms.com/ohbm/courses/5158/sections/7789"><span style="color:rgb(17, 85, 204)">last year&rsquo;s presentations at the OHBM conference</span></a><span style="color:rgb(0, 0, 0)">, including those discussed in this post.</span></span><br /><br /><span><span style="color:rgb(0, 0, 0); font-weight:700">What do the resting state networks actually show?</span></span><br /><span><span style="color:rgb(0, 0, 0)">How do you interpret findings from your resting state analysis? Well, first, it is important to consider the biological function of the correlated temporal patterns. Unfortunately, it is not as simple as defining it as &lsquo;activity during rest.&rsquo; RSNs are collections of brain regions that have synchronous BOLD fluctuations, but the source of the signal has not been unequivocally established. While there is strong evidence to suggest that the signal is neural, there is still ongoing debate about the extent to which it may be influenced by non-neuronal noise, such as respiratory and cardiac oscillations. However, the fact that rs-fMRI analysis results have been reproduced even when applying conservative physiological corrections across both individual subjects and groups points to a largely neural basis of the rs-fMRI signal.</span></span><br /><br /><span><span style="color:rgb(0, 0, 0)">So what does the functional connectivity mean? In purely methodological terms it is the statistical correlation of two time series. It has been suggested that such correlations have arisen as a result of neural populations that are active together to perform a task and have therefore &lsquo;wired&rsquo; together. The rs-fMRI signal reflects their spontaneous neural activity in the absence of a specific task. There may be direct anatomic connections between networks derived from rs-fMRI analyses, or another joint source of the signal. This is currently not well understood, and rs-fMRI findings should be interpreted with caution.</span></span><br /><br /><span><span style="color:rgb(0, 0, 0)">A short, but good, outline of the origin of the rsfMRI signal is provided in </span><a href="https://www.ncbi.nlm.nih.gov/pubmed/20471808"><span style="color:rgb(17, 85, 204)">van den Heuvel et al. (2010</span></a><span style="color:rgb(0, 0, 0)">).<br /></span></span><br /></div>
+
+		</div>
+	
+	
+			<div class="blog-social  ">
+		<div class="blog-social-item blog-fb-like"><fb:like href="https://www.ohbmbrainmappingblog.com/1/post/2018/08/ohbm-ondemand-how-to-resting-state-fmri-analysis.html" width="90" layout="button_count" action="like" show_faces="false" share="false"></fb:like></div><div class="blog-social-item"><a class="twitter-share-button" href="http://twitter.com/share?url=https://www.ohbmbrainmappingblog.com/1/post/2018/08/ohbm-ondemand-how-to-resting-state-fmri-analysis.html" data-text="OHBM OnDemand How-to: Resting State fMRI Analysis - ORGANIZATION FOR HUMAN BRAIN MAPPING" data-count="horizontal"></a></div>
+		<div style="clear:both"></div>
+	</div>
+
+	
+		<div class="blog-comments-bottom">
+				<a href="ohbm-ondemand-how-to-resting-state-fmri-analysis.html#comments" class="blog-link">
+		0 Comments
+	</a>
+
+		</div>
+	
+		<div class="blog-post-separator"></div>
+	</div>
+
+
+    <a name="comments" id="comments"></a>
+<div id="commentArea">
+	<div class="blog-comment-area">
+		
+
+		<div id="commentText">
+			<!-- lastComment -->
+		<div id="lastComment"> </div>
+		</div>
+		<br />
+		
+			<div class="blog-notice-comments-pending">Your comment will be posted after it is approved.</div>
+		
+			<br/><br/>
+			<h2 id="commentReplyTitle">Leave a Reply.</h2>
+			<div class="blogCommentReplyWrapper ">
+				<div class="iframeWrapper">
+					<div class="iframeContainer">
+						<iframe src="https://www.weebly.com/editor/apps/showCommentForm-v2.php?user_id=139872966&amp;blog_id=699015543220266125&amp;post_id=203656114553596775&amp;parent=http://www.ohbmbrainmappingblog.com/blog/ohbm-ondemand-how-to-resting-state-fmri-analysis&amp;is_mobile=&amp;r=3&amp;is_light=1" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+					</div>
+				</div>
+			</div>
+
+	</div>
+	<!-- bid-1: , path:  -->
+</div>
+ 
+<!-- bid: $blog_id --></div>
+	</div>
+
+	    </td>
+	        <td class="blog-sidebar" valign="top">
+	            <div id="124045111785600110-sidebar" class="column-blog">
+	<div class="blog-sidebar-separator">
+		<ul id="124045111785600110-sidebar-list" class="columnlist-blog" style="margin:0; padding: 0;">
+			<h2 class="blog-author-title" style="text-align:left;"><a href="../index.html">BLOG HOME</a><br /><br /><a href="../tutorials.html">&#8203;TUTORIALS</a><br /><br /><a href="http://www.humanbrainmapping.org" target="_blank">&#8203;</a><a href="../media.html" target="_blank">MEDIA</a><br /><br /><a href="../contributors.html">&#8203;contributors</a><br /><br /><a href="../media.html" target="_blank">&#8203;</a><a href="http://www.humanbrainmapping.org/" target="_blank">OHBM WEBSITE</a></h2>
+<p style="text-align:left;">&#8203;</p>
+
+<div class="paragraph"><strong><a href="https://www.pathlms.com/ohbm" target="_blank"><font size="4">OHBM OnDemand&nbsp;<br />&#8203;Education Platform</font></a><br /></strong><br /></div>
+
+<div style="text-align:left;"><div style="height:10px;overflow:hidden"></div>
+<span class="wsite-social wsite-social-default"><a class='first-child wsite-social-item wsite-social-facebook' href='https://www.facebook.com/Organization-for-Human-Brain-Mapping-373611079434746/' target='_blank' alt='Facebook' aria-label='Facebook'><span class='wsite-social-item-inner'></span></a><a class='wsite-social-item wsite-social-twitter' href='https://twitter.com/OHBM' target='_blank' alt='Twitter' aria-label='Twitter'><span class='wsite-social-item-inner'></span></a><a class='wsite-social-item wsite-social-linkedin' href='https://www.linkedin.com/in/organization-for-human-brain-mapping-00962979' target='_blank' alt='Linkedin' aria-label='Linkedin'><span class='wsite-social-item-inner'></span></a><a class='last-child wsite-social-item wsite-social-mail' href='mailto:ohbm.blogteam@gmail.com' target='_blank' alt='Mail' aria-label='Mail'><span class='wsite-social-item-inner'></span></a></span>
+<div style="height:10px;overflow:hidden"></div></div>
+
+<p class="blog-feed-link">
+	<link href="ohbm-ondemand-how-to-resting-state-fmri-analysis.html"  rel="alternate" type="application/rss+xml" title="RSS" />
+	<a href="../1/feed">
+		<img src="https://cdn2.editmysite.com/images/old/bg_feed.gif" />
+		RSS Feed
+	</a>
+</p>
+
+<div class="wsite-search-element-outer"><div class="wsite-search-element-align-left" style="padding: 10px 0 10px 0">
+  <form class="wsite-search-element-form" action="https://www.ohbmbrainmappingblog.com/apps/search" method="get">
+    <div class="wsite-search-element">
+      <input class="wsite-input wsite-search-element-input" type="text" name="q" placeholder="Search" autocomplete="off" aria-label="Search" />
+      <span class="wsite-search-element-submit" title="Search"></span>
+    </div>
+  </form>
+</div></div>
+
+<div class="wsite-spacer" style="height:29px;"></div>
+
+<h2 class="blog-archives-title" style="text-align:left;">Archives</h2>
+<p class="blog-archive-list">
+		<a href="archives/10-2022.html" class="blog-link">October 2022</a>
+		<br />
+		<a href="archives/09-2022.html" class="blog-link">September 2022</a>
+		<br />
+		<a href="archives/08-2022.html" class="blog-link">August 2022</a>
+		<br />
+		<a href="archives/07-2022.html" class="blog-link">July 2022</a>
+		<br />
+		<a href="archives/06-2022.html" class="blog-link">June 2022</a>
+		<br />
+		<a href="archives/05-2022.html" class="blog-link">May 2022</a>
+		<br />
+		<a href="archives/04-2022.html" class="blog-link">April 2022</a>
+		<br />
+		<a href="archives/03-2022.html" class="blog-link">March 2022</a>
+		<br />
+		<a href="archives/01-2022.html" class="blog-link">January 2022</a>
+		<br />
+		<a href="archives/12-2021.html" class="blog-link">December 2021</a>
+		<br />
+		<a href="archives/11-2021.html" class="blog-link">November 2021</a>
+		<br />
+		<a href="archives/10-2021.html" class="blog-link">October 2021</a>
+		<br />
+		<a href="archives/09-2021.html" class="blog-link">September 2021</a>
+		<br />
+		<a href="archives/08-2021.html" class="blog-link">August 2021</a>
+		<br />
+		<a href="archives/07-2021.html" class="blog-link">July 2021</a>
+		<br />
+		<a href="archives/06-2021.html" class="blog-link">June 2021</a>
+		<br />
+		<a href="archives/05-2021.html" class="blog-link">May 2021</a>
+		<br />
+		<a href="archives/04-2021.html" class="blog-link">April 2021</a>
+		<br />
+		<a href="archives/03-2021.html" class="blog-link">March 2021</a>
+		<br />
+		<a href="archives/02-2021.html" class="blog-link">February 2021</a>
+		<br />
+		<a href="archives/01-2021.html" class="blog-link">January 2021</a>
+		<br />
+		<a href="archives/12-2020.html" class="blog-link">December 2020</a>
+		<br />
+		<a href="archives/11-2020.html" class="blog-link">November 2020</a>
+		<br />
+		<a href="archives/10-2020.html" class="blog-link">October 2020</a>
+		<br />
+		<a href="archives/09-2020.html" class="blog-link">September 2020</a>
+		<br />
+		<a href="archives/06-2020.html" class="blog-link">June 2020</a>
+		<br />
+		<a href="archives/05-2020.html" class="blog-link">May 2020</a>
+		<br />
+		<a href="archives/04-2020.html" class="blog-link">April 2020</a>
+		<br />
+		<a href="archives/03-2020.html" class="blog-link">March 2020</a>
+		<br />
+		<a href="archives/02-2020.html" class="blog-link">February 2020</a>
+		<br />
+		<a href="archives/01-2020.html" class="blog-link">January 2020</a>
+		<br />
+		<a href="archives/12-2019.html" class="blog-link">December 2019</a>
+		<br />
+		<a href="archives/11-2019.html" class="blog-link">November 2019</a>
+		<br />
+		<a href="archives/10-2019.html" class="blog-link">October 2019</a>
+		<br />
+		<a href="archives/09-2019.html" class="blog-link">September 2019</a>
+		<br />
+		<a href="archives/08-2019.html" class="blog-link">August 2019</a>
+		<br />
+		<a href="archives/07-2019.html" class="blog-link">July 2019</a>
+		<br />
+		<a href="archives/06-2019.html" class="blog-link">June 2019</a>
+		<br />
+		<a href="archives/05-2019.html" class="blog-link">May 2019</a>
+		<br />
+		<a href="archives/04-2019.html" class="blog-link">April 2019</a>
+		<br />
+		<a href="archives/03-2019.html" class="blog-link">March 2019</a>
+		<br />
+		<a href="archives/02-2019.html" class="blog-link">February 2019</a>
+		<br />
+		<a href="archives/01-2019.html" class="blog-link">January 2019</a>
+		<br />
+		<a href="archives/12-2018.html" class="blog-link">December 2018</a>
+		<br />
+		<a href="archives/11-2018.html" class="blog-link">November 2018</a>
+		<br />
+		<a href="archives/10-2018.html" class="blog-link">October 2018</a>
+		<br />
+		<a href="archives/08-2018.html" class="blog-link">August 2018</a>
+		<br />
+		<a href="archives/07-2018.html" class="blog-link">July 2018</a>
+		<br />
+		<a href="archives/06-2018.html" class="blog-link">June 2018</a>
+		<br />
+		<a href="archives/05-2018.html" class="blog-link">May 2018</a>
+		<br />
+		<a href="archives/04-2018.html" class="blog-link">April 2018</a>
+		<br />
+		<a href="archives/03-2018.html" class="blog-link">March 2018</a>
+		<br />
+		<a href="archives/02-2018.html" class="blog-link">February 2018</a>
+		<br />
+		<a href="archives/01-2018.html" class="blog-link">January 2018</a>
+		<br />
+		<a href="archives/12-2017.html" class="blog-link">December 2017</a>
+		<br />
+		<a href="archives/11-2017.html" class="blog-link">November 2017</a>
+		<br />
+		<a href="archives/10-2017.html" class="blog-link">October 2017</a>
+		<br />
+		<a href="archives/09-2017.html" class="blog-link">September 2017</a>
+		<br />
+		<a href="archives/08-2017.html" class="blog-link">August 2017</a>
+		<br />
+		<a href="archives/07-2017.html" class="blog-link">July 2017</a>
+		<br />
+		<a href="archives/06-2017.html" class="blog-link">June 2017</a>
+		<br />
+		<a href="archives/05-2017.html" class="blog-link">May 2017</a>
+		<br />
+		<a href="archives/04-2017.html" class="blog-link">April 2017</a>
+		<br />
+		<a href="archives/03-2017.html" class="blog-link">March 2017</a>
+		<br />
+		<a href="archives/02-2017.html" class="blog-link">February 2017</a>
+		<br />
+		<a href="archives/01-2017.html" class="blog-link">January 2017</a>
+		<br />
+		<a href="archives/12-2016.html" class="blog-link">December 2016</a>
+		<br />
+		<a href="archives/11-2016.html" class="blog-link">November 2016</a>
+		<br />
+		<a href="archives/10-2016.html" class="blog-link">October 2016</a>
+		<br />
+		<a href="archives/09-2016.html" class="blog-link">September 2016</a>
+		<br />
+		<a href="archives/08-2016.html" class="blog-link">August 2016</a>
+		<br />
+		<a href="archives/07-2016.html" class="blog-link">July 2016</a>
+		<br />
+		<a href="archives/06-2016.html" class="blog-link">June 2016</a>
+		<br />
+		<a href="archives/05-2016.html" class="blog-link">May 2016</a>
+		<br />
+		<a href="archives/04-2016.html" class="blog-link">April 2016</a>
+		<br />
+</p>
+		</ul>
+	</div>
+</div>
+
+	        </td>
+	</tr>
+</table>
+
+</div>
+</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="footer-wrap"><div class='wsite-elements wsite-footer'>
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -20px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:79.1%; padding:0 20px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:left;"><font size="4">stay connected with ohbm!</font></h2>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:20.9%; padding:0 20px;">
+					
+						
+
+<div style="text-align:center;"><div style="height:20px;overflow:hidden"></div>
+<span class="wsite-social wsite-social-default"><a class='first-child wsite-social-item wsite-social-facebook' href='https://www.facebook.com/Organization-for-Human-Brain-Mapping-373611079434746/?fref=nf' target='_blank' alt='Facebook' aria-label='Facebook'><span class='wsite-social-item-inner'></span></a><a class='wsite-social-item wsite-social-twitter' href='https://twitter.com/OHBM_SciNews' target='_blank' alt='Twitter' aria-label='Twitter'><span class='wsite-social-item-inner'></span></a><a class='last-child wsite-social-item wsite-social-linkedin' href='https://www.linkedin.com/company/organization-for-human-brain-mapping' target='_blank' alt='Linkedin' aria-label='Linkedin'><span class='wsite-social-item-inner'></span></a></span>
+<div style="height:0px;overflow:hidden"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:33.71103822001%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:left;"><font size="3"><span><a href="http://www.humanbrainmapping.org/i4a/pages/index.cfm?pageid=3282">become a member</a></span></font></h2>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:37.840880509071%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:left;"><font size="3">Telephone</font></h2>
+
+<div class="paragraph" style="text-align:left;">952-646-2029</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:28.44808127092%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:left;"><a href="mailto:info@humanbrainmapping.org"><strong><font size="3">Email ohbm</font></strong></a><br /></h2>
+
+<div class="paragraph" style="text-align:left;"><a href="mailto:hello@ohbm-com.com"><strong><font size="4">EMAIL BLOG TEAM</font></strong></a></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<div class="paragraph" style="text-align:left;"><em><font color="#a1a1a1" size="2">Header image created by&nbsp;<span>Thiebaut de Schotten &amp; Batrancourt&nbsp;&nbsp;</span></font><br /><span><font color="#a1a1a1"><font size="2">www.brainconnectivitybehaviour.eu</font></font></span></em><br /><br /></div></div></div>
+
+	</div>
+
+	<!-- JavaScript -->
+	<script type="text/javascript" src="../files/theme/plugins.js"></script>
+	<script type="text/javascript" src="../files/theme/mobile.js"></script>
+	<script type="text/javascript" src="../files/theme/custom.js"></script>
+    <div id="customer-accounts-app"></div>
+    <script src="https://cdn2.editmysite.com/js/site/main-customer-accounts-site.js?buildTime=1673495532"></script>
+
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78661612-1', 'auto');
+  ga('send', 'pageview');
+
+</script><script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-7870337-1']);
+	_gaq.push(['_setDomainName', 'none']);
+	_gaq.push(['_setAllowLinker', true]);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		// NOTE: keep the [1] if you replace this code. Otherwise cookie banner scripts won't be first on the page
+		var s = document.getElementsByTagName('script')[1]; s.parentNode.insertBefore(ga, s);
+	})();
+
+	_W.Analytics = _W.Analytics || {'trackers': {}};
+	_W.Analytics.trackers.wGA = '_gaq';
+</script>
+
+<script type="text/javascript" async=1>
+	// NOTE: keep the getElementsByTagName(o)**[1]** if you replace this code. Otherwise cookie banner scripts won't be first on the page
+	;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+			p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+			};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[1];n.async=1;
+			n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,'script','//cdn2.editmysite.com/js/wsnbn/snowday262.js','snowday'));
+
+	var r = [99, 104, 101, 99, 107, 111, 117, 116, 46, 40, 119, 101, 101, 98, 108, 121, 124, 101, 100, 105, 116, 109, 121, 115, 105, 116, 101, 41, 46, 99, 111, 109];
+	var snPlObR = function(arr) {
+		var s = '';
+		for (var i = 0 ; i < arr.length ; i++){
+			s = s + String.fromCharCode(arr[i]);
+		}
+		return s;
+	};
+	var s = snPlObR(r);
+
+	var regEx = new RegExp(s);
+
+	_W.Analytics = _W.Analytics || {'trackers': {}};
+	_W.Analytics.trackers.wSP = 'snowday';
+	_W.Analytics.user_id = '139872966';
+	_W.Analytics.site_id = '204303227559001667';
+
+	var drSegmentsTag = document.getElementById('drSegments');
+	if (drSegmentsTag) {
+		_W.Analytics.spContexts = _W.Analytics.spContexts || [];
+
+		var segmentData = JSON.parse(drSegmentsTag.innerText);
+		segmentData.forEach(function(test) {
+			_W.Analytics.spContexts.push({
+				schema: "iglu:com.weebly/context_ab_segment/jsonschema/1-0-0",
+				data: {
+					test_id: test.name,
+					segment: test.variant,
+				}
+			});
+		});
+	}
+
+
+	(function(app_id, ec_hostname, discover_root_domain) {
+		var track = window[_W.Analytics.trackers.wSP];
+		if (!track) return;
+		track('newTracker', app_id, ec_hostname, {
+			appId: app_id,
+			post: true,
+			platform: 'web',
+			discoverRootDomain: discover_root_domain,
+			cookieName: '_snow_',
+			contexts: {
+				webPage: true,
+				performanceTiming: true,
+				gaCookies: true
+			},
+			crossDomainLinker: function (linkElement) {
+				return regEx.test(linkElement.href);
+			},
+			respectDoNotTrack: true
+		});
+		track('trackPageView', _W.Analytics.user_id+':'+_W.Analytics.site_id, _W.Analytics.spContexts);
+		track('crossDomainLinker', function (linkElement) {
+			return regEx.test(linkElement.href);
+		});
+	})(
+		'_wn',
+		'ec.editmysite.com',
+		true
+	);
+</script>
+
+
+
+
+
+<script>
+	(function(jQuery) {
+		try {
+			if (jQuery) {
+				jQuery('div.blog-social div.fb-like').attr('class', 'blog-social-item blog-fb-like');
+				var $commentFrame = jQuery('#commentArea iframe');
+				if ($commentFrame.length > 0) {
+					var frameHeight = jQuery($commentFrame[0].contentWindow.document).height() + 50;
+					$commentFrame.css('min-height', frameHeight + 'px');
+				}
+				if (jQuery('.product-button').length > 0){
+					jQuery(document).ready(function(){
+						jQuery('.product-button').parent().each(function(index, product){
+							if(jQuery(product).attr('target') == 'paypal'){
+								if (!jQuery(product).find('> [name="bn"]').length){
+									jQuery('<input>').attr({
+										type: 'hidden',
+										name: 'bn',
+										value: 'DragAndDropBuil_SP_EC'
+									}).appendTo(product);
+								}
+							}
+						});
+					});
+				}
+			}
+			else {
+				// Prototype
+				$$('div.blog-social div.fb-like').each(function(div) {
+					div.className = 'blog-social-item blog-fb-like';
+				});
+				$$('#commentArea iframe').each(function(iframe) {
+					iframe.style.minHeight = '410px';
+				});
+			}
+		}
+		catch(ex) {}
+	})(window._W && _W.jQuery);
+</script>
+
+<script>
+	window._W.isEUUser = false;
+	window._W.showCookieToAll = "";
+</script>
+
+<div id="fb-root"></div>
+<script>
+	window.fbAsyncInit = function() {
+		FB.init({
+			appId : '190291501407',
+			xfbml : true,
+			version : 'v2.6'
+		});
+
+        // Set Facebook comment plugin's colorscheme based off of theme
+		var comments = document.getElementsByClassName('facebook-comment-widget'),
+			scheme = document.body.className.match('wsite-theme-light');
+
+		for (var i = 0; i < comments.length; i++) {
+			comments[i].setAttribute('colorscheme', scheme ? 'light' : 'dark');
+		}
+
+		var fbCommentCounts;
+
+		FB.Event.subscribe('xfbml.render', function(){
+			fbCommentCounts = jQuery('.fb_comments_count');
+			for (var i = 0; i < fbCommentCounts.length; i++) {
+				var commentText = (jQuery(fbCommentCounts[i]).text() == '1' ? "Comment" : "Comments");
+				jQuery(fbCommentCounts[i]).parent().siblings('.fb_comment_count_label').text(commentText);
+			}
+		});
+
+		var comment_callback = function(res) {
+			FB.XFBML.parse(); // Refresh comment counters on page
+		}
+
+		FB.Event.subscribe('comment.create', comment_callback);
+		FB.Event.subscribe('comment.remove', comment_callback);
+
+	};
+
+	(function(d, s, id){
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/"+_W.facebookLocale+"/sdk.js";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+</script>
+<script type='text/javascript'>
+	(function() {
+		function j(src, id) {
+			var s = document.createElement('script');
+			s.type = 'text/javascript';
+			s.async = true;
+			s.src = src;
+			if(id) {s.id=id};
+			document.getElementsByTagName('head')[0].appendChild(s);
+		}
+		j('//platform.twi'+'tter.com/widgets.js');
+	})()
+</script>
+	</body>
+</html>
