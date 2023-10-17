@@ -65,14 +65,21 @@ def extract_text(file):
     ps = []
     for paragraph in paragraphs:
         cur_branch, cur_attribs = None, None
+        consec_br = 0
 
         for t in paragraph.xpath('.//text() | .//br'):
             # <br/>
             if not isinstance(t, str):
-                if cur_branch:
-                    ps.append(cur_branch[0])
-                    cur_branch, cur_attribs = None, None
+                consec_br += 1
                 continue
+
+            # text
+            if consec_br == 1 and cur_branch:
+                cur_branch[-1].append(html.Element('br'))
+            elif consec_br > 1 and cur_branch:
+                ps.append(cur_branch[0])
+                cur_branch, cur_attribs = None, None
+            consec_br = 0
 
             attribs = collect_attribs(t)
 
