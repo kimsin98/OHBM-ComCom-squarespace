@@ -1,0 +1,102 @@
+<p style="text-align:left;"><span><span style="color:rgb(33, 33, 33); font-weight:700">By Cyril Pernet, Dora Hermes, Chris Holdgraf</span></span></p>
+<p style="text-align:left;"><span><span style="color:rgb(33, 33, 33)">We are happy to announce that the Brain Imaging Data Structure (BIDS) now supports all of the major electrophysiology modalities in human neuroscience. This means that EEG, MEG, and iEEG researchers can all store their data in a BIDS-compliant manner, making these datasets more shareable, understandable, and re-usable. This post describes the BIDS standard in general and the community around it, as well as recent changes that have brought support for electrophysiology.</span></span></p>
+<p style="text-align:left;"><span><span style="color:rgb(33, 33, 33); font-weight:700"> </span></span></p>
+<p style="text-align:left;"><span><span style="color:rgb(33, 33, 33); font-weight:700">The Brain Imaging Data Structure: BIDS</span></span></p>
+<p style="text-align:left;"><span><span style="color:rgb(33, 33, 33)">BIDS is a standard that specifies how to organize data in different folders, how to name files and how to document metadata (i.e. information about the data). It does this using community standards and dictionaries enabling efficient </span><span style="color:rgb(0, 0, 0)">communication and collaboration between data users. Details about BIDS can be found at </span><a href="http://bids.neuroimaging.io/"><span style="color:rgb(17, 85, 204)">http://bids.neuroimaging.io/</span></a><span style="color:rgb(0, 0, 0)">.</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">BIDS is an initiative that arose as a specific action taken in response to deliberations of the</span><a href="https://www.incf.org/"><span style="color:rgb(0, 0, 0)"> </span><span style="color:rgb(17, 85, 204)">INCF</span></a><span style="color:rgb(0, 0, 0)">, NeuroImaging Data Sharing Task Force (NIDASH), along with the</span><a href="http://nidm.nidash.org/"><span style="color:rgb(0, 0, 0)"> </span><span style="color:rgb(17, 85, 204)">NeuroImaging Data Model</span></a><span style="color:rgb(0, 0, 0)">.  NIDM is a Semantic Web-based metadata standard that helps capture and describe experimental data, analytic workflows and statistical results that complement BIDS.</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">​</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">With seeds planted in January 2015, BIDS started in September after being presented at the OHBM (June) and INCF (August) annual conferences and has rapidly been taken up by our community – starting with</span><a href="https://www.nature.com/articles/sdata201644"><span style="color:rgb(0, 0, 0)"> </span><span style="color:rgb(17, 85, 204)">a specification related to sharing MRI data</span></a><span style="color:rgb(0, 0, 0)"> (basic structural, functional and diffusion) submitted in December 2015 and followed by a growing number of extensions into various modalities. The analysis of a recent survey done by the</span><a href="http://reproducibility.stanford.edu/"><span style="color:rgb(0, 0, 0)"> </span><span style="color:rgb(17, 85, 204)">Stanford Centre for reproducible neuroscience</span></a><span style="color:rgb(0, 0, 0)"> lead to a current estimate of</span><a href="http://reproducibility.stanford.edu/blog/"><span style="color:rgb(0, 0, 0)"> </span><span style="color:rgb(17, 85, 204)">over 65000 subjects’ data stored and/or shared using BIDS</span></a><span style="color:rgb(0, 0, 0)">.</span></span></p>
+<p><span><span style="color:rgb(33, 33, 33); font-weight:700">Building bridges with the electrophysiology communities</span></span></p>
+<p><span><span style="color:rgb(33, 33, 33)">In 2016,</span><a href="https://www.nature.com/articles/sdata2018110"><span style="color:rgb(33, 33, 33)"> </span><span style="color:rgb(17, 85, 204)">MEG BIDS</span></a><span style="color:rgb(33, 33, 33)"> was published describing how to organize and share MEG data and metadata. Right after that, Cyril Pernet used the open science space during the annual OHBM meeting in Vancouver (2016) calling for an EEG-BIDS. The first draft was done the following week with the help of Robert Oostenveld during an EEGLAB workshop. Simultaneously, the iEEG community had a need to organize and share data in a standard that matches MRI, MEG and EEG data, so Dora Hermes and Chris Holdgraf developed the iEEG-BIDS extension. For almost 2 years, the two teams developed the standards, while checking with others for consistency, with some help from the MEG-BIDS team. This work culminated with two papers published in the journal Scientific Data (</span><a href="https://www.nature.com/articles/s41597-019-0105-7"><span style="color:rgb(17, 85, 204)">Holdgraf et al., 2019</span></a><span style="color:rgb(0, 0, 0)">, </span><a href="https://www.nature.com/articles/s41597-019-0104-8"><span style="color:rgb(17, 85, 204)">Pernet et al., 2019</span></a><span style="color:rgb(33, 33, 33)">). Concretely, this means human brain electrophysiology data sharing is fully harmonized thanks to the effort and collaborative spirit of all involved. It also means that about 2/3 of all functional imaging data can now be organized, documented and shared efficiently (with the exception of PET, NIRS, TMS and dTCS, 34.7% of publications since January 2018 according to our PubMed search).</span></span></p>
+<p>​</p>
+<p><span><span style="color:rgb(33, 33, 33); font-weight:700">BIDS is bringing neuroimagers together</span></span></p>
+<p><span><span style="color:rgb(33, 33, 33)">While BIDS came about thanks to NIDASH, it was pushed forward by Chris Gorgolewski and the support of </span><span style="color:rgb(0, 0, 0)">the</span><a href="http://reproducibility.stanford.edu/"><span style="color:rgb(0, 0, 0)"> </span><span style="color:rgb(17, 85, 204)">Stanford Centre for reproducible neuroscience</span></a><span style="color:rgb(0, 0, 0)">, and allows all to freely use and contribute. This approach has been extremely successful, leading to 5 published articles (</span><a href="https://www.nature.com/articles/sdata201644"><span style="color:rgb(17, 85, 204)">Gorgolewski et al. 2016</span></a><span style="color:rgb(0, 0, 0)">,</span><a href="https://www.nature.com/articles/sdata2018110"><span style="color:rgb(0, 0, 0)"> </span></a><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005209"><span style="color:rgb(17, 85, 204)">Gorgolewski et al. 2017</span></a><span style="color:rgb(0, 0, 0)">, </span><a href="https://www.nature.com/articles/s41597-019-0105-7"><span style="color:rgb(17, 85, 204)">Holdgraf et al., 2019</span></a><span style="color:rgb(0, 0, 0)">, </span><a href="https://www.nature.com/articles/sdata2018110"><span style="color:rgb(17, 85, 204)">Niso et al., 2016</span></a><span style="color:rgb(0, 0, 0)">, </span><a href="https://www.nature.com/articles/s41597-019-0104-8"><span style="color:rgb(17, 85, 204)">Pernet et al, 2019</span></a><span style="color:rgb(0, 0, 0)">) with 86 different authors from 9 different countries. This demonstrates how much neuroimaging  community is thriving by sharing data and creating a community platform to enhance our knowledge and share our experience. Mapping those countries out, however, shows that much more work is needed to reach out to the entire OHBM community.</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">If you would like to start using BIDS for your own data, want to get involved in conversations around the BIDS specifications, would like to extend BIDS to cover a new use-case or modality, or would generally like to join the BIDS community, check out the</span><a href="https://github.com/bids-standard/bids-starter-kit"><span style="color:rgb(0, 0, 0)"> </span><span style="color:rgb(17, 85, 204)">BIDS starter kit</span></a><span style="color:rgb(0, 0, 0)">, which has lots of helpful links and guides for getting more involved.</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)"> </span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">List of BIDS contributors:</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Adeen Flinker - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Alexander Li Cohen - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Alexandre Gramfort - France</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Andrea Pigorini - Italy</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Ariel Rokem - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Arjen Stolk - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Arnaud Delorme - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Aysegul Gunduz - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Ben Dichter - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Bradley Voytek - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Brett Foster - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Brian N. Lundstrom - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Brian Wandell - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Cameron Craddock - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Camille Maumet - France</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Christophe Phillips - Belgium</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Christopher Holdgraf - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Christopher Honey - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Christopher Lee-Messer - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Cyril Pernet - United Kingdom</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Daniel A. Handwerker - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">David Groppe - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">David Keator - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Dora Hermes - Netherlands</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Elizabeth Bock - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Eugene P. Duff - United Kingdom</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Fidel Alfaro-Almagro - United Kingdom</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Francois Tadel - Canada</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Gabriel A. Devenyi - Canada</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Gaël Varoquaux - France</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Giovanni Piantoni - Netherlands</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Guillaume Flandin - United Kingdom</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Guiomar Niso - Spain</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Gunnar Schaefer - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Iris Groen - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Jan-Mathijs Schoffelen - Netherlands</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Jean-Baptiste Poline - Canada</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Jean-Philippe Lachaux - France</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Jeffrey G. Ojemann - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Jeremy T. Moreau - France</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Jessica A. Turner - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">John Pellman - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Jonathan Lau - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Jonathan Winawer - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Joseph Wexler - Canada</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Kai Miller - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Kirstie Whitaker - United Kingdom</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Kristofer Bouchard - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Krzysztof J. Gorgolewski - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Liberty Hamilton - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Lundstrom Christopher - United States</span></span></p>
+<p>L<span><span style="color:rgb(0, 0, 0)">yuba Zehl - Germany</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">M. Mallar Chakravarty - Canada</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Mainak Jas - France</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Michael Hanke - Germany</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Mihai Capotă - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Nader Pouratian - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Natalia Petridou - Netherlands</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Nathan W. Churchill - Canada</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Nick ramsey Ramsey - Netherlands</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Nicole C. Swann - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Nolan Nichols - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">​Olivier David - France</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Orrin Devinsky - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Pierre Bellec - Canada</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Richard N. Henson - United Kingdom</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Robert Knight - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Robert Oostenveld - Netherlands</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Russell A. Poldrack - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Samir Das - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Sasha D'Ambrosio - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Satrajit S. Ghosh - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Stefan Appelhoff - Germany</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Stephan Bickel - Germany</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Sylvain Baillet - Canada</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Teon L. Brooks - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Thomas E. Nichols - United Kingdom</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Tibor Auer - United Kingdom</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Tristan Glatard - Canada</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Vanessa Sochat - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Vince D. Calhoun - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Vladimir Litvak - United Kingdom</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">William Triplett - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Xiangrui Li - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Yaroslav O. Halchenko - United States</span></span></p>
+<p><span><span style="color:rgb(0, 0, 0)">Zachary Michael - United States</span></span></p>
