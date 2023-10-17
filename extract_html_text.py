@@ -119,6 +119,7 @@ def main():
     parser.add_argument('out_dir', type=Path, help='Directory to save outputs')
     args = parser.parse_args()
 
+    args.out_dir.mkdir(parents=True, exist_ok=True)
     for file in Path('.').glob(args.pattern):
         print('Processing', file)
         with open(args.out_dir / file.name, 'w', encoding='utf-8') as f:
