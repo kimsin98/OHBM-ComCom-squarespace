@@ -22,5 +22,6 @@
 
 ## TODO
 
-[ ] Aggregate [basic authors](https://support.squarespace.com/hc/en-us/articles/205810518)
-[ ] Tags, categories?
+- [ ] Organize by date
+- [ ] Aggregate [basic authors](https://support.squarespace.com/hc/en-us/articles/205810518)
+- [ ] Tags, categories?
