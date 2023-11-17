@@ -2,6 +2,7 @@
 # coding: utf-8
 """
 Extract text (blog-content) from html, clean it, and save the results.
+Organized by metadata.
 """
 import argparse
 from pathlib import Path
@@ -57,9 +58,8 @@ def append_text_to(element, text):
     return
 
 
-def extract_text(file):
-    root = html.parse(file)
-    blog = root.find(".//div[@class='blog-content']")
+def extract_text(tree):
+    blog = tree.find(".//div[@class='blog-content']")
     paragraphs = blog.findall(".//div[@class='paragraph']")
 
     ps = []
@@ -129,8 +129,9 @@ def main():
     args.out_dir.mkdir(parents=True, exist_ok=True)
     for file in Path('.').glob(args.pattern):
         print('Processing', file)
+        tree = html.parse(file)
         with open(args.out_dir / file.name, 'w', encoding='utf-8') as f:
-            for p in extract_text(file):
+            for p in extract_text(tree):
                 f.write(html.tostring(p, encoding='unicode'))
                 f.write('\n')
 
