@@ -181,13 +181,20 @@ def main():
                 f.write(html.tostring(p, encoding='unicode'))
                 f.write('\n')
 
-        # copy images
+        # copy images, report missing
         image_paths = get_image_paths(tree)
+        missing = []
         for i in image_paths:
             if i.exists():
                 shutil.copy2(i, args.out_dir / directory / i.name)
-            else:
+            elif 'placeholder' not in i.stem:
                 print("can't find", i)
+                missing.append(str(i))
+
+        if missing:
+            with open(args.out_dir / directory / 'MISSING.txt', 'w') as f:
+                for m in missing:
+                    f.write(m + '\n')
 
 
 if __name__ == '__main__':
