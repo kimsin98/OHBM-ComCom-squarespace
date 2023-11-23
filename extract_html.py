@@ -1,12 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 """
-Extract text (blog-content) from html, clean it, and save the results.
-Organized by metadata.
+Extract content from html, clean it, and save the results by year/date.
 """
 import argparse
 from pathlib import Path
 from lxml import html
+from datetime import datetime
+import json
+import shutil
 
 
 def collect_attribs(text):
@@ -120,20 +122,72 @@ def extract_text(tree):
     return ps
 
 
+def extract_meta(tree):
+    metadata = {
+        'title': tree.find(".//meta[@property='og:title']").attrib['content'],
+        'url': tree.find(".//meta[@property='og:url']").attrib['content']
+    }
+
+    date = tree.find(".//*[@class='date-text']")
+    if date is not None:
+        metadata['date'] = (datetime.strptime(date.text.strip(), '%m/%d/%Y')
+                            .strftime('%Y-%m-%d'))
+
+    blog = tree.find(".//div[@class='blog-content']")
+    author = blog.find(".//*[@class='blog-author-title']")
+    if author is not None:
+        metadata['author'] = html.tostring(author, method='text',
+                                           encoding='unicode').strip()
+
+    return metadata
+
+
+def get_image_paths(tree):
+    images = tree.findall(".//meta[@property='og:image']")
+
+    image_paths = []
+    for image in images:
+        url_path = Path(image.attrib['content'])
+        image_paths.append(Path(*url_path.parts[1:]))
+
+    return image_paths
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('pattern', type=str, help='HTML files to process')
     parser.add_argument('out_dir', type=Path, help='Directory to save outputs')
     args = parser.parse_args()
 
-    args.out_dir.mkdir(parents=True, exist_ok=True)
     for file in Path('.').glob(args.pattern):
         print('Processing', file)
         tree = html.parse(file)
-        with open(args.out_dir / file.name, 'w', encoding='utf-8') as f:
+
+        # extract metadata
+        meta = extract_meta(tree)
+        date = datetime.strptime(meta['date'], '%Y-%m-%d')
+        url_path = Path(meta['url'])
+        directory = Path(datetime.strftime(date, '%Y/%m'), url_path.stem)
+        (args.out_dir / directory).mkdir(parents=True, exist_ok=True)
+
+        with open(args.out_dir / directory / 'metadata.json', 'w',
+                  encoding='utf-8') as f:
+            json.dump(meta, f, ensure_ascii=False, indent=4)
+
+        # extract text
+        with open(args.out_dir / directory / 'text.html', 'w',
+                  encoding='utf-8') as f:
             for p in extract_text(tree):
                 f.write(html.tostring(p, encoding='unicode'))
                 f.write('\n')
+
+        # copy images
+        image_paths = get_image_paths(tree)
+        for i in image_paths:
+            if i.exists():
+                shutil.copy2(i, args.out_dir / directory / i.name)
+            else:
+                print("can't find", i)
 
 
 if __name__ == '__main__':
