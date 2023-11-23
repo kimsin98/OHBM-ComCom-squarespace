@@ -2,12 +2,10 @@
 
 ## Protocol for transferring a page
 
-1. Copy title.
-2. Add images as necessary. Image files are all in the
-   [www.ohbmbrainmappingblog.com/uploads](https://github.com/kimsin98/OHBM-ComCom-squarespace/tree/main/www.ohbmbrainmappingblog.com/uploads)
-   directory.
-3. Create code blocks between images and copy HTML from corresponding files in [squarespace](squarespace) directory.
-4. If possible, change the author to the right [basic author](https://support.squarespace.com/hc/en-us/articles/205810518).
+1. Find the folder matching page URL in [squarespace](squarespace).
+2. Copy title.
+3. Add images as necessary. Insert code blocks between images and copy HTML from `text.html`.
+4. If you can, change the author to the right [basic author](https://support.squarespace.com/hc/en-us/articles/205810518).
 5. Review, publish, change the URL, and
    [change the date](https://support.squarespace.com/hc/en-us/articles/206543597-Changing-blog-post-publication-dates)
    to original publication date.
@@ -22,6 +20,6 @@
 
 ## TODO
 
-- [ ] Organize by date
+- [x] Organize by date
 - [ ] Aggregate [basic authors](https://support.squarespace.com/hc/en-us/articles/205810518)
 - [ ] Tags, categories?
