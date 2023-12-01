@@ -12,15 +12,14 @@ import shutil
 
 
 def collect_attribs(text):
-    if text.is_text:
+    if isinstance(text, html.HtmlElement) or text.is_text:
         element = text.getparent()
     elif text.is_tail:
         element = text.getparent().getparent()
 
     attribs = []
     while element.get('class') != 'paragraph':
-        if element.tag != 'br':
-            attribs.insert(0, (element.tag, dict(element.attrib)))
+        attribs.insert(0, (element.tag, dict(element.attrib)))
         element = element.getparent()
 
     # paragraph div -> p
@@ -52,12 +51,14 @@ def first_diff_at(a, b):
 
 
 def append_text_to(element, text):
-    children = element.getchildren()
-    if children:
-        children[-1].tail = (children[-1].tail or '') + text
+    if isinstance(text, html.HtmlElement):
+        element.append(html.Element(text.tag, attrib=text.attrib))
     else:
-        element.text = (element.text or '') + text
-    return
+        children = list(element)
+        if children:
+            children[-1].tail = (children[-1].tail or '') + text
+        else:
+            element.text = (element.text or '') + text
 
 
 def extract_text(tree):
@@ -66,22 +67,34 @@ def extract_text(tree):
 
     ps = []
     for paragraph in paragraphs:
-        cur_branch, cur_attribs = None, None
-        consec_br = 0
+        textbrs = paragraph.xpath('.//text() | .//br')
 
-        for t in paragraph.xpath('.//text() | .//br'):
-            # <br/>
+        # keep single <br/> between text only
+        texts = []
+        br_start = None
+        for i, t in enumerate(textbrs):
             if not isinstance(t, str):
-                consec_br += 1
+                if br_start is None:
+                    br_start = i
                 continue
 
-            # text
-            if consec_br == 1 and cur_branch:
-                cur_branch[-1].append(html.Element('br'))
-            elif consec_br > 1 and cur_branch:
+            if br_start:
+                # cut if 2+ <br/>
+                if i - br_start > 1:
+                    texts.append(None)
+                else:
+                    texts.append(textbrs[br_start])
+                br_start = None
+
+            texts.append(t)
+
+        # build new <p>s
+        cur_branch, cur_attribs = None, None
+        for t in texts:
+            if t is None:
                 ps.append(cur_branch[0])
                 cur_branch, cur_attribs = None, None
-            consec_br = 0
+                continue
 
             attribs = collect_attribs(t)
 
