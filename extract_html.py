@@ -15,7 +15,7 @@ import shutil
 
 SEQUENTIAL_TAGS = ['li', 'ul', 'ol', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
                    'blockquote', 'table', 'tr', 'td']
-DEFAULT_TAGS = ['div', 'span']
+DEFAULT_TAGS = ['p', 'div', 'span']
 DEFAULT_STYLES = {
     'color': ['black', 'rgb(0, 0, 0)', '#000'],
     'font-weight': ['normal', '400'],
@@ -60,24 +60,20 @@ class Trait:
         return html.Element(self.tag, attrib=attrib)
 
 
-def collect_traits(text):
+def collect_traits(text, root):
     if isinstance(text, html.HtmlElement) or text.is_text:
         element = text.getparent()
     elif text.is_tail:
         element = text.getparent().getparent()
 
     traits = []
-    while element.get('class') != 'paragraph':
+    while element != root:
         trait = Trait(element)
         if trait:
             traits.insert(0, trait)
         element = element.getparent()
-
-    # paragraph div -> p
-    p = Trait(element)
-    p.tag = 'p'
-    del p.attrib['class']
-    traits.insert(0, p)
+    # always add root
+    traits.insert(0, Trait(element))
 
     return traits
 
@@ -113,13 +109,10 @@ def append_text_to(element, text):
             element.text = (element.text or '') + text
 
 
-def extract_text(tree):
-    blog = tree.find(".//div[@class='blog-content']")
-    paragraphs = blog.findall(".//div[@class='paragraph']")
-
-    ps = []
-    for paragraph in paragraphs:
-        textbrs = paragraph.xpath('.//text() | .//br')
+def rebuild_trees(trees):
+    rebuilt = []
+    for tree in trees:
+        textbrs = tree.xpath('.//text() | .//br')
 
         # keep single <br/> between text only
         texts = []
@@ -144,11 +137,11 @@ def extract_text(tree):
         cur_branch, cur_traits = None, None
         for t in texts:
             if t is None:
-                ps.append(cur_branch[0])
+                rebuilt.append(cur_branch[0])
                 cur_branch, cur_traits = None, None
                 continue
 
-            traits = collect_traits(t)
+            traits = collect_traits(t, tree)
 
             # new branch
             if not cur_branch:
@@ -175,9 +168,20 @@ def extract_text(tree):
             append_text_to(cur_branch[-1], t)
 
         if cur_branch is not None:
-            ps.append(cur_branch[0])
+            rebuilt.append(cur_branch[0])
 
-    return ps
+    return rebuilt
+
+
+def extract_text(tree):
+    blog = tree.find(".//div[@class='blog-content']")
+    paragraphs = blog.findall(".//div[@class='paragraph']")
+
+    for paragraph in paragraphs:
+        paragraph.tag = 'p'
+        del paragraph.attrib['class']
+
+    return rebuild_trees(paragraphs)
 
 
 def extract_meta(tree):
