@@ -2,13 +2,15 @@
 
 ## Protocol for transferring a page
 
-1. Find the folder matching page URL in [squarespace](squarespace).
+1. Open the original blog page and the matching folder in [squarespace](squarespace).
 2. Copy title.
-3. Add images as necessary. Insert code blocks between images and copy HTML from `text.html`.
-4. If you can, change the author to the right [basic author](https://support.squarespace.com/hc/en-us/articles/205810518).
-5. Review, publish, change the URL, and
-   [change the date](https://support.squarespace.com/hc/en-us/articles/206543597-Changing-blog-post-publication-dates)
-   to original publication date.
+3. Add images as necessary.
+4. Insert code blocks around images (or caption) and copy HTML from `text.html`.
+5. Compare with the original and make changes if necessary.
+6. Publish. Change the URL and [date](https://support.squarespace.com/hc/en-us/articles/206543597-Changing-blog-post-publication-dates)
+   to match the original.
+7. If you can (admin), change the author to the right [basic author](https://support.squarespace.com/hc/en-us/articles/205810518).
+
 
 ## Formatting notes
 
