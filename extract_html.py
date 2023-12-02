@@ -5,13 +5,41 @@ Extract content from html, clean it, and save the results by year/date.
 """
 import argparse
 from pathlib import Path
+
 from lxml import html
+# from cssutils import parseStyle
 from datetime import datetime
+
 import json
 import shutil
 
-SEQUENTIAL = ['li', 'ul', 'ol', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
-              'blockquote']
+SEQUENTIAL_TAGS = ['li', 'ul', 'ol', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+                   'blockquote']
+DEFAULT_TAGS = ['p', 'div', 'span']
+DEFAULT_STYLES = {
+    'color': ['black', 'rgb(0, 0, 0)', '#000'],
+    'font-weight': ['normal', '400'],
+    'text-align': ['left']
+}
+
+
+class Trait:
+    def __init__(self, element):
+        self.tag = element.tag
+        if self.tag in SEQUENTIAL_TAGS:
+            self.attrib = element
+        else:
+            self.attrib = dict(element.attrib)
+
+    def __eq__(self, other):
+        return self.tag == other.tag and self.attrib == other.attrib
+
+    def element(self):
+        if self.tag in SEQUENTIAL_TAGS:
+            attrib = self.attrib.attrib
+        else:
+            attrib = self.attrib
+        return html.Element(self.tag, attrib=attrib)
 
 
 def collect_traits(text):
@@ -22,16 +50,14 @@ def collect_traits(text):
 
     traits = []
     while element.get('class') != 'paragraph':
-        if element.tag in SEQUENTIAL:
-            traits.insert(0, (element.tag, element))
-        else:
-            traits.insert(0, (element.tag, dict(element.attrib)))
+        traits.insert(0, Trait(element))
         element = element.getparent()
 
     # paragraph div -> p
-    attrib = dict(element.attrib)
-    del attrib['class']
-    traits.insert(0, ('p', attrib))
+    p = Trait(element)
+    p.tag = 'p'
+    del p.attrib['class']
+    traits.insert(0, p)
 
     return traits
 
@@ -39,8 +65,7 @@ def collect_traits(text):
 def create_by_traits(traits):
     branch = []
     for t in traits:
-        attrib = t[1].attrib if isinstance(t[1], html.HtmlElement) else t[1]
-        element = html.Element(t[0], attrib=attrib)
+        element = t.element()
         if branch:
             branch[-1].append(element)
         branch.append(element)
