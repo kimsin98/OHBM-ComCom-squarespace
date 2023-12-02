@@ -10,33 +10,40 @@ from datetime import datetime
 import json
 import shutil
 
+SEQUENTIAL = ['li', 'ul', 'ol', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+              'blockquote']
 
-def collect_attribs(text):
+
+def collect_traits(text):
     if isinstance(text, html.HtmlElement) or text.is_text:
         element = text.getparent()
     elif text.is_tail:
         element = text.getparent().getparent()
 
-    attribs = []
+    traits = []
     while element.get('class') != 'paragraph':
-        attribs.insert(0, (element.tag, dict(element.attrib)))
+        if element.tag in SEQUENTIAL:
+            traits.insert(0, (element.tag, element))
+        else:
+            traits.insert(0, (element.tag, dict(element.attrib)))
         element = element.getparent()
 
     # paragraph div -> p
     attrib = dict(element.attrib)
     del attrib['class']
-    attribs.insert(0, ('p', attrib))
+    traits.insert(0, ('p', attrib))
 
-    return attribs
+    return traits
 
 
-def create_by_attribs(attribs):
+def create_by_traits(traits):
     branch = []
-    for a in attribs:
-        e = html.Element(a[0], attrib=a[1])
+    for t in traits:
+        attrib = t[1].attrib if isinstance(t[1], html.HtmlElement) else t[1]
+        element = html.Element(t[0], attrib=attrib)
         if branch:
-            branch[-1].append(e)
-        branch.append(e)
+            branch[-1].append(element)
+        branch.append(element)
     return branch
 
 
@@ -73,7 +80,7 @@ def extract_text(tree):
         texts = []
         br_start = None
         for i, t in enumerate(textbrs):
-            if not isinstance(t, str):
+            if isinstance(t, html.HtmlElement):
                 if br_start is None:
                     br_start = i
                 continue
@@ -89,44 +96,37 @@ def extract_text(tree):
             texts.append(t)
 
         # build new <p>s
-        cur_branch, cur_attribs = None, None
+        cur_branch, cur_traits = None, None
         for t in texts:
             if t is None:
                 ps.append(cur_branch[0])
-                cur_branch, cur_attribs = None, None
+                cur_branch, cur_traits = None, None
                 continue
 
-            attribs = collect_attribs(t)
+            traits = collect_traits(t)
 
             # new branch
             if not cur_branch:
-                cur_branch, cur_attribs = create_by_attribs(attribs), attribs
+                cur_branch, cur_traits = create_by_traits(traits), traits
                 append_text_to(cur_branch[-1], t)
                 continue
 
-            branch_at = first_diff_at(attribs, cur_attribs)
+            branch_at = first_diff_at(traits, cur_traits)
 
             # same branch
             if branch_at is None:
                 append_text_to(cur_branch[-1], t)
                 continue
 
-            # restart branch
-            if branch_at == 0:
-                ps.append(cur_branch[0])
-                cur_branch, cur_attribs = create_by_attribs(attribs), attribs
-                append_text_to(cur_branch[-1], t)
-                continue
-
             # split branch
-            if branch_at < len(cur_attribs):
+            if branch_at < len(cur_traits):
                 cur_branch = cur_branch[:branch_at]
-                cur_attribs = cur_attribs[:branch_at]
-            if branch_at < len(attribs):
-                new_split = create_by_attribs(attribs[branch_at:])
+                cur_traits = cur_traits[:branch_at]
+            if branch_at < len(traits):
+                new_split = create_by_traits(traits[branch_at:])
                 cur_branch[-1].append(new_split[0])
                 cur_branch.extend(new_split)
-                cur_attribs.extend(attribs[branch_at:])
+                cur_traits.extend(traits[branch_at:])
             append_text_to(cur_branch[-1], t)
 
         if cur_branch is not None:
