@@ -7,15 +7,15 @@ import argparse
 from pathlib import Path
 
 from lxml import html
-# from cssutils import parseStyle
+from cssutils import parseStyle
 from datetime import datetime
 
 import json
 import shutil
 
 SEQUENTIAL_TAGS = ['li', 'ul', 'ol', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
-                   'blockquote']
-DEFAULT_TAGS = ['p', 'div', 'span']
+                   'blockquote', 'table', 'tr', 'td']
+DEFAULT_TAGS = ['div', 'span']
 DEFAULT_STYLES = {
     'color': ['black', 'rgb(0, 0, 0)', '#000'],
     'font-weight': ['normal', '400'],
@@ -26,13 +26,31 @@ DEFAULT_STYLES = {
 class Trait:
     def __init__(self, element):
         self.tag = element.tag
+
         if self.tag in SEQUENTIAL_TAGS:
             self.attrib = element
-        else:
-            self.attrib = dict(element.attrib)
+            return
+
+        attrib = dict(element.attrib)
+        # remove default CSS styles
+        if self.tag in DEFAULT_TAGS and 'style' in attrib:
+            style = parseStyle(attrib['style'])
+            for prop in style:
+                if (prop.name in DEFAULT_STYLES and
+                        prop.value in DEFAULT_STYLES[prop.name]):
+                    style.removeProperty(prop.name)
+            if style.keys():
+                attrib['style'] = style.getCssText(' ')
+            else:
+                del attrib['style']
+        self.attrib = attrib
+        return
 
     def __eq__(self, other):
         return self.tag == other.tag and self.attrib == other.attrib
+
+    def __bool__(self):
+        return self.tag not in DEFAULT_TAGS or bool(self.attrib)
 
     def element(self):
         if self.tag in SEQUENTIAL_TAGS:
@@ -50,7 +68,9 @@ def collect_traits(text):
 
     traits = []
     while element.get('class') != 'paragraph':
-        traits.insert(0, Trait(element))
+        trait = Trait(element)
+        if trait:
+            traits.insert(0, trait)
         element = element.getparent()
 
     # paragraph div -> p
