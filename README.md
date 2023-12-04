@@ -17,14 +17,14 @@
 3. Image: Check that all images are present.
 4. If everything looks good, open settings (click on date above title).
    * Content > Post URL: Match the original URL (`blog/name`).
-   * Options > Status: Set "Published". Change the date to original date in the past. Time can be whatever.
+   * Options > Status: Set "Published". Change the date to original's date in the past. Time can be whatever.
 5. If you can (admins only), create a [basic author](https://support.squarespace.com/hc/en-us/articles/205810518)
    and change the author.
 
 ## Formatting notes
 
 * Title: Default heading and font, no changes
-* Author, Subtitle: Paragraph 2, Paragraph 3
+* Author, Subtitle: Paragraph 2, Paragraph 3 (color 3, dark blue)
 * Main text: Paragraph 2 (default)
 * Image captions: Paragraph 3
 * No indentation on paragraphs, just new line (this doesn't necessarily need to be consistent across sections)
