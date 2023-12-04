@@ -12,12 +12,13 @@
 
 ## Reviewing a post
 
-1. Text: Check spaces/line breaks, general formatting feel.
-2. Image: Check that all images are present.
-3. If everything looks good, open settings (click on date above title).
+1. Open the post with EDIT. **Do NOT review using Squarespace's preview because it breaks some code!**
+2. Text: Check spaces/line breaks, general formatting feel.
+3. Image: Check that all images are present.
+4. If everything looks good, open settings (click on date above title).
    * Content > Post URL: Match the original URL (`blog/name`).
    * Options > Status: Set "Published". Change the date to original date in the past. Time can be whatever.
-4. If you can (admins only), create a [basic author](https://support.squarespace.com/hc/en-us/articles/205810518)
+5. If you can (admins only), create a [basic author](https://support.squarespace.com/hc/en-us/articles/205810518)
    and change the author.
 
 ## Formatting notes
