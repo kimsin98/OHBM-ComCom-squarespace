@@ -23,10 +23,10 @@
 ## Formatting notes
 
 * Title: Default heading and font, no changes
-* Main Text Size: Paragraph 2 (default)
-* Image captions text size: Paragraph 3
+* Author, Subtitle: Paragraph 2, Paragraph 3
+* Main text: Paragraph 2 (default)
+* Image captions: Paragraph 3
 * No indentation on paragraphs, just new line (this doesn't necessarily need to be consistent across sections)
-* Change URL from random character string to name of the article
 
 ## TODO
 
