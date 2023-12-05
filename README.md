@@ -24,7 +24,9 @@
 ## Formatting notes
 
 * Title: Default heading and font, no changes
-* Author, Subtitle: Paragraph 2, Paragraph 3 (color 3, dark blue)
+* Author: Paragraph 1
+* Subtitle: Paragraph 2 (color 3, dark blue)
+* Section header: Heading 4
 * Main text: Paragraph 2 (default)
 * Image captions: Paragraph 3
 * No indentation on paragraphs, just new line (this doesn't necessarily need to be consistent across sections)
