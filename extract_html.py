@@ -175,13 +175,28 @@ def rebuild_trees(trees):
 
 def extract_text(tree):
     blog = tree.find(".//div[@class='blog-content']")
-    paragraphs = blog.findall(".//div[@class='paragraph']")
+    trees = []
 
+    # author, subtitle
+    author = blog.find(".//h2[@class='blog-author-title']")
+    if author is not None:
+        author.tag = 'p'
+        author.attrib['class'] = 'sqsrte-large'
+        trees.extend(rebuild_trees([author]))
+
+        subtitle = author.getnext()
+        if subtitle.tag == 'p':
+            subtitle.attrib['class'] = 'sqsrte-text-color--accent'
+            trees.extend(rebuild_trees([subtitle]))
+
+    # main text
+    paragraphs = blog.findall(".//div[@class='paragraph']")
     for paragraph in paragraphs:
         paragraph.tag = 'p'
         del paragraph.attrib['class']
+    trees.extend(rebuild_trees(paragraphs))
 
-    return rebuild_trees(paragraphs)
+    return trees
 
 
 def extract_meta(tree):
@@ -239,8 +254,8 @@ def main():
         # extract text
         with open(args.out_dir / directory / 'text.html', 'w',
                   encoding='utf-8') as f:
-            for p in extract_text(tree):
-                f.write(html.tostring(p, encoding='unicode'))
+            for t in extract_text(tree):
+                f.write(html.tostring(t, encoding='unicode'))
                 f.write('\n')
 
         # copy images, report missing
