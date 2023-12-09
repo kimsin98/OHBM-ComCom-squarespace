@@ -16,7 +16,6 @@ import shutil
 BLOCK_TAGS = ['div', 'ul', 'ol', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
               'blockquote', 'table', 'pre', 'div']
 SEQUENTIAL_TAGS = ['li', 'tr', 'td']
-DEFAULT_TAGS = ['p', 'div', 'span']
 DEFAULT_STYLES = {
     'color': ['black', 'rgb(0, 0, 0)', '#000'],
     'font-weight': ['normal', '400'],
@@ -34,26 +33,39 @@ class Trait:
         else:
             self.element = None
 
+        self.attrib = element.attrib
+
+        # replace <font> tags
+        if self.tag == 'font':
+            self.tag = 'span'
+            if 'size' in self.attrib:
+                size = int(self.attrib.pop('size'))
+                if size < 5:
+                    if size == 2:
+                        self.attrib['class'] = 'sqsrte-small'
+                    elif size == 4:
+                        self.attrib['class'] = 'sqsrte-large'
+                else:
+                    self.tag = 'h' + str(9 - size)
+            if 'color' in self.attrib:
+                self.attrib['style'] = 'color: ' + self.attrib.pop('color')
+
         # remove default CSS styles
-        if self.tag in DEFAULT_TAGS and 'style' in element.attrib:
-            style = parseStyle(element.attrib['style'])
+        if 'style' in self.attrib:
+            style = parseStyle(self.attrib.pop('style'))
             for prop in style:
                 if (prop.name in DEFAULT_STYLES and
                         prop.value in DEFAULT_STYLES[prop.name]):
                     style.removeProperty(prop.name)
             if style.keys():
-                element.attrib['style'] = style.getCssText(' ')
-            else:
-                del element.attrib['style']
-        self.attrib = element.attrib
-        return
+                self.attrib['style'] = style.getCssText(' ')
 
     def __eq__(self, other):
         return (self.tag == other.tag and self.attrib == other.attrib
                 and self.element == other.element)
 
     def __bool__(self):
-        return self.tag not in DEFAULT_TAGS or bool(self.attrib)
+        return self.tag not in ['div', 'span'] or bool(self.attrib)
 
     def create_element(self):
         return html.Element(self.tag, attrib=self.attrib)
@@ -66,8 +78,10 @@ def collect_traits(text, root):
         element = text.getparent().getparent()
 
     traits = []
-    while element != root and element.tag not in BLOCK_TAGS:
+    while element != root:
         trait = Trait(element)
+        if trait.tag in BLOCK_TAGS:
+            break
         if trait:
             traits.insert(0, trait)
         element = element.getparent()
