@@ -111,15 +111,25 @@ def append_text_to(element, text):
 def rebuild_trees(trees):
     rebuilt = []
     for tree in trees:
+        # remove zwsp
+        for t in tree.xpath('.//text()'):
+            text = t.replace('\u200b', '')
+            if t.is_tail:
+                t.getparent().tail = text
+            else:
+                t.getparent().text = text
+
         textbrs = tree.xpath('.//text() | .//br')
 
-        # keep single <br/> between text only
+        # remove double <br> and empty texts
         texts = []
         br_start = None
         for i, t in enumerate(textbrs):
             if isinstance(t, html.HtmlElement):
                 if br_start is None:
                     br_start = i
+                continue
+            elif not t:
                 continue
 
             if br_start:
