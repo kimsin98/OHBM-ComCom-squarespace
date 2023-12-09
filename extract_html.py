@@ -13,8 +13,9 @@ from datetime import datetime
 import json
 import shutil
 
-SEQUENTIAL_TAGS = ['li', 'ul', 'ol', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
-                   'blockquote', 'table', 'tr', 'td']
+BLOCK_TAGS = ['div', 'ul', 'ol', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+              'blockquote', 'table', 'pre', 'div']
+SEQUENTIAL_TAGS = ['li', 'tr', 'td']
 DEFAULT_TAGS = ['p', 'div', 'span']
 DEFAULT_STYLES = {
     'color': ['black', 'rgb(0, 0, 0)', '#000'],
@@ -27,37 +28,35 @@ class Trait:
     def __init__(self, element):
         self.tag = element.tag
 
-        if self.tag in SEQUENTIAL_TAGS:
-            self.attrib = element
-            return
+        # unique traits
+        if self.tag in BLOCK_TAGS + SEQUENTIAL_TAGS:
+            self.element = element
+        else:
+            self.element = None
 
-        attrib = dict(element.attrib)
         # remove default CSS styles
-        if self.tag in DEFAULT_TAGS and 'style' in attrib:
-            style = parseStyle(attrib['style'])
+        if self.tag in DEFAULT_TAGS and 'style' in element.attrib:
+            style = parseStyle(element.attrib['style'])
             for prop in style:
                 if (prop.name in DEFAULT_STYLES and
                         prop.value in DEFAULT_STYLES[prop.name]):
                     style.removeProperty(prop.name)
             if style.keys():
-                attrib['style'] = style.getCssText(' ')
+                element.attrib['style'] = style.getCssText(' ')
             else:
-                del attrib['style']
-        self.attrib = attrib
+                del element.attrib['style']
+        self.attrib = element.attrib
         return
 
     def __eq__(self, other):
-        return self.tag == other.tag and self.attrib == other.attrib
+        return (self.tag == other.tag and self.attrib == other.attrib
+                and self.element == other.element)
 
     def __bool__(self):
         return self.tag not in DEFAULT_TAGS or bool(self.attrib)
 
-    def element(self):
-        if self.tag in SEQUENTIAL_TAGS:
-            attrib = self.attrib.attrib
-        else:
-            attrib = self.attrib
-        return html.Element(self.tag, attrib=attrib)
+    def create_element(self):
+        return html.Element(self.tag, attrib=self.attrib)
 
 
 def collect_traits(text, root):
@@ -67,12 +66,12 @@ def collect_traits(text, root):
         element = text.getparent().getparent()
 
     traits = []
-    while element != root:
+    while element != root and element.tag not in BLOCK_TAGS:
         trait = Trait(element)
         if trait:
             traits.insert(0, trait)
         element = element.getparent()
-    # always add root
+    # always add top
     traits.insert(0, Trait(element))
 
     return traits
@@ -81,7 +80,7 @@ def collect_traits(text, root):
 def create_by_traits(traits):
     branch = []
     for t in traits:
-        element = t.element()
+        element = t.create_element()
         if branch:
             branch[-1].append(element)
         branch.append(element)
@@ -153,6 +152,13 @@ def rebuild_trees(trees):
 
             # same branch
             if branch_at is None:
+                append_text_to(cur_branch[-1], t)
+                continue
+
+            # restart branch
+            if branch_at == 0:
+                rebuilt.append(cur_branch[0])
+                cur_branch, cur_traits = create_by_traits(traits), traits
                 append_text_to(cur_branch[-1], t)
                 continue
 
