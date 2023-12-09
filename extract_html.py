@@ -33,7 +33,7 @@ class Trait:
         else:
             self.element = None
 
-        self.attrib = element.attrib
+        self.attrib = dict(element.attrib)
 
         # replace <font> tags
         if self.tag == 'font':
@@ -67,6 +67,9 @@ class Trait:
     def __bool__(self):
         return self.tag not in ['div', 'span'] or bool(self.attrib)
 
+    def __repr__(self):
+        return f"{self.tag} {self.attrib}"
+
     def create_element(self):
         return html.Element(self.tag, attrib=self.attrib)
 
@@ -80,13 +83,13 @@ def collect_traits(text, root):
     traits = []
     while element != root:
         trait = Trait(element)
-        if trait.tag in BLOCK_TAGS:
-            break
         if trait:
             traits.insert(0, trait)
+        if trait.tag in BLOCK_TAGS:
+            break
         element = element.getparent()
-    # always add top
-    traits.insert(0, Trait(element))
+    else:
+        traits.insert(0, Trait(element))
 
     return traits
 
@@ -120,6 +123,38 @@ def append_text_to(element, text):
             children[-1].tail = (children[-1].tail or '') + text
         else:
             element.text = (element.text or '') + text
+
+
+def strip_br(tree):
+    # leading
+    cur_elem = tree
+    while cur_elem.getchildren():
+        if cur_elem.text:
+            break
+
+        first = cur_elem.getchildren()[0]
+        if first.tag == 'br':
+            if first.tail:
+                cur_elem.text = first.tail
+            cur_elem.remove(first)
+            break
+
+        cur_elem = first
+
+    # trailing
+    cur_elem = tree
+    while cur_elem.getchildren():
+        last = cur_elem.getchildren()[-1]
+        if last.tail:
+            break
+
+        if last.tag == 'br':
+            cur_elem.remove(last)
+            break
+
+        cur_elem = last
+
+    return tree
 
 
 def rebuild_trees(trees):
@@ -160,7 +195,7 @@ def rebuild_trees(trees):
         cur_branch, cur_traits = None, None
         for t in texts:
             if t is None:
-                rebuilt.append(cur_branch[0])
+                rebuilt.append(strip_br(cur_branch[0]))
                 cur_branch, cur_traits = None, None
                 continue
 
@@ -181,7 +216,7 @@ def rebuild_trees(trees):
 
             # restart branch
             if branch_at == 0:
-                rebuilt.append(cur_branch[0])
+                rebuilt.append(strip_br(cur_branch[0]))
                 cur_branch, cur_traits = create_by_traits(traits), traits
                 append_text_to(cur_branch[-1], t)
                 continue
@@ -198,7 +233,7 @@ def rebuild_trees(trees):
             append_text_to(cur_branch[-1], t)
 
         if cur_branch is not None:
-            rebuilt.append(cur_branch[0])
+            rebuilt.append(strip_br(cur_branch[0]))
 
     return rebuilt
 
