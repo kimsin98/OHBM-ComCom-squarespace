@@ -178,11 +178,15 @@ def rebuild_trees(trees):
                 if br_start is None:
                     br_start = i
                 continue
-            elif not t:
+            if not t:
                 continue
 
-            if br_start:
-                # cut if 2+ <br/>
+            if br_start is not None:
+                # ignore whitespace between <br>
+                if not t.strip():
+                    continue
+
+                # cut if 2+ <br>
                 if i - br_start > 1:
                     texts.append(None)
                 else:
@@ -195,8 +199,9 @@ def rebuild_trees(trees):
         cur_branch, cur_traits = None, None
         for t in texts:
             if t is None:
-                rebuilt.append(strip_br(cur_branch[0]))
-                cur_branch, cur_traits = None, None
+                if cur_branch:
+                    rebuilt.append(strip_br(cur_branch[0]))
+                    cur_branch, cur_traits = None, None
                 continue
 
             traits = collect_traits(t, tree)
