@@ -5,6 +5,7 @@
 1. Open the original blog page and the matching folder in [squarespace](squarespace).
 2. Copy title.
 3. Add images as necessary.
+   * Use "Card" design to add text beside images. Add text as subtitle because title ignores some formatting.
 4. Insert code blocks around images and copy HTML from `text.html`.
 5. Compare with the original and make changes if necessary.
    You may need to create additional text/code/other blocks and edit manually.
