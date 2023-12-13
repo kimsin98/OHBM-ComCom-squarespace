@@ -5,8 +5,10 @@
 1. Open the original blog page and the matching folder in [squarespace](squarespace).
 2. Copy title.
 3. Add images as necessary.
-   * Use "Card" design to add text beside images. Add text as subtitle because title ignores some formatting.
+   * Use "Card" design to add text beside images. Add texts as subtitles because titles ignore some formatting.
+   * Some images may be missing. You will have to find and save those images from the original blog.
 4. Insert code blocks around images and copy HTML from `text.html`.
+   * Tables will need to be created in HTML or Markdown.
 5. Compare with the original and make changes if necessary.
    You may need to create additional text/code/other blocks and edit manually.
    * Check [formatting notes](#formatting-notes)!
