@@ -33,7 +33,7 @@
 
 ## Formatting notes
 
-* Title: Default heading and font, no changes
+* Title: Default heading and font, no all caps
 * Author: Paragraph 1
 * Subtitle: Paragraph 2 (color 3, dark blue)
 * Section header: Heading 4
