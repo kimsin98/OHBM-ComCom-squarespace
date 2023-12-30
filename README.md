@@ -41,7 +41,7 @@
 ## Formatting notes
 
 * Title: Default heading and font, no all caps
-* Author: Paragraph 1
+* Author: Paragraph 1, no all caps
 * Subtitle: Paragraph 2 (color 3, dark blue)
 * Section header: Heading 4
 * Main text: Paragraph 2 (default)
