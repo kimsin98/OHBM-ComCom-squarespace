@@ -18,18 +18,23 @@
 6. Compare with the original and make changes if necessary.
    You may need to create additional text/code/other blocks and edit manually.
    * Check [formatting notes](#formatting-notes)!
-7. Open settings (click on date above title). Set the post Status (under Options) to "Needs Review".
+   * Feel free to improve upon the original if you can.
+7. When you are done, open settings (click on date above title).
+   * Content > Featured Image: Use "search for images" to choose a preview image among post images.
+   * Options > Status: Set "Needs Review".
 
 ## Reviewing a post
 
 1. Open the post with EDIT. **Do NOT review using Squarespace's preview because it breaks some code!**
 2. Text: Check spaces/line breaks, general formatting feel.
 3. Image: Check that all images are present.
-4. Add "By " at the start of the author line when appropriate. If you can (admins only), create a
-   [basic author](https://support.squarespace.com/hc/en-us/articles/205810518) and change the author in settings.
-   * If you can't set a single author in the settings (e.g. written by many people), you can hide the "Written By"
-     line at the top using "Edit Section" (button on top right).
-5. If everything looks good, publish by open settings (click on date above title).
+4. Add "By " at the start of the author line when appropriate.
+   * If you can (admins only), set the author in settings after creating a
+     [basic author](https://support.squarespace.com/hc/en-us/articles/205810518).
+     You may need to refresh the page for the new author to show up.
+   * If you can't set a single author in the settings (e.g. written by many people),
+     you can hide the "Written By" line at the top using "Edit Section" (button on top right).
+6. If everything looks good, open settings (click on date above title).
    * Content > Post URL: Match the original URL (`blog/article-name`).
    * Options > Status: Set "Published". Change the date to original's date in the past. Time can be whatever.
 
