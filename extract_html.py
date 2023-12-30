@@ -157,12 +157,18 @@ def strip_br(tree):
     return tree
 
 
+def sanitize_whitespace(string):
+    string = string.replace('\u200b', '')  # zero-width space
+    string = string.replace('\u00A0', ' ')  # non-breaking space
+    return string
+
+
 def rebuild_trees(trees):
     rebuilt = []
     for tree in trees:
-        # remove zwsp
+        # sanitize
         for t in tree.xpath('.//text()'):
-            text = t.replace('\u200b', '')
+            text = sanitize_whitespace(t)
             if t.is_tail:
                 t.getparent().tail = text
             else:
@@ -270,21 +276,26 @@ def extract_text(tree):
 
 
 def extract_meta(tree):
-    metadata = {
-        'title': tree.find(".//meta[@property='og:title']").attrib['content'],
-        'url': tree.find(".//meta[@property='og:url']").attrib['content']
-    }
+    metadata = {}
+    metadata['title'] = sanitize_whitespace(
+        tree.find(".//meta[@property='og:title']")
+        .attrib['content'])
+    metadata['url'] = (
+        tree.find(".//meta[@property='og:url']")
+        .attrib['content'])
 
     date = tree.find(".//*[@class='date-text']")
     if date is not None:
-        metadata['date'] = (datetime.strptime(date.text.strip(), '%m/%d/%Y')
+        metadata['date'] = (datetime
+                            .strptime(date.text.strip(), '%m/%d/%Y')
                             .strftime('%Y-%m-%d'))
 
-    blog = tree.find(".//div[@class='blog-content']")
-    author = blog.find(".//*[@class='blog-author-title']")
+    author = (tree.find(".//div[@class='blog-content']")
+              .find(".//*[@class='blog-author-title']"))
     if author is not None:
-        metadata['author'] = html.tostring(author, method='text',
-                                           encoding='unicode').strip()
+        metadata['author'] = sanitize_whitespace(
+            html.tostring(author, method='text', encoding='unicode')
+            .strip())
 
     return metadata
 
