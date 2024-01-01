@@ -340,12 +340,16 @@ def main():
                 f.write(html.tostring(t, encoding='unicode'))
                 f.write('\n')
 
-        # copy images, report missing
+        # copy images, fix extensions, report missing
         image_paths = get_image_paths(tree)
         missing = []
         for i in image_paths:
             if i.exists():
-                shutil.copy2(i, args.out_dir / directory / i.name)
+                shutil.copy2(
+                    i,
+                    args.out_dir / directory
+                    / (i.stem + i.suffix.split('?')[0])
+                )
             elif 'placeholder' not in i.stem:
                 print("can't find", i)
                 missing.append(str(i))
