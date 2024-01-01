@@ -12,6 +12,7 @@
         This keeps the image's original size.
       * Create a code/text block, then drag the block to the image's side.
         This lets you resize the image by dragging the border between blocks.
+   * You should rename the image to a more appropriate name whenever you can (e.g. the person's name).
    * Some images may be missing. You will have to find and save those images from the original blog.
 5. Insert code blocks around images and copy HTML from `text.html`.
    * Tables will need to be created in HTML or Markdown.
