@@ -85,12 +85,13 @@ def collect_traits(text, root):
         trait = Trait(element)
         if trait:
             traits.insert(0, trait)
-        if trait.tag in BLOCK_TAGS:
-            break
         element = element.getparent()
-    else:
-        traits.insert(0, Trait(element))
+    traits.insert(0, Trait(element))
 
+    # block-level elements should be outside <p>
+    for i, trait in enumerate(traits):
+        if trait.tag in BLOCK_TAGS:
+            return traits[i:]
     return traits
 
 
