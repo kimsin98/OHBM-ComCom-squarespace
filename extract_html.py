@@ -325,8 +325,8 @@ def main():
         # extract metadata
         meta = extract_meta(tree)
         date = datetime.strptime(meta['date'], '%Y-%m-%d')
-        url_path = Path(meta['url'])
-        directory = Path(datetime.strftime(date, '%Y/%m'), url_path.stem)
+        url_name = Path(meta['url']).stem
+        directory = Path(datetime.strftime(date, '%Y/%m'), url_name)
         (args.out_dir / directory).mkdir(parents=True, exist_ok=True)
 
         with open(args.out_dir / directory / 'metadata.json', 'w',
@@ -340,19 +340,19 @@ def main():
                 f.write(html.tostring(t, encoding='unicode'))
                 f.write('\n')
 
-        # copy images, fix extensions, report missing
+        # copy images, rename, report missing
         image_paths = get_image_paths(tree)
         missing = []
-        for i in image_paths:
-            if i.exists():
+        for i, image_path in enumerate(image_paths):
+            if image_path.exists():
                 shutil.copy2(
-                    i,
+                    image_path,
                     args.out_dir / directory
-                    / (i.stem + i.suffix.split('?')[0])
+                    / f"{url_name}_{i+1}{image_path.suffix.split('?')[0]}"
                 )
-            elif 'placeholder' not in i.stem:
-                print("can't find", i)
-                missing.append(str(i))
+            elif 'placeholder' not in image_path.stem:
+                print("can't find", image_path)
+                missing.append(str(image_path))
 
         if missing:
             with open(args.out_dir / directory / 'MISSING.txt', 'w') as f:
