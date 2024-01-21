@@ -6,22 +6,23 @@
 2. Copy title.
    * Beware of HTML that may carry over (check title in top bar) if copying from the original blog.
    * `metadata.json` includes sanitized title.
-4. Add images as necessary.
+4. Add images.
+   * You should rename the image to a more appropriate name whenever you can (e.g. the person's name).
+   * Some images may be missing. You will have to find and save those images from the original blog.
+   * For common images (like logos), avoid uploading duplicates. Try searching the image library ("Select from Library").
+6. Add text. Insert code blocks around images and copy HTML from `text.html`.
    * There are 2 ways of adding text beside an image:
       * Set the image to "Card" design and add text as the image subtitle.
         This keeps the image's original size.
       * Create a code/text block, then drag the block to the image's side.
         This lets you resize the image by dragging the border between blocks.
-   * You should rename the image to a more appropriate name whenever you can (e.g. the person's name).
-   * Some images may be missing. You will have to find and save those images from the original blog.
-5. Insert code blocks around images and copy HTML from `text.html`.
    * Tables will need to be created in HTML or Markdown.
-6. Compare with the original and make changes if necessary.
+7. Compare with the original and make changes if necessary.
    You may need to create additional text/code/other blocks and edit manually.
    * Check [formatting notes](#formatting-notes)!
    * Feel free to improve upon the original if you can.
-7. When you are done, open settings (click on date above title).
-   * Content > Featured Image: Use "search for images" to choose a preview image among post images.
+8. When you are done, open settings (click on date above title).
+   * Content > Featured Image: Use "Search for Images" to choose a preview image among post images.
    * Options > Status: Set "Needs Review".
 
 ## Reviewing a post
