@@ -23,6 +23,7 @@
    * Feel free to improve upon the original if you can.
 8. When you are done, open settings (click on date above title).
    * Content > Featured Image: Use "Search for Images" to choose a preview image among post images.
+      * If the post has no image, you can default to a logo.
    * Options > Status: Set "Needs Review".
 
 ## Reviewing a post
