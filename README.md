@@ -58,5 +58,6 @@ There are 2 ways of adding text beside an image:
 ## TODO
 
 - [x] Organize by date
+- [ ] Re-link all https://www.ohbmbrainmappingblog.com links
 - [ ] Aggregate [basic authors](https://support.squarespace.com/hc/en-us/articles/205810518)
 - [ ] Tags, categories?
