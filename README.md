@@ -46,7 +46,7 @@
 * Main text: Paragraph 2 (default)
    * Use natural margin between paragraphs rather than double line break.
    * No indentation on paragraphs, just new line (this doesn't necessarily need to be consistent across sections)
-* Image captions: Paragraph 3
+* Image captions: Paragraph 3 (automatically applied now)
 
 ### Image
 There are 2 ways of adding text beside an image:
