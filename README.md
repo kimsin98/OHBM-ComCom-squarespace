@@ -1,39 +1,41 @@
-# OHBM-ComCom-squarespace
+# OHBM ComCom blog content transfer to Squarespace
+
+## Prerequisite
+
+You will need a Squarespace account and ask an admin for the "Website Editor" permission to add or edit posts. Join `#website` channel on Slack and notify Sin or Alfie to get started!
 
 ## Transferring a post
 
-1. Open the original blog page and the matching folder in [squarespace](squarespace).
-2. Copy title.
-   * Beware of HTML that may carry over (check title in top bar) if copying from the original blog.
-   * `metadata.json` includes sanitized title.
-4. Add images.
-   * You should rename the image to a more appropriate name whenever you can (e.g. the person's name).
-   * Some images may be missing. You will have to find and save those images from the original blog.
+1. Open the original blog page and the matching folder in this repository's [squarespace](squarespace) directory. The spreadsheet row includes those links.
+2. Create a new blog page by clicking "+" button under Pages > Blog > Blog Content.
+3. Copy title from the `metadata.json` file.
+   * Copying from the original blog may carry over additional HTML that we do not want.
+4. Add images. They can be downloaded in order from the GitHub folder.
+   * Some images may be missing or wrong. You will have to find the right images from the original blog or the [Internet Archive](https://web.archive.org/).
    * For common images (like logos), avoid uploading duplicates. Try searching the image library ("Select from Library").
-5. Add text. Insert code blocks around images and copy HTML from `text.html`.
-   * Check [formatting notes](#formatting-notes)!
-   * Tables will need to be created in HTML or Markdown.
+   * Captions can be copied from `text.html` and styled manually or just copied from the original blog.
+5. Add text. Insert code blocks between images and copy HTML from `text.html`.
+   * Check [formatting notes](#formatting-notes) for more details like how to put text beside images!
+   * Tables will need to be recreated in HTML or Markdown. If you are not sure how, skip it and add a TODO in the spreadsheet's "Notes" column.
 6. Compare with the original and make changes if necessary.
-   You may need to create additional text/code/other blocks and edit manually.
-   * Feel free to improve upon the original if you can.
+   * Feel free to improve upon the original if you can. Note what you did in the "Notes" column.
+   * If you can't fix some discrepancy, note it in the "Notes" column.
 7. When you are done, open settings (click on date above title).
    * Content > Featured Image: Use "Search for Images" to choose a preview image among post images.
-      * If the post has no image, you can default to a logo.
+      * If the post has no image, you can default to a common logo.
    * Options > Status: Set "Needs Review".
 
 ## Reviewing a post
 
-1. Open the post with EDIT. **Do NOT review using Squarespace's preview because it breaks some code!**
-2. Text: Check spaces/line breaks, general formatting feel.
+1. Open the post with EDIT. **Do NOT review using Squarespace's side preview because it breaks some code!**
+2. Text: Check spaces/line breaks and general formatting consistency.
 3. Image: Check that all images are present.
-4. Add "By " or "Author: " at the start of the author line when appropriate.
-   * If you can (admins only), set the author in settings after creating a
-     [basic author](https://support.squarespace.com/hc/en-us/articles/205810518).
-     You may need to refresh the page for the new author to show up.
-   * If you can't set a single author in the settings (e.g. written by many people),
-     you can hide the "Written By" line at the top using "Edit Section" (button on top right).
-5. If everything looks good, open settings (click on date above title).
-   * Content > Post URL: Match the original URL (`blog/article-name`).
+4. Add "By " or "Author: " before the author name when appropriate for clarity. Set the author from a dropdown in settings.
+   * New basic authors can be only [created by admins](https://support.squarespace.com/hc/en-us/articles/205810518).
+     Notify an admin if you can't create one.
+   * You may need to refresh the page for the new basic author to show up.
+6. If everything looks good, open settings (click on date above title).
+   * Content > Post URL: Copy the original URL name from the spreadsheet (`blog/article-name`).
    * Options > Status: Set "Published". Change the date to original's date in the past. Time can be whatever.
 
 ## Formatting notes
@@ -44,7 +46,7 @@
 * Subtitle: Paragraph 2 (color 3, dark blue)
 * Section header: Heading 4
 * Main text: Paragraph 2 (default)
-   * Use natural margin between paragraphs rather than double line break.
+   * **Use natural margin between paragraphs rather than double line break.**
    * No indentation on paragraphs, just new line (this doesn't necessarily need to be consistent across sections)
 * Image captions: Paragraph 3 (automatically applied now)
 
