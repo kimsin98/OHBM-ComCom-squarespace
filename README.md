@@ -25,6 +25,10 @@ You will need a Squarespace account and ask an admin for the "Website Editor" pe
       * If the post has no image, you can default to a common logo.
    * Options > Status: Set "Needs Review".
 
+The whole process takes ~15 min on average. Video guide:
+
+[transferring.webm](https://github.com/user-attachments/assets/fd375501-0508-4ebd-8b02-66bb7e68a1ff)
+
 ## Reviewing a post
 
 1. Open the post with EDIT. **Do NOT review using Squarespace's side preview because it breaks some code!**
@@ -46,7 +50,8 @@ You will need a Squarespace account and ask an admin for the "Website Editor" pe
 * Subtitle: Paragraph 2 (color 3, dark blue)
 * Section header: Heading 4
 * Main text: Paragraph 2 (default)
-   * **Use natural margin between paragraphs rather than double line break.**
+   * **Use natural margin between paragraphs [transferring.webm](https://github.com/user-attachments/assets/e8fdef59-b63a-436d-9bc4-dc4b50ac6612)
+rather than double line break.**
    * No indentation on paragraphs, just new line (this doesn't necessarily need to be consistent across sections)
 * Image captions: Paragraph 3 (automatically applied now)
 
