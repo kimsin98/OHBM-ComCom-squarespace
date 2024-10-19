@@ -15,7 +15,7 @@ You will need a Squarespace account and ask an admin for the "Website Editor" pe
    * For common images (like logos), avoid uploading duplicates. Try searching the image library ("Select from Library").
    * Captions can be copied from `text.html` and styled manually or just copied from the original blog.
 5. Add text. Insert code blocks between images and copy HTML from `text.html`.
-   * Check [formatting notes](#formatting-notes) for more details like how to put text beside images!
+   * Check [style guide](#style-guide) for more details like how to put text beside images!
    * Tables will need to be recreated in HTML or Markdown. If you are not sure how, skip it and add a TODO in the spreadsheet's "Notes" column.
 6. Compare with the original and make changes if necessary.
    * Feel free to improve upon the original if you can. Note what you did in the "Notes" column.
@@ -28,7 +28,7 @@ You will need a Squarespace account and ask an admin for the "Website Editor" pe
 ## Reviewing a post
 
 1. Open the post with EDIT. **Do NOT review using Squarespace's side preview because it breaks some code!**
-2. Text: Check spaces/line breaks and general formatting consistency.
+2. Text: Check spaces/line breaks and general style consistency.
 3. Image: Check that all images are present.
 4. Add "By " or "Author: " before the author name when appropriate for clarity. Set the author from a dropdown in settings.
    * New basic authors can be only [created by admins](https://support.squarespace.com/hc/en-us/articles/205810518).
@@ -38,7 +38,7 @@ You will need a Squarespace account and ask an admin for the "Website Editor" pe
    * Content > Post URL: Copy the original URL name from the spreadsheet (`blog/article-name`).
    * Options > Status: Set "Published". Change the date to original's date in the past. Time can be whatever.
 
-## Formatting notes
+## Style guide
 
 ### Text
 * Title: Default heading and font, no all caps
