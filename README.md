@@ -41,6 +41,7 @@ The whole process takes ~15 min on average. Video guide:
 6. If everything looks good, open settings (click on date above title).
    * Content > Post URL: Copy the original URL name from the spreadsheet (`blog/article-name`).
    * Options > Status: Set "Published". Change the date to original's date in the past. Time can be whatever.
+      * Selecting date many months ago can be frustrating with Squarespace's UI. Use [this bookmark app]() to go faster!
 
 ## Style guide
 
